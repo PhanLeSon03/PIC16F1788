@@ -11,7 +11,6 @@
 void DACInit(void);
 void DACSet(uint8_t Val);
 
-
 #ifdef	__cplusplus
 extern "C" {
 #endif

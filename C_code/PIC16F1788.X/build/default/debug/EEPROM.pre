@@ -9022,16 +9022,19 @@ typedef unsigned char bool;
 uint16_t EEPROMRead(uint8_t Address);
 char EEPROMWrite(uint16_t Data, uint8_t Address);
 
-# 38 "EEPROM.c"
+# 39 "EEPROM.c"
 char EEPROMWrite(uint16_t Data, uint8_t Address)
 {
 static char cntOverTime;
 
-# 47
-EEDATA = Address;
+asm("BANKSEL EEADRL");
 
+# 48
+EEADRL = (Address);
 
-EEADR = Data;
+EEDATL = (uint8_t)(Data|0x00FF);
+EEDATH = (uint8_t)(Data>>8);
+
 
 
 CFGS = 0;
@@ -9040,24 +9043,21 @@ WREN = 1 ;
 
 (GIE = 0);
 
-# 63
-EECON2 = 0x55;
-EECON2 = 0xAA;
-WR = 1;
+# 65
+asm("BANKSEL EECON2");
 
-# 77
+
+
+asm("MOVLW 0x55");
+asm("MOVWF EECON2");
+asm("MOVLW 0xAA");
+asm("MOVWF EECON2");
+asm("BSF EECON1,0x1");
 (GIE = 1);
 
 WREN = 0;
 
-while(WR)
-{
-}
-
-return 1;
-
-_delay(2000);
-if (WR)
+if (EEIF)
 {
 cntOverTime++;
 if (cntOverTime > 2)
@@ -9082,17 +9082,16 @@ return 1;
 
 uint16_t EEPROMRead(uint8_t Address)
 {
+asm("BANKSEL EEADRL");
 
 
 
-
-EEADR = Address;
+EEADRL = (Address);
 CFGS = 0;
 EEPGD = 0;
 RD = 1;
-_delay(20);
 
+return ((uint16_t)(EEDATL))|((uint16_t)(EEDATH<<8));
 
-return EEDATA;
 }
 

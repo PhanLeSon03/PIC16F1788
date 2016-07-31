@@ -4,7 +4,6 @@
 UART.h  \
 PWM.h  \
 interrupts.h  \
-EEPROM.h  \
 user.h  \
 ADC.h  \
 DAC.h  \

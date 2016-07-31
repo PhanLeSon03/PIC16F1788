@@ -1,0 +1,1098 @@
+FILE_TYPE = EXPANDEDPARTLIST;
+{ Using PSTWRITER 16.5.0 p001Nov-08-2014 at 19:58:07 }
+DIRECTIVES
+ PST_VERSION='PST_HDL_CENTRIC_VERSION_0';
+ ROOT_DRAWING='PTMD_PCB20141102_2215';
+ POST_TIME='Apr 21 2011 10:02:30';
+ SOURCE_TOOL='CAPTURE_WRITER';
+END_DIRECTIVES;
+
+PART_NAME
+ C100 'C_RES0805_10UF':
+ ROOM='PWR';
+
+SECTION_NUMBER 1
+ '@PTMD_PCB20141102_2215.SCHEMATIC1(SCH_1):INS13254847@ANALOG.C.NORMAL(CHIPS)':
+ C_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):ins13254847@analog.\c.normal\(chips)',
+ P_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):page1_ins13254847@analog.\c.normal\(chips)',
+ ROOM='PWR',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C101 'C_RES0805_100NF':
+ ROOM='PWR';
+
+SECTION_NUMBER 1
+ '@PTMD_PCB20141102_2215.SCHEMATIC1(SCH_1):INS13254475@ANALOG.C.NORMAL(CHIPS)':
+ C_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):ins13254475@analog.\c.normal\(chips)',
+ P_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):page1_ins13254475@analog.\c.normal\(chips)',
+ ROOM='PWR',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C102 'CAPACITOR POL_ALUMIUM_330UF_TUT':
+ ROOM='PWR';
+
+SECTION_NUMBER 1
+ '@PTMD_PCB20141102_2215.SCHEMATIC1(SCH_1):INS13255477@DISCRETE.CAPACITOR POL.NORMAL(CHIPS)':
+ C_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):ins13255477@discrete.\capacitor pol.normal\(chips)',
+ P_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):page1_ins13255477@discrete.\capacitor pol.normal\(chips)',
+ ROOM='PWR',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C103 'C_RES0805_100NF':
+ ROOM='PWR';
+
+SECTION_NUMBER 1
+ '@PTMD_PCB20141102_2215.SCHEMATIC1(SCH_1):INS13254869@ANALOG.C.NORMAL(CHIPS)':
+ C_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):ins13254869@analog.\c.normal\(chips)',
+ P_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):page1_ins13254869@analog.\c.normal\(chips)',
+ ROOM='PWR',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C104 'CAP NP_CAP0603_100NF':
+ ROOM='Driver';
+
+SECTION_NUMBER 1
+ '@PTMD_PCB20141102_2215.SCHEMATIC1(SCH_1):INS13256745@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):ins13256745@discrete.\cap np.normal\(chips)',
+ P_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):page1_ins13256745@discrete.\cap np.normal\(chips)',
+ ROOM='Driver',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C105 'CAP NP_CAP0603_100NF':
+ ROOM='Driver';
+
+SECTION_NUMBER 1
+ '@PTMD_PCB20141102_2215.SCHEMATIC1(SCH_1):INS13256763@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):ins13256763@discrete.\cap np.normal\(chips)',
+ P_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):page1_ins13256763@discrete.\cap np.normal\(chips)',
+ ROOM='Driver',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C106 'CAP NP_CAP0603_100NF':
+ ROOM='Driver';
+
+SECTION_NUMBER 1
+ '@PTMD_PCB20141102_2215.SCHEMATIC1(SCH_1):INS13255703@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):ins13255703@discrete.\cap np.normal\(chips)',
+ P_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):page1_ins13255703@discrete.\cap np.normal\(chips)',
+ ROOM='Driver',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C107 'CAP NP_CAP0603_100NF':
+ ROOM='LED';
+
+SECTION_NUMBER 1
+ '@PTMD_PCB20141102_2215.SCHEMATIC1(SCH_1):INS13256787@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):ins13256787@discrete.\cap np.normal\(chips)',
+ P_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):page1_ins13256787@discrete.\cap np.normal\(chips)',
+ ROOM='LED',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C108 'CAP NP_CAP0603_10PF':
+ ROOM='Driver';
+
+SECTION_NUMBER 1
+ '@PTMD_PCB20141102_2215.SCHEMATIC1(SCH_1):INS13254253@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):ins13254253@discrete.\cap np.normal\(chips)',
+ P_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):page1_ins13254253@discrete.\cap np.normal\(chips)',
+ ROOM='Driver',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C109 'CAP NP_CAP0603_100NF':
+ ROOM='Driver';
+
+SECTION_NUMBER 1
+ '@PTMD_PCB20141102_2215.SCHEMATIC1(SCH_1):INS13254451@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):ins13254451@discrete.\cap np.normal\(chips)',
+ P_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):page1_ins13254451@discrete.\cap np.normal\(chips)',
+ ROOM='Driver',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C110 'CAP NP_CAP0603_100NF':
+ ROOM='MCU';
+
+SECTION_NUMBER 1
+ '@PTMD_PCB20141102_2215.SCHEMATIC1(SCH_1):INS13256839@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):ins13256839@discrete.\cap np.normal\(chips)',
+ P_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):page1_ins13256839@discrete.\cap np.normal\(chips)',
+ ROOM='MCU',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C111 'C_1N4007_TUTAO_2UF':
+ ROOM='Driver';
+
+SECTION_NUMBER 1
+ '@PTMD_PCB20141102_2215.SCHEMATIC1(SCH_1):INS13255441@ANALOG.C.NORMAL(CHIPS)':
+ C_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):ins13255441@analog.\c.normal\(chips)',
+ P_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):page1_ins13255441@analog.\c.normal\(chips)',
+ ROOM='Driver',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C112 'CAP NP_CAP0603_1UF':
+ ROOM='MCU';
+
+SECTION_NUMBER 1
+ '@PTMD_PCB20141102_2215.SCHEMATIC1(SCH_1):INS13257257@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):ins13257257@discrete.\cap np.normal\(chips)',
+ P_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):page1_ins13257257@discrete.\cap np.normal\(chips)',
+ ROOM='MCU',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C113 'CAP NP_CAP0603_1UF':
+ ROOM='MCU';
+
+SECTION_NUMBER 1
+ '@PTMD_PCB20141102_2215.SCHEMATIC1(SCH_1):INS13257183@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):ins13257183@discrete.\cap np.normal\(chips)',
+ P_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):page1_ins13257183@discrete.\cap np.normal\(chips)',
+ ROOM='MCU',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C114 'CAP NP_CAP0603_100NF':
+ ROOM='MCU';
+
+SECTION_NUMBER 1
+ '@PTMD_PCB20141102_2215.SCHEMATIC1(SCH_1):INS13256887@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):ins13256887@discrete.\cap np.normal\(chips)',
+ P_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):page1_ins13256887@discrete.\cap np.normal\(chips)',
+ ROOM='MCU',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C115 'CAP_C1206_TUTAO_6.8UF':
+ ROOM='Signal';
+
+SECTION_NUMBER 1
+ '@PTMD_PCB20141102_2215.SCHEMATIC1(SCH_1):INS13255365@DISCRETE.CAP.NORMAL(CHIPS)':
+ C_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):ins13255365@discrete.\cap.normal\(chips)',
+ P_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):page1_ins13255365@discrete.\cap.normal\(chips)',
+ ROOM='Signal',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C116 'CAP NP_CAP0603_100NF':
+ ROOM='Signal';
+
+SECTION_NUMBER 1
+ '@PTMD_PCB20141102_2215.SCHEMATIC1(SCH_1):INS13261829@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):ins13261829@discrete.\cap np.normal\(chips)',
+ P_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):page1_ins13261829@discrete.\cap np.normal\(chips)',
+ ROOM='Signal',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C117 'CAP NP_CAP0603_100NF':
+ ROOM='MCU';
+
+SECTION_NUMBER 1
+ '@PTMD_PCB20141102_2215.SCHEMATIC1(SCH_1):INS13256939@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):ins13256939@discrete.\cap np.normal\(chips)',
+ P_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):page1_ins13256939@discrete.\cap np.normal\(chips)',
+ ROOM='MCU',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C118 'CAP NP_CAP0603_10PF':
+ ROOM='Signal';
+
+SECTION_NUMBER 1
+ '@PTMD_PCB20141102_2215.SCHEMATIC1(SCH_1):INS13256959@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):ins13256959@discrete.\cap np.normal\(chips)',
+ P_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):page1_ins13256959@discrete.\cap np.normal\(chips)',
+ ROOM='Signal',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C119 'CAP NP_CAP0603_10PF':
+ ROOM='Signal';
+
+SECTION_NUMBER 1
+ '@PTMD_PCB20141102_2215.SCHEMATIC1(SCH_1):INS13257067@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):ins13257067@discrete.\cap np.normal\(chips)',
+ P_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):page1_ins13257067@discrete.\cap np.normal\(chips)',
+ ROOM='Signal',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C120 'CAP NP_CAP0603_100NF':
+ ROOM='Signal';
+
+SECTION_NUMBER 1
+ '@PTMD_PCB20141102_2215.SCHEMATIC1(SCH_1):INS13255401@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):ins13255401@discrete.\cap np.normal\(chips)',
+ P_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):page1_ins13255401@discrete.\cap np.normal\(chips)',
+ ROOM='Signal',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C121 'CAP NP_CAP0603_100NF':
+ ROOM='Signal';
+
+SECTION_NUMBER 1
+ '@PTMD_PCB20141102_2215.SCHEMATIC1(SCH_1):INS13255385@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):ins13255385@discrete.\cap np.normal\(chips)',
+ P_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):page1_ins13255385@discrete.\cap np.normal\(chips)',
+ ROOM='Signal',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C122 'CAP NP_CAP0603_100NF':
+ ROOM='Signal';
+
+SECTION_NUMBER 1
+ '@PTMD_PCB20141102_2215.SCHEMATIC1(SCH_1):INS13255317@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):ins13255317@discrete.\cap np.normal\(chips)',
+ P_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):page1_ins13255317@discrete.\cap np.normal\(chips)',
+ ROOM='Signal',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C123 'CAP NP_CAP0603_10PF':
+ ROOM='Signal';
+
+SECTION_NUMBER 1
+ '@PTMD_PCB20141102_2215.SCHEMATIC1(SCH_1):INS13257083@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):ins13257083@discrete.\cap np.normal\(chips)',
+ P_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):page1_ins13257083@discrete.\cap np.normal\(chips)',
+ ROOM='Signal',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C124 'CAP NP_CAP0603_100NF':
+ ROOM='Conn';
+
+SECTION_NUMBER 1
+ '@PTMD_PCB20141102_2215.SCHEMATIC1(SCH_1):INS13256471@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):ins13256471@discrete.\cap np.normal\(chips)',
+ P_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):page1_ins13256471@discrete.\cap np.normal\(chips)',
+ ROOM='Conn',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C125 'CAP NP_CAP0603_1UF':
+ ROOM='Conn';
+
+SECTION_NUMBER 1
+ '@PTMD_PCB20141102_2215.SCHEMATIC1(SCH_1):INS13255559@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):ins13255559@discrete.\cap np.normal\(chips)',
+ P_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):page1_ins13255559@discrete.\cap np.normal\(chips)',
+ ROOM='Conn',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C126 'CAP NP_CAP0603_100NF':
+ ROOM='Conn';
+
+SECTION_NUMBER 1
+ '@PTMD_PCB20141102_2215.SCHEMATIC1(SCH_1):INS13255505@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):ins13255505@discrete.\cap np.normal\(chips)',
+ P_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):page1_ins13255505@discrete.\cap np.normal\(chips)',
+ ROOM='Conn',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C127 'CAP NP_CAP0603_100NF':
+ ROOM='Conn';
+
+SECTION_NUMBER 1
+ '@PTMD_PCB20141102_2215.SCHEMATIC1(SCH_1):INS13256403@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):ins13256403@discrete.\cap np.normal\(chips)',
+ P_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):page1_ins13256403@discrete.\cap np.normal\(chips)',
+ ROOM='Conn',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ D100 'LED_0_LED3MM_LED':
+ ROOM='PWR';
+
+SECTION_NUMBER 1
+ '@PTMD_PCB20141102_2215.SCHEMATIC1(SCH_1):INS13257295@RF BOARD.LED_0.NORMAL(CHIPS)':
+ C_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):ins13257295@\rf board\.\led_0.normal\(chips)',
+ P_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):page1_ins13257295@\rf board\.\led_0.normal\(chips)',
+ ROOM='PWR',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ D101 'LED_0_LED3MM_LED':
+ ROOM='LED';
+
+SECTION_NUMBER 1
+ '@PTMD_PCB20141102_2215.SCHEMATIC1(SCH_1):INS13257145@RF BOARD.LED_0.NORMAL(CHIPS)':
+ C_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):ins13257145@\rf board\.\led_0.normal\(chips)',
+ P_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):page1_ins13257145@\rf board\.\led_0.normal\(chips)',
+ ROOM='LED',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ D102 'DIODE_0_1N4007_SMD_SS34':
+ ROOM='Driver';
+
+SECTION_NUMBER 1
+ '@PTMD_PCB20141102_2215.SCHEMATIC1(SCH_1):INS13254583@THESIS_SON_20141102.DIODE_0.NORMAL(CHIPS)':
+ C_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):ins13254583@thesis_son_20141102.\diode_0.normal\(chips)',
+ P_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):page1_ins13254583@thesis_son_20141102.\diode_0.normal\(chips)',
+ ROOM='Driver',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ D103 'DIODE_1N4007_SMD_1N4007':
+ ROOM='Driver';
+
+SECTION_NUMBER 1
+ '@PTMD_PCB20141102_2215.SCHEMATIC1(SCH_1):INS13256333@DISCRETE.DIODE.NORMAL(CHIPS)':
+ C_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):ins13256333@discrete.\diode.normal\(chips)',
+ P_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):page1_ins13256333@discrete.\diode.normal\(chips)',
+ ROOM='Driver',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ D104 'DIODE_1N4007_SMD_1N4007':
+ ROOM='Driver';
+
+SECTION_NUMBER 1
+ '@PTMD_PCB20141102_2215.SCHEMATIC1(SCH_1):INS13256349@DISCRETE.DIODE.NORMAL(CHIPS)':
+ C_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):ins13256349@discrete.\diode.normal\(chips)',
+ P_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):page1_ins13256349@discrete.\diode.normal\(chips)',
+ ROOM='Driver',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ D105 'BAT54/SOT_0_SOT23_TUTAO_BAT54/S':
+ ROOM='Signal';
+
+SECTION_NUMBER 1
+ '@PTMD_PCB20141102_2215.SCHEMATIC1(SCH_1):INS13254947@THESIS_SON_20141024.BAT54/SOT_0.NORMAL(CHIPS)':
+ C_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):ins13254947@thesis_son_20141024.\bat54/sot_0.normal\(chips)',
+ P_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):page1_ins13254947@thesis_son_20141024.\bat54/sot_0.normal\(chips)',
+ ROOM='Signal',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ J100 'JACK DC_DC-JACK_JACK DC':
+ ROOM='PWR';
+
+SECTION_NUMBER 1
+ '@PTMD_PCB20141102_2215.SCHEMATIC1(SCH_1):INS13257527@WATERSENSOR.JACK DC.NORMAL(CHIPS)':
+ C_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):ins13257527@watersensor.\jack dc.normal\(chips)',
+ P_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):page1_ins13257527@watersensor.\jack dc.normal\(chips)',
+ ROOM='PWR',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ J101 'CON2_HEADER2PINMALE_INDUCTOR CO':
+ ROOM='Driver';
+
+SECTION_NUMBER 1
+ '@PTMD_PCB20141102_2215.SCHEMATIC1(SCH_1):INS13255293@CONNECTOR.CON2.NORMAL(CHIPS)':
+ C_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):ins13255293@connector.\con2.normal\(chips)',
+ P_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):page1_ins13255293@connector.\con2.normal\(chips)',
+ ROOM='Driver',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ J102 'CON2_HEADER2PINMALE_SIGNAL CONN':
+ ROOM='Signal';
+
+SECTION_NUMBER 1
+ '@PTMD_PCB20141102_2215.SCHEMATIC1(SCH_1):INS13261530@CONNECTOR.CON2.NORMAL(CHIPS)':
+ C_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):ins13261530@connector.\con2.normal\(chips)',
+ P_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):page1_ins13261530@connector.\con2.normal\(chips)',
+ ROOM='Signal',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ J103 'CON4_HEADER4PINMALE_SIGNAL_TEST':
+ ROOM='TP';
+
+SECTION_NUMBER 1
+ '@PTMD_PCB20141102_2215.SCHEMATIC1(SCH_1):INS13256143@CONNECTOR.CON4.NORMAL(CHIPS)':
+ C_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):ins13256143@connector.\con4.normal\(chips)',
+ P_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):page1_ins13256143@connector.\con4.normal\(chips)',
+ ROOM='TP',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ J104 'CONNECTOR EDGE 5_0_HEADER6PINMA':
+ ROOM='Conn';
+
+SECTION_NUMBER 1
+ '@PTMD_PCB20141102_2215.SCHEMATIC1(SCH_1):INS13255041@ACS_J2788_LOGIC BOARD.CONNECTOR EDGE 5_0.NORMAL(CHIPS)':
+ C_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):ins13255041@\acs_j2788_logic board\.\connector edge 5_0.normal\(chips)',
+ P_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):page1_ins13255041@\acs_j2788_logic board\.\connector edge 5_0.normal\(chips)',
+ ROOM='Conn',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ J105 'CON4_HEADER4PINMALE_POWER_SEL_C':
+ ROOM='Conn';
+
+SECTION_NUMBER 1
+ '@PTMD_PCB20141102_2215.SCHEMATIC1(SCH_1):INS13255747@CONNECTOR.CON4.NORMAL(CHIPS)':
+ C_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):ins13255747@connector.\con4.normal\(chips)',
+ P_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):page1_ins13255747@connector.\con4.normal\(chips)',
+ ROOM='Conn',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ J106 'CON4_HEADER4PINMALE_UART_CONN':
+ ROOM='Conn';
+
+SECTION_NUMBER 1
+ '@PTMD_PCB20141102_2215.SCHEMATIC1(SCH_1):INS13255243@CONNECTOR.CON4.NORMAL(CHIPS)':
+ C_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):ins13255243@connector.\con4.normal\(chips)',
+ P_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):page1_ins13255243@connector.\con4.normal\(chips)',
+ ROOM='Conn',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ J107 'JACK DC_DC-JACK_JACK DC':
+ ROOM='Conn';
+
+SECTION_NUMBER 1
+ '@PTMD_PCB20141102_2215.SCHEMATIC1(SCH_1):INS13255989@WATERSENSOR.JACK DC.NORMAL(CHIPS)':
+ C_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):ins13255989@watersensor.\jack dc.normal\(chips)',
+ P_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):page1_ins13255989@watersensor.\jack dc.normal\(chips)',
+ ROOM='Conn',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ L100 'CHOKE_INDUCTOR_TUTAO_L127H-150M':
+ ROOM='PWR';
+
+SECTION_NUMBER 1
+ '@PTMD_PCB20141102_2215.SCHEMATIC1(SCH_1):INS13257493@DISCRETE.CHOKE.NORMAL(CHIPS)':
+ C_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):ins13257493@discrete.\choke.normal\(chips)',
+ P_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):page1_ins13257493@discrete.\choke.normal\(chips)',
+ ROOM='PWR',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ L101 'CHOKE_INDUCTOR_TUTAO_L127H-150M':
+ ROOM='Driver';
+
+SECTION_NUMBER 1
+ '@PTMD_PCB20141102_2215.SCHEMATIC1(SCH_1):INS13254221@DISCRETE.CHOKE.NORMAL(CHIPS)':
+ C_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):ins13254221@discrete.\choke.normal\(chips)',
+ P_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):page1_ins13254221@discrete.\choke.normal\(chips)',
+ ROOM='Driver',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ L102 'CHOKE_RES0805_BEAD':
+ ROOM='Signal';
+
+SECTION_NUMBER 1
+ '@PTMD_PCB20141102_2215.SCHEMATIC1(SCH_1):INS13254417@DISCRETE.CHOKE.NORMAL(CHIPS)':
+ C_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):ins13254417@discrete.\choke.normal\(chips)',
+ P_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):page1_ins13254417@discrete.\choke.normal\(chips)',
+ ROOM='Signal',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ Q100 'MMBT2222A/SOT_0_SOT23_TUTAO_MMB':
+ ROOM='LED';
+
+SECTION_NUMBER 1
+ '@PTMD_PCB20141102_2215.SCHEMATIC1(SCH_1):INS13257165@THESIS_SON.MMBT2222A/SOT_0.NORMAL(CHIPS)':
+ C_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):ins13257165@thesis_son.\mmbt2222a/sot_0.normal\(chips)',
+ P_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):page1_ins13257165@thesis_son.\mmbt2222a/sot_0.normal\(chips)',
+ ROOM='LED',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ Q101 'IRF540N/TO_0_TO263_TUTAO_SUB85N':
+ ROOM='Driver';
+
+SECTION_NUMBER 1
+ '@PTMD_PCB20141102_2215.SCHEMATIC1(SCH_1):INS13254615@THESIS_SON_20141024.IRF540N/TO_0.NORMAL(CHIPS)':
+ C_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):ins13254615@thesis_son_20141024.\irf540n/to_0.normal\(chips)',
+ P_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):page1_ins13254615@thesis_son_20141024.\irf540n/to_0.normal\(chips)',
+ ROOM='Driver',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ Q102 'IRF540N/TO_0_TO263_TUTAO_SUB85N':
+ ROOM='Driver';
+
+SECTION_NUMBER 1
+ '@PTMD_PCB20141102_2215.SCHEMATIC1(SCH_1):INS13257509@THESIS_SON_20141024.IRF540N/TO_0.NORMAL(CHIPS)':
+ C_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):ins13257509@thesis_son_20141024.\irf540n/to_0.normal\(chips)',
+ P_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):page1_ins13257509@thesis_son_20141024.\irf540n/to_0.normal\(chips)',
+ ROOM='Driver',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R100 'RESISTOR_RES0805_0R':
+ ROOM='PWR';
+
+SECTION_NUMBER 1
+ '@PTMD_PCB20141102_2215.SCHEMATIC1(SCH_1):INS13255843@DISCRETE.RESISTOR.NORMAL(CHIPS)':
+ C_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):ins13255843@discrete.\resistor.normal\(chips)',
+ P_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):page1_ins13255843@discrete.\resistor.normal\(chips)',
+ ROOM='PWR',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R101 'R_RES0805_330R':
+ ROOM='PWR';
+
+SECTION_NUMBER 1
+ '@PTMD_PCB20141102_2215.SCHEMATIC1(SCH_1):INS13257311@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):ins13257311@discrete.\r.normal\(chips)',
+ P_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):page1_ins13257311@discrete.\r.normal\(chips)',
+ ROOM='PWR',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R102 'R_RESC0603_1K':
+ ROOM='LED';
+
+SECTION_NUMBER 1
+ '@PTMD_PCB20141102_2215.SCHEMATIC1(SCH_1):INS13256563@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):ins13256563@discrete.\r.normal\(chips)',
+ P_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):page1_ins13256563@discrete.\r.normal\(chips)',
+ ROOM='LED',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R103 'R_RES0805_330R':
+ ROOM='LED';
+
+SECTION_NUMBER 1
+ '@PTMD_PCB20141102_2215.SCHEMATIC1(SCH_1):INS13257109@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):ins13257109@discrete.\r.normal\(chips)',
+ P_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):page1_ins13257109@discrete.\r.normal\(chips)',
+ ROOM='LED',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R104 'RES0402':
+ ROOM='LED';
+
+SECTION_NUMBER 1
+ '@PTMD_PCB20141102_2215.SCHEMATIC1(SCH_1):INS13257203@PCI_VER2_REV1.RESISTOR_0.NORMAL(CHIPS)':
+ C_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):ins13257203@pci_ver2_rev1.\resistor_0.normal\(chips)',
+ P_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):page1_ins13257203@pci_ver2_rev1.\resistor_0.normal\(chips)',
+ ROOM='LED',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R105 'RESISTOR_RESC0603_100R':
+ ROOM='LED';
+
+SECTION_NUMBER 1
+ '@PTMD_PCB20141102_2215.SCHEMATIC1(SCH_1):INS13256523@DISCRETE.RESISTOR.NORMAL(CHIPS)':
+ C_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):ins13256523@discrete.\resistor.normal\(chips)',
+ P_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):page1_ins13256523@discrete.\resistor.normal\(chips)',
+ ROOM='LED',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R106 'R_RESC0603_10K':
+ ROOM='MCU';
+
+SECTION_NUMBER 1
+ '@PTMD_PCB20141102_2215.SCHEMATIC1(SCH_1):INS13256687@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):ins13256687@discrete.\r.normal\(chips)',
+ P_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):page1_ins13256687@discrete.\r.normal\(chips)',
+ ROOM='MCU',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R107 'R_RESC0603_100K':
+ ROOM='LED';
+
+SECTION_NUMBER 1
+ '@PTMD_PCB20141102_2215.SCHEMATIC1(SCH_1):INS13254909@ANALOG.R.NORMAL(CHIPS)':
+ C_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):ins13254909@analog.\r.normal\(chips)',
+ P_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):page1_ins13254909@analog.\r.normal\(chips)',
+ ROOM='LED',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R108 'R_RESC0603_10K':
+ ROOM='LED';
+
+SECTION_NUMBER 1
+ '@PTMD_PCB20141102_2215.SCHEMATIC1(SCH_1):INS13255575@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):ins13255575@discrete.\r.normal\(chips)',
+ P_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):page1_ins13255575@discrete.\r.normal\(chips)',
+ ROOM='LED',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R109 'R_RES0805_1K':
+ ROOM='Driver';
+
+SECTION_NUMBER 1
+ '@PTMD_PCB20141102_2215.SCHEMATIC1(SCH_1):INS13254355@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):ins13254355@discrete.\r.normal\(chips)',
+ P_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):page1_ins13254355@discrete.\r.normal\(chips)',
+ ROOM='Driver',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R110 'RESISTOR_RES0805_100R':
+ ROOM='Driver';
+
+SECTION_NUMBER 1
+ '@PTMD_PCB20141102_2215.SCHEMATIC1(SCH_1):INS13255025@DISCRETE.RESISTOR.NORMAL(CHIPS)':
+ C_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):ins13255025@discrete.\resistor.normal\(chips)',
+ P_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):page1_ins13255025@discrete.\resistor.normal\(chips)',
+ ROOM='Driver',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R111 'R_RES0805_1K':
+ ROOM='Driver';
+
+SECTION_NUMBER 1
+ '@PTMD_PCB20141102_2215.SCHEMATIC1(SCH_1):INS13255109@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):ins13255109@discrete.\r.normal\(chips)',
+ P_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):page1_ins13255109@discrete.\r.normal\(chips)',
+ ROOM='Driver',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R112 'R_RESC0603_330R':
+ ROOM='Driver';
+
+SECTION_NUMBER 1
+ '@PTMD_PCB20141102_2215.SCHEMATIC1(SCH_1):INS13254539@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):ins13254539@discrete.\r.normal\(chips)',
+ P_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):page1_ins13254539@discrete.\r.normal\(chips)',
+ ROOM='Driver',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R113 'R_RESC0603_1K':
+ ROOM='MCU';
+
+SECTION_NUMBER 1
+ '@PTMD_PCB20141102_2215.SCHEMATIC1(SCH_1):INS13256637@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):ins13256637@discrete.\r.normal\(chips)',
+ P_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):page1_ins13256637@discrete.\r.normal\(chips)',
+ ROOM='MCU',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R114 'R_RESC0603_330R':
+ ROOM='Driver';
+
+SECTION_NUMBER 1
+ '@PTMD_PCB20141102_2215.SCHEMATIC1(SCH_1):INS13254281@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):ins13254281@discrete.\r.normal\(chips)',
+ P_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):page1_ins13254281@discrete.\r.normal\(chips)',
+ ROOM='Driver',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R115 'R_RESC0603_27R':
+ ROOM='MCU';
+
+SECTION_NUMBER 1
+ '@PTMD_PCB20141102_2215.SCHEMATIC1(SCH_1):INS13254965@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):ins13254965@discrete.\r.normal\(chips)',
+ P_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):page1_ins13254965@discrete.\r.normal\(chips)',
+ ROOM='MCU',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R116 'RESISTOR_RES0805_100R':
+ ROOM='Driver';
+
+SECTION_NUMBER 1
+ '@PTMD_PCB20141102_2215.SCHEMATIC1(SCH_1):INS13255071@DISCRETE.RESISTOR.NORMAL(CHIPS)':
+ C_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):ins13255071@discrete.\resistor.normal\(chips)',
+ P_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):page1_ins13255071@discrete.\resistor.normal\(chips)',
+ ROOM='Driver',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R117 'R_RESC0603_27R':
+ ROOM='MCU';
+
+SECTION_NUMBER 1
+ '@PTMD_PCB20141102_2215.SCHEMATIC1(SCH_1):INS13254829@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):ins13254829@discrete.\r.normal\(chips)',
+ P_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):page1_ins13254829@discrete.\r.normal\(chips)',
+ ROOM='MCU',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R118 'RESISTOR_RESC0603_0R':
+ ROOM='Signal';
+
+SECTION_NUMBER 1
+ '@PTMD_PCB20141102_2215.SCHEMATIC1(SCH_1):INS13254435@DISCRETE.RESISTOR.NORMAL(CHIPS)':
+ C_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):ins13254435@discrete.\resistor.normal\(chips)',
+ P_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):page1_ins13254435@discrete.\resistor.normal\(chips)',
+ ROOM='Signal',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R119 'RESISTOR_RESC0603_2.2K':
+ ROOM='Signal';
+
+SECTION_NUMBER 1
+ '@PTMD_PCB20141102_2215.SCHEMATIC1(SCH_1):INS13255921@DISCRETE.RESISTOR.NORMAL(CHIPS)':
+ C_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):ins13255921@discrete.\resistor.normal\(chips)',
+ P_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):page1_ins13255921@discrete.\resistor.normal\(chips)',
+ ROOM='Signal',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R120 'RESISTOR_RESC0603_100R':
+ ROOM='Signal';
+
+SECTION_NUMBER 1
+ '@PTMD_PCB20141102_2215.SCHEMATIC1(SCH_1):INS13255687@DISCRETE.RESISTOR.NORMAL(CHIPS)':
+ C_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):ins13255687@discrete.\resistor.normal\(chips)',
+ P_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):page1_ins13255687@discrete.\resistor.normal\(chips)',
+ ROOM='Signal',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R121 'RESISTOR_RESC0603_22K':
+ ROOM='Signal';
+
+SECTION_NUMBER 1
+ '@PTMD_PCB20141102_2215.SCHEMATIC1(SCH_1):INS13255905@DISCRETE.RESISTOR.NORMAL(CHIPS)':
+ C_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):ins13255905@discrete.\resistor.normal\(chips)',
+ P_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):page1_ins13255905@discrete.\resistor.normal\(chips)',
+ ROOM='Signal',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R122 'RESISTOR_RESC0603_100R':
+ ROOM='Conn';
+
+SECTION_NUMBER 1
+ '@PTMD_PCB20141102_2215.SCHEMATIC1(SCH_1):INS13255771@DISCRETE.RESISTOR.NORMAL(CHIPS)':
+ C_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):ins13255771@discrete.\resistor.normal\(chips)',
+ P_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):page1_ins13255771@discrete.\resistor.normal\(chips)',
+ ROOM='Conn',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R123 'RESISTOR_RESC0603_0R':
+ ROOM='Conn';
+
+SECTION_NUMBER 1
+ '@PTMD_PCB20141102_2215.SCHEMATIC1(SCH_1):INS13255425@DISCRETE.RESISTOR.NORMAL(CHIPS)':
+ C_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):ins13255425@discrete.\resistor.normal\(chips)',
+ P_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):page1_ins13255425@discrete.\resistor.normal\(chips)',
+ ROOM='Conn',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R124 'RESISTOR_RESC0603_100R':
+ ROOM='Conn';
+
+SECTION_NUMBER 1
+ '@PTMD_PCB20141102_2215.SCHEMATIC1(SCH_1):INS13255801@DISCRETE.RESISTOR.NORMAL(CHIPS)':
+ C_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):ins13255801@discrete.\resistor.normal\(chips)',
+ P_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):page1_ins13255801@discrete.\resistor.normal\(chips)',
+ ROOM='Conn',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R125 'RESISTOR_RESC0603_100R':
+ ROOM='Conn';
+
+SECTION_NUMBER 1
+ '@PTMD_PCB20141102_2215.SCHEMATIC1(SCH_1):INS13255867@DISCRETE.RESISTOR.NORMAL(CHIPS)':
+ C_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):ins13255867@discrete.\resistor.normal\(chips)',
+ P_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):page1_ins13255867@discrete.\resistor.normal\(chips)',
+ ROOM='Conn',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R126 'RESISTOR_RESC0603_100R':
+ ROOM='Conn';
+
+SECTION_NUMBER 1
+ '@PTMD_PCB20141102_2215.SCHEMATIC1(SCH_1):INS13255821@DISCRETE.RESISTOR.NORMAL(CHIPS)':
+ C_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):ins13255821@discrete.\resistor.normal\(chips)',
+ P_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):page1_ins13255821@discrete.\resistor.normal\(chips)',
+ ROOM='Conn',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R127 'RESISTOR_RESC0603_100R':
+ ROOM='Conn';
+
+SECTION_NUMBER 1
+ '@PTMD_PCB20141102_2215.SCHEMATIC1(SCH_1):INS13255883@DISCRETE.RESISTOR.NORMAL(CHIPS)':
+ C_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):ins13255883@discrete.\resistor.normal\(chips)',
+ P_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):page1_ins13255883@discrete.\resistor.normal\(chips)',
+ ROOM='Conn',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ RS100 'R_POWER_RES_0.22R':
+ ROOM='Driver';
+
+SECTION_NUMBER 1
+ '@PTMD_PCB20141102_2215.SCHEMATIC1(SCH_1):INS13254925@ANALOG.R.NORMAL(CHIPS)':
+ C_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):ins13254925@analog.\r.normal\(chips)',
+ P_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):page1_ins13254925@analog.\r.normal\(chips)',
+ ROOM='Driver',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ RS101 'R_POWER_RES_0.22R':
+ ROOM='Driver';
+
+SECTION_NUMBER 1
+ '@PTMD_PCB20141102_2215.SCHEMATIC1(SCH_1):INS13255007@ANALOG.R.NORMAL(CHIPS)':
+ C_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):ins13255007@analog.\r.normal\(chips)',
+ P_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):page1_ins13255007@analog.\r.normal\(chips)',
+ ROOM='Driver',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ RV100 'VARISTOR_1_VR3_1K':
+ ROOM='MCU';
+
+SECTION_NUMBER 1
+ '@PTMD_PCB20141102_2215.SCHEMATIC1(SCH_1):INS13255541@THESIS_SON_20141026.VARISTOR_1.NORMAL(CHIPS)':
+ C_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):ins13255541@thesis_son_20141026.\varistor_1.normal\(chips)',
+ P_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):page1_ins13255541@thesis_son_20141026.\varistor_1.normal\(chips)',
+ ROOM='MCU',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ SW100 'SW_TC_SPST_BUTTON_KAN0611-1201B':
+ ROOM='LED';
+
+SECTION_NUMBER 1
+ '@PTMD_PCB20141102_2215.SCHEMATIC1(SCH_1):INS13257433@DISCRETE.SW_TC_SPST.NORMAL(CHIPS)':
+ C_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):ins13257433@discrete.\sw_tc_spst.normal\(chips)',
+ P_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):page1_ins13257433@discrete.\sw_tc_spst.normal\(chips)',
+ ROOM='LED',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ TP100 'TEST POINT_TP_TP_TEST POINT':
+ ROOM='TP';
+
+SECTION_NUMBER 1
+ '@PTMD_PCB20141102_2215.SCHEMATIC1(SCH_1):INS13256027@CONNECTOR.TEST POINT.NORMAL(CHIPS)':
+ C_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):ins13256027@connector.\test point.normal\(chips)',
+ P_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):page1_ins13256027@connector.\test point.normal\(chips)',
+ ROOM='TP',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ TP101 'TEST POINT_TP_TP_TEST POINT':
+ ROOM='TP';
+
+SECTION_NUMBER 1
+ '@PTMD_PCB20141102_2215.SCHEMATIC1(SCH_1):INS13256053@CONNECTOR.TEST POINT.NORMAL(CHIPS)':
+ C_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):ins13256053@connector.\test point.normal\(chips)',
+ P_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):page1_ins13256053@connector.\test point.normal\(chips)',
+ ROOM='TP',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ TP102 'TEST POINT_TP_TP_TEST POINT':
+ ROOM='TP';
+
+SECTION_NUMBER 1
+ '@PTMD_PCB20141102_2215.SCHEMATIC1(SCH_1):INS13256075@CONNECTOR.TEST POINT.NORMAL(CHIPS)':
+ C_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):ins13256075@connector.\test point.normal\(chips)',
+ P_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):page1_ins13256075@connector.\test point.normal\(chips)',
+ ROOM='TP',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ TP103 'TEST POINT_TP_TP_TEST POINT':
+ ROOM='TP';
+
+SECTION_NUMBER 1
+ '@PTMD_PCB20141102_2215.SCHEMATIC1(SCH_1):INS13256097@CONNECTOR.TEST POINT.NORMAL(CHIPS)':
+ C_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):ins13256097@connector.\test point.normal\(chips)',
+ P_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):page1_ins13256097@connector.\test point.normal\(chips)',
+ ROOM='TP',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ TP104 'TEST POINT_TP_TP_TEST POINT':
+ ROOM='TP';
+
+SECTION_NUMBER 1
+ '@PTMD_PCB20141102_2215.SCHEMATIC1(SCH_1):INS13256123@CONNECTOR.TEST POINT.NORMAL(CHIPS)':
+ C_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):ins13256123@connector.\test point.normal\(chips)',
+ P_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):page1_ins13256123@connector.\test point.normal\(chips)',
+ ROOM='TP',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ TP105 'TEST POINT_TP_TP_TEST POINT':
+ ROOM='TP';
+
+SECTION_NUMBER 1
+ '@PTMD_PCB20141102_2215.SCHEMATIC1(SCH_1):INS13256183@CONNECTOR.TEST POINT.NORMAL(CHIPS)':
+ C_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):ins13256183@connector.\test point.normal\(chips)',
+ P_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):page1_ins13256183@connector.\test point.normal\(chips)',
+ ROOM='TP',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U100 '78XX/TO_0_TO20AB_TUTAO_7805/TO':
+ ROOM='PWR';
+
+SECTION_NUMBER 1
+ '@PTMD_PCB20141102_2215.SCHEMATIC1(SCH_1):INS13254375@DC_DRIVER.78XX/TO_0.NORMAL(CHIPS)':
+ C_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):ins13254375@dc_driver.\78xx/to_0.normal\(chips)',
+ P_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):page1_ins13254375@dc_driver.\78xx/to_0.normal\(chips)',
+ ROOM='PWR',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U101 'PIC16F1788_0_SSOP28_TUTAO_PIC16':
+ ROOM='MCU';
+
+SECTION_NUMBER 1
+ '@PTMD_PCB20141102_2215.SCHEMATIC1(SCH_1):INS13254749@PTMD_PCB20141102.PIC16F1788_0.NORMAL(SCH_1)':
+ C_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):ins13254749@ptmd_pcb20141102.\pic16f1788_0.normal\(sch_1)',
+ P_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):page1_ins13254749@ptmd_pcb20141102.\pic16f1788_0.normal\(sch_1)',
+ ROOM='MCU',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U102 'IR2011_DIP8_TUTAO_IR2011':
+ ROOM='Driver';
+
+SECTION_NUMBER 1
+ '@PTMD_PCB20141102_2215.SCHEMATIC1(SCH_1):INS13256419@WATERSENSOR.IR2011.NORMAL(CHIPS)':
+ C_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):ins13256419@watersensor.\ir2011.normal\(chips)',
+ P_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):page1_ins13256419@watersensor.\ir2011.normal\(chips)',
+ ROOM='Driver',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U103 'LMV358/SO_VSSOP_TUTAO_LMV358IDG':
+ ROOM='Signal';
+
+SECTION_NUMBER 1
+ '@PTMD_PCB20141102_2215.SCHEMATIC1(SCH_1):INS13256251@OPAMP.LMV358/SO.NORMAL(CHIPS)':
+ C_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):ins13256251@opamp.\lmv358/so.normal\(chips)',
+ P_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):page1_ins13256251@opamp.\lmv358/so.normal\(chips)',
+ ROOM='Signal',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='A';
+
+SECTION_NUMBER 2
+ '@PTMD_PCB20141102_2215.SCHEMATIC1(SCH_1):INS13256277@OPAMP.LMV358/SO.NORMAL(CHIPS)':
+ C_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):ins13256277@opamp.\lmv358/so.normal\(chips)',
+ P_PATH='@ptmd_pcb20141102_2215.schematic1(sch_1):page1_ins13256277@opamp.\lmv358/so.normal\(chips)',
+ ROOM='Signal',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='B';
+
+END.

@@ -70,7 +70,7 @@ void PWMSetConfig(void)
      /* 10: PSMCxCLK pin */
      /* 00: Fosc system clock */
      /* Bit 6-->5: PxCPRE */
-     /* Clock Prescale : PxCPRE<1:0> bit 5-4*/
+     /* Clock Prescale : PxCPRE<1:0> */
      /* 00:Devide by 1 */
      /* 01:Devide by 2 */
      /* 10:Devide by 4 */
@@ -79,7 +79,7 @@ void PWMSetConfig(void)
                       //00 --> Fosc system clock
 
      /* 23-June: Interrupt configuration */
-     PSMC1INT = 0x00; // Bit 4: PxTPRIE: PSMC Time Base Period Interrupt Enable bit
+     PSMC1INT = 0x10; // Bit 4: PxTPRIE: PSMC Time Base Period Interrupt Enable bit
                       // Bit 0: PxTPRIF: PSMC Time Base Period Interrupt Flag bit
 
      /* Output on PortC, normal polarity */
@@ -98,8 +98,8 @@ void PWMSetConfig(void)
      PSMC1DCSbits.P1DCST = 1;/* Falling edge event will occur when PSMCxTMR = PSMCxDC*/
 
      /* set rising and falling dead-band times */
-     PSMC1DBR = 10; /* for rising (x+1)*15.625 : 63->1u*/
-     PSMC1DBF = 10; /* for falling */
+     PSMC1DBR = 0; /*63 for rising (x+1)*15.625 */
+     PSMC1DBF = 0; /*63 for falling */
 
 
      /* Enable PSMC in complementary Single Mode */

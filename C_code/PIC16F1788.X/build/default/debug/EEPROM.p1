@@ -1,8 +1,10 @@
 Version 3.2 HI-TECH Software Intermediate Code
-"3834 C:\Program Files (x86)\Microchip\xc8\v1.21\include\pic16f1788.h
-[v _EEDATA `Vuc ~T0 @X0 0 e@403 ]
-"3779
-[v _EEADR `Vus ~T0 @X0 0 e@401 ]
+"3785 C:\Program Files (x86)\Microchip\xc8\v1.21\include\pic16f1788.h
+[v _EEADRL `Vuc ~T0 @X0 0 e@401 ]
+"3829
+[v _EEDATL `Vuc ~T0 @X0 0 e@403 ]
+"3866
+[v _EEDATH `Vuc ~T0 @X0 0 e@404 ]
 "15924
 [v _CFGS `Vb ~T0 @X0 0 e@3246 ]
 "16094
@@ -11,14 +13,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _WREN `Vb ~T0 @X0 0 e@3242 ]
 "16106
 [v _GIE `Vb ~T0 @X0 0 e@95 ]
-"3946
-[v _EECON2 `Vuc ~T0 @X0 0 e@406 ]
-"18504
-[v _WR `Vb ~T0 @X0 0 e@3241 ]
-"151 C:\Program Files (x86)\Microchip\xc8\v1.21\include\pic.h
-[v __delay `(v ~T0 @X0 0 ef1`ul ]
-[p i __delay ]
-"16092 C:\Program Files (x86)\Microchip\xc8\v1.21\include\pic16f1788.h
+"16092
 [v _EEIF `Vb ~T0 @X0 0 e@148 ]
 "18116
 [v _RD `Vb ~T0 @X0 0 e@3240 ]
@@ -6559,168 +6554,162 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;stdbool.h: 12: typedef unsigned char bool;
 [; ;EEPROM.h: 10: uint16_t EEPROMRead(uint8_t Address);
 [; ;EEPROM.h: 11: char EEPROMWrite(uint16_t Data, uint8_t Address);
-"39 EEPROM.c
+"40 EEPROM.c
 [v _EEPROMWrite `(uc ~T0 @X0 1 ef2`ui`uc ]
 {
-[; ;EEPROM.c: 38: char EEPROMWrite(uint16_t Data, uint8_t Address)
-[; ;EEPROM.c: 39: {
+[; ;EEPROM.c: 39: char EEPROMWrite(uint16_t Data, uint8_t Address)
+[; ;EEPROM.c: 40: {
 [e :U _EEPROMWrite ]
 [v _Data `ui ~T0 @X0 1 r1 ]
 [v _Address `uc ~T0 @X0 1 r2 ]
 [f ]
-"40
+"41
 [v F7067 `uc ~T0 @X0 1 s cntOverTime ]
-[; ;EEPROM.c: 40: static char cntOverTime;
-[; ;EEPROM.c: 47: EEDATA = Address;
-"47
-[e = _EEDATA _Address ]
-[; ;EEPROM.c: 50: EEADR = Data;
+[; ;EEPROM.c: 41: static char cntOverTime;
+[; ;EEPROM.c: 43: asm("BANKSEL EEADRL");
+"43
+[; <" BANKSEL EEADRL ;# ">
+[; ;EEPROM.c: 48: EEADRL = (Address);
+"48
+[e = _EEADRL _Address ]
+[; ;EEPROM.c: 50: EEDATL = (uint8_t)(Data|0x00FF);
 "50
-[e = _EEADR -> _Data `us ]
-[; ;EEPROM.c: 53: CFGS = 0;
-"53
-[e = _CFGS -> -> 0 `i `b ]
-[; ;EEPROM.c: 54: EEPGD = 0;
-"54
-[e = _EEPGD -> -> 0 `i `b ]
-[; ;EEPROM.c: 55: WREN = 1 ;
+[e = _EEDATL -> | _Data -> -> 255 `i `ui `uc ]
+[; ;EEPROM.c: 51: EEDATH = (uint8_t)(Data>>8);
+"51
+[e = _EEDATH -> >> _Data -> 8 `i `uc ]
+[; ;EEPROM.c: 55: CFGS = 0;
 "55
-[e = _WREN -> -> 1 `i `b ]
-[; ;EEPROM.c: 57: (GIE = 0);
+[e = _CFGS -> -> 0 `i `b ]
+[; ;EEPROM.c: 56: EEPGD = 0;
+"56
+[e = _EEPGD -> -> 0 `i `b ]
+[; ;EEPROM.c: 57: WREN = 1 ;
 "57
+[e = _WREN -> -> 1 `i `b ]
+[; ;EEPROM.c: 59: (GIE = 0);
+"59
 [e = _GIE -> -> 0 `i `b ]
-[; ;EEPROM.c: 63: EECON2 = 0x55;
-"63
-[e = _EECON2 -> -> 85 `i `uc ]
-[; ;EEPROM.c: 64: EECON2 = 0xAA;
-"64
-[e = _EECON2 -> -> 170 `i `uc ]
-[; ;EEPROM.c: 65: WR = 1;
+[; ;EEPROM.c: 65: asm("BANKSEL EECON2");
 "65
-[e = _WR -> -> 1 `i `b ]
-[; ;EEPROM.c: 77: (GIE = 1);
-"77
+[; <" BANKSEL EECON2 ;# ">
+[; ;EEPROM.c: 69: asm("MOVLW 0x55");
+"69
+[; <" MOVLW 0x55 ;# ">
+[; ;EEPROM.c: 70: asm("MOVWF EECON2");
+"70
+[; <" MOVWF EECON2 ;# ">
+[; ;EEPROM.c: 71: asm("MOVLW 0xAA");
+"71
+[; <" MOVLW 0xAA ;# ">
+[; ;EEPROM.c: 72: asm("MOVWF EECON2");
+"72
+[; <" MOVWF EECON2 ;# ">
+[; ;EEPROM.c: 73: asm("BSF EECON1,0x1");
+"73
+[; <" BSF EECON1,0x1 ;# ">
+[; ;EEPROM.c: 74: (GIE = 1);
+"74
 [e = _GIE -> -> 1 `i `b ]
-[; ;EEPROM.c: 79: WREN = 0;
-"79
+[; ;EEPROM.c: 76: WREN = 0;
+"76
 [e = _WREN -> -> 0 `i `b ]
-[; ;EEPROM.c: 81: while(WR)
+[; ;EEPROM.c: 78: if (EEIF)
+"78
+[e $ ! _EEIF 721  ]
+[; ;EEPROM.c: 79: {
+"79
+{
+[; ;EEPROM.c: 80: cntOverTime++;
+"80
+[e ++ F7067 -> -> 1 `i `uc ]
+[; ;EEPROM.c: 81: if (cntOverTime > 2)
 "81
-[e $U 721  ]
-[e :U 722 ]
+[e $ ! > -> F7067 `i -> 2 `i 722  ]
 [; ;EEPROM.c: 82: {
 "82
 {
+[; ;EEPROM.c: 83: cntOverTime = 0;
 "83
-}
-[e :U 721 ]
-"81
-[e $ _WR 722  ]
-[e :U 723 ]
-[; ;EEPROM.c: 83: }
-[; ;EEPROM.c: 85: return 1;
-"85
-[e ) -> -> 1 `i `uc ]
+[e = F7067 -> -> 0 `i `uc ]
+[; ;EEPROM.c: 84: return 0;
+"84
+[e ) -> -> 0 `i `uc ]
 [e $UE 720  ]
-[; ;EEPROM.c: 87: _delay(2000);
+"85
+}
+[; ;EEPROM.c: 85: }
+[e $U 723  ]
+"86
+[e :U 722 ]
+[; ;EEPROM.c: 86: else
+[; ;EEPROM.c: 87: {
 "87
-[e ( __delay (1 -> -> -> 2000 `i `l `ul ]
-[; ;EEPROM.c: 88: if (WR)
-"88
-[e $ ! _WR 724  ]
-[; ;EEPROM.c: 89: {
-"89
 {
-[; ;EEPROM.c: 90: cntOverTime++;
+[; ;EEPROM.c: 88: return 2;
+"88
+[e ) -> -> 2 `i `uc ]
+[e $UE 720  ]
+"89
+}
+[e :U 723 ]
 "90
-[e ++ F7067 -> -> 1 `i `uc ]
-[; ;EEPROM.c: 91: if (cntOverTime > 2)
+}
+[; ;EEPROM.c: 89: }
+[; ;EEPROM.c: 90: }
+[e $U 724  ]
 "91
-[e $ ! > -> F7067 `i -> 2 `i 725  ]
+[e :U 721 ]
+[; ;EEPROM.c: 91: else
 [; ;EEPROM.c: 92: {
 "92
 {
-[; ;EEPROM.c: 93: cntOverTime = 0;
+[; ;EEPROM.c: 93: EEIF = 0;
 "93
-[e = F7067 -> -> 0 `i `uc ]
-[; ;EEPROM.c: 94: return 0;
-"94
-[e ) -> -> 0 `i `uc ]
-[e $UE 720  ]
-"95
-}
-[; ;EEPROM.c: 95: }
-[e $U 726  ]
-"96
-[e :U 725 ]
-[; ;EEPROM.c: 96: else
-[; ;EEPROM.c: 97: {
-"97
-{
-[; ;EEPROM.c: 98: return 2;
-"98
-[e ) -> -> 2 `i `uc ]
-[e $UE 720  ]
-"99
-}
-[e :U 726 ]
-"100
-}
-[; ;EEPROM.c: 99: }
-[; ;EEPROM.c: 100: }
-[e $U 727  ]
-"101
-[e :U 724 ]
-[; ;EEPROM.c: 101: else
-[; ;EEPROM.c: 102: {
-"102
-{
-[; ;EEPROM.c: 103: EEIF = 0;
-"103
 [e = _EEIF -> -> 0 `i `b ]
-[; ;EEPROM.c: 104: cntOverTime = 0;
-"104
+[; ;EEPROM.c: 94: cntOverTime = 0;
+"94
 [e = F7067 -> -> 0 `i `uc ]
-[; ;EEPROM.c: 105: return 1;
-"105
+[; ;EEPROM.c: 95: return 1;
+"95
 [e ) -> -> 1 `i `uc ]
 [e $UE 720  ]
-"106
+"96
 }
-[e :U 727 ]
-[; ;EEPROM.c: 106: }
-[; ;EEPROM.c: 109: }
-"109
+[e :U 724 ]
+[; ;EEPROM.c: 96: }
+[; ;EEPROM.c: 99: }
+"99
 [e :UE 720 ]
 }
-"112
+"102
 [v _EEPROMRead `(ui ~T0 @X0 1 ef1`uc ]
 {
-[; ;EEPROM.c: 111: uint16_t EEPROMRead(uint8_t Address)
-[; ;EEPROM.c: 112: {
+[; ;EEPROM.c: 101: uint16_t EEPROMRead(uint8_t Address)
+[; ;EEPROM.c: 102: {
 [e :U _EEPROMRead ]
 [v _Address `uc ~T0 @X0 1 r1 ]
 [f ]
-[; ;EEPROM.c: 117: EEADR = Address;
-"117
-[e = _EEADR -> _Address `us ]
-[; ;EEPROM.c: 118: CFGS = 0;
-"118
+[; ;EEPROM.c: 103: asm("BANKSEL EEADRL");
+"103
+[; <" BANKSEL EEADRL ;# ">
+[; ;EEPROM.c: 107: EEADRL = (Address);
+"107
+[e = _EEADRL _Address ]
+[; ;EEPROM.c: 108: CFGS = 0;
+"108
 [e = _CFGS -> -> 0 `i `b ]
-[; ;EEPROM.c: 119: EEPGD = 0;
-"119
+[; ;EEPROM.c: 109: EEPGD = 0;
+"109
 [e = _EEPGD -> -> 0 `i `b ]
-[; ;EEPROM.c: 120: RD = 1;
-"120
+[; ;EEPROM.c: 110: RD = 1;
+"110
 [e = _RD -> -> 1 `i `b ]
-[; ;EEPROM.c: 121: _delay(20);
-"121
-[e ( __delay (1 -> -> -> 20 `i `l `ul ]
-[; ;EEPROM.c: 124: return EEDATA;
-"124
-[e ) -> _EEDATA `ui ]
-[e $UE 728  ]
-[; ;EEPROM.c: 125: }
-"125
-[e :UE 728 ]
+[; ;EEPROM.c: 112: return ((uint16_t)(EEDATL))|((uint16_t)(EEDATH<<8));
+"112
+[e ) | -> _EEDATL `ui -> << -> _EEDATH `i -> 8 `i `ui ]
+[e $UE 725  ]
+[; ;EEPROM.c: 114: }
+"114
+[e :UE 725 ]
 }

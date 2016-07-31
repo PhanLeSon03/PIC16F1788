@@ -9121,6 +9121,12 @@ extern int vsscanf(const char *, const char *, va_list);
 extern int sprintf(char *, const char *, ...);
 extern int printf(const char *, ...);
 
+# 41 "C:\Program Files (x86)\Microchip\xc8\v1.21\include\eeprom_routines.h"
+extern void eeprom_write(unsigned char addr, unsigned char value);
+extern unsigned char eeprom_read(unsigned char addr);
+extern void eecpymem(volatile unsigned char *to, __eeprom unsigned char *from, unsigned char size);
+extern void memcpyee(__eeprom unsigned char *to, const unsigned char *from, unsigned char size);
+
 # 19 "system.h"
 void ConfigureOscillator(void);
 
@@ -9145,13 +9151,12 @@ void SetPWM1(unsigned int DutyCycle);
 void SetPeriod (unsigned int rPeriod);
 void SetDeadTime(unsigned char rDeadTime);
 
-# 54 "ADC.h"
+# 37 "ADC.h"
 void ADCIni(char ANx , char Fosc);
 void ADCINTIni(char ANx, char Fosc);
 int ReadADC(char ANx);
 int16_t ReadADCINT(void);
 int16_t ChkPeakVal(void);
-int16_t SearchingOffSet(void);
 
 # 25 "App.h"
 bool ScanFrq(void);
@@ -9166,51 +9171,35 @@ char EEPROMWrite(uint16_t Data, uint8_t Address);
 void DACInit(void);
 void DACSet(uint8_t Val);
 
-# 70 "main.c"
+# 34 "main.c"
 __config("__CONFIG", "pic", "FOSC_INTOSC & WDTE_OFF & PWRTE_ON & MCLRE_OFF & BOREN_OFF & LVP_OFF & CPD_OFF & CP_OFF & PLLEN_ON & CLKOUTEN_OFF");
 
-# 76
+# 40
 extern int16_t cntBlink;
 extern volatile bit flgTicTac;
 extern volatile bit flgPSMC;
 extern uint8_t cntPerd;
 extern volatile unsigned char UART_cntTxUART;
-extern char ADCON0Tmp;
-extern int32_t vAvg;
-
-
-unsigned char chBufADC[20];
+char chBufADC[20];
 int vADCAN0;
-int cntPWM,cntStepDwn;
-int vADCANFlt,vSenOff;
-uint16_t vPWM, vPWM_old;
+int cntPWM;
+int vADCANFlt;
+int vPWM = 3084;;
 int vADCANOld;
 int vADCANOld1;
-int cntCur,cntBIAS,cntNoPres;
+int cntCur;
 int16_t vPeakVld;
 char RA7Old;
-char bFlg,flgOffRls,flgStepDwn;
-char cntUARTSend,cntDiff;
-static char Voff,Voff_old;
-int Vin, Vavr_max, Vavr_old, Vavr, Vin2, Vin3, Vin4, Vin5, Vin6, Vin7, Vin8;
-int vSenDiff, Voff_Old;
-char stMAX,flgTurnOnDly_Offset, cntTurnOnDly_Offset;
-uint32_t cntOS;
+char bFlg;
+char cntUARTSend;
 
-# 108
+# 63
 void main(void)
 {
 
 
-char stBlinking = 0;
-char stFinish = 0;
-
 
 int16_t vPeak;
-int16_t vDAC;
-uint16_t temp;
-
-static int16_t vADCAN9,vADCAN9_Old,vADCAN9_mark,vUART,vUART_off;
 
 
 ConfigureOscillator();
@@ -9219,311 +9208,30 @@ ConfigureOscillator();
 
 InitApp();
 
-ADCON0Tmp = ADCON0;
 
-# 137
-DACSet(0);
+vPWM = eeprom_read(0);
+DACSet(100);
 
-
-{
-
-
-
-Voff = 0;
-DACSet(Voff);
-vPWM = 0;
-{ PWMSetPeriod (64000000/(vPWM+100)); PWMSetDutyCycle(32000000/(vPWM+100)); _delay(200000); }
-
-
-
-DACSet(Voff);
-_delay(200000);
-
-while (!stFinish)
-{
-{ Vin = ReadADC(9); for (char i=0; i<8;i++) { Vin8 = Vin7; Vin7 = Vin6; Vin6 = Vin5; Vin5 = Vin4; Vin4 = Vin3; Vin3 = Vin2; Vin2 = Vin; Vin = ReadADC(9); _delay(1000); } Vavr = (Vin + Vin2 + Vin3 + Vin4 + Vin5 + Vin6 + Vin7 + Vin8)/8;}
-if (Vavr < 4095 - 100)
-{
-if (Vavr < Vavr_old)
-{
-vPWM +=100;
-}
-else
-{
-vPWM +=10;
-}
-{ PWMSetPeriod (64000000/(vPWM+100)); PWMSetDutyCycle(32000000/(vPWM+100)); _delay(200000); }
-if (vPWM > 20000)
-{
-vPWM = vPWM_old;
-Voff = Voff_old;
-DACSet(Voff);
-{ PWMSetPeriod (64000000/(vPWM+100)); PWMSetDutyCycle(32000000/(vPWM+100)); _delay(200000); }
-stFinish = 1;
-}
-else
-{
-
-
-}
-if (stMAX==0)
-{
-if ((Vavr > Vavr_max)&&(Vavr_max<4095 - 100))
-{
-Vavr_max = Vavr;
-vPWM_old = vPWM;
-}
-}
-
-
-}
-else
-{
-while (Vavr > 3000)
-{
-if (Voff<250) Voff +=1;
-DACSet(Voff);
-_delay(30000);
-{ Vin = ReadADC(9); for (char i=0; i<8;i++) { Vin8 = Vin7; Vin7 = Vin6; Vin6 = Vin5; Vin5 = Vin4; Vin4 = Vin3; Vin3 = Vin2; Vin2 = Vin; Vin = ReadADC(9); _delay(1000); } Vavr = (Vin + Vin2 + Vin3 + Vin4 + Vin5 + Vin6 + Vin7 + Vin8)/8;}
-}
-
-if (Voff > Voff_old)
-{
-Voff_old = Voff;
-vPWM_old = vPWM;
-}
-
-vPWM+=10;
-{ PWMSetPeriod (64000000/(vPWM+100)); PWMSetDutyCycle(32000000/(vPWM+100)); _delay(200000); }
-
-stMAX = 1;
-}
-
-Vavr_old = Vavr;
-
-# 221
-sprintf(chBufADC,"%d\r\n\n",Vavr);
-while(!UARTSend(chBufADC,0));
-
-}
-
-
-
-}
-
+# 87
 while(1)
 {
-
 
 if (flgTicTac == 1)
 {
 flgTicTac = 0;
 
+# 100
+RC2 = !RC2;
 cntCur++;
-cntOS++;
 
 vADCAN0 = ReadADC(1);
-vADCAN9 = ReadADC(9);
-
-temp = vADCAN9;
-
-
-vADCAN9 = vADCAN9_Old +(vADCAN9-vADCAN9_Old)/15;
-
-if ((vADCAN9==vADCAN9_Old)&&(temp!=vADCAN9))
-{
-if ((temp>vADCAN9))
-{
-vADCAN9++;
-}
-else
-{
-vADCAN9--;
-}
-}
 
 
 
-
-if ((flgOffRls==1)&&(flgTurnOnDly_Offset==1))
-{
-
-flgOffRls = 0;
-}
+vADCANFlt = vADCANOld+(vADCAN0-vADCANOld)/20;
 
 
 
-if ((((vADCAN9 > vSenOff + (100))&&(vADCAN9_Old > vSenOff + (100))))||(cntNoPres>63))
-{
-vSenOff = vADCAN9;
-cntNoPres = 0;
-cntDiff = 0;
-vSenDiff = 0;
-}
-
-
-cntDiff++;
-if (cntDiff == 8)
-{
-if (bFlg)
-{
-bFlg = 0;
-vSenOff = vADCAN9;
-}
-vSenDiff = vSenOff - vADCAN9;
-cntDiff = 0;
-}
-
-
-if (vADCAN9 > vSenOff - (100))
-{
-flgOffRls = 1;
-}
-
-
-
-if ((vSenDiff > (40)))
-{
-if (cntTurnOnDly_Offset<255) cntTurnOnDly_Offset++;
-}
-else
-{
-cntTurnOnDly_Offset = 0;
-vADCAN9_mark = vADCAN9;
-}
-
-if (cntTurnOnDly_Offset>5)
-{
-flgTurnOnDly_Offset = 1;
-}
-else
-{
-flgTurnOnDly_Offset = 0;
-}
-
-
-
-if (vSenDiff > (60))
-{
-if (cntStepDwn<255)cntStepDwn++;
-}
-
-if (vSenDiff < (60)/2)
-{
-cntStepDwn = 0;
-}
-
-if (cntStepDwn>4)
-{
-flgStepDwn = 1;
-}
-
-
-
-
-if ((vADCAN9> 3000+3*100)
-&&(vADCAN9_Old> 3000+3*100)
-&&(bFlg==0))
-{
-if (Voff<250) Voff +=1;
-DACSet(Voff);
-
-
-bFlg = 1;
-cntDiff =-50;
-cntNoPres =-10;
-vSenDiff = 0;
-stBlinking = 0;
-}
-
-else
-{
-if ((vSenDiff > (900)))
-{
-stBlinking = 4;
-}
-else if ((vSenDiff > (400)))
-{
-stBlinking = 3;
-}
-else if ((vSenDiff > (150)))
-{
-stBlinking = 2;
-}
-else if ((vSenDiff > (90))||(flgTurnOnDly_Offset==1)||(flgStepDwn))
-{
-stBlinking = 1;
-}
-else
-{
-stBlinking = 0;
-}
-}
-
-
-
-
-switch (stBlinking)
-{
-case 1:
-{
-if (cntCur > 50)
-{
-RC2 = !RC2;
-cntCur = 0;
-}
-cntNoPres=0;
-flgStepDwn = 0;
-flgTurnOnDly_Offset = 0;
-cntTurnOnDly_Offset = 0;
-cntStepDwn = 0;
-break;
-}
-case 2:
-{
-if (cntCur > 25)
-{
-RC2 = !RC2;
-cntCur = 0;
-}
-cntNoPres=0;
-break;
-}
-case 3:
-{
-if (cntCur > 12)
-{
-RC2 = !RC2;
-cntCur = 0;
-}
-cntNoPres=0;
-break;
-}
-case 4:
-{
-if (cntCur > 6)
-{
-RC2 = !RC2;
-cntCur = 0;
-}
-cntNoPres=0;
-break;
-}
-default:
-{
-RC2 = 0;
-cntCur = 0;
-cntNoPres++;
-}
-}
-
-if ((vADCAN9 < 100)&&(vADCAN9_Old<100))
-{
-
-
-}
-
-vADCANFlt = vADCANOld+(vADCAN0-vADCANOld)/15;
 
 if ((vADCANFlt==vADCANOld)&&(vADCAN0!=vADCANOld))
 {
@@ -9537,75 +9245,47 @@ vADCANFlt--;
 }
 }
 
-vADCANOld = vADCANFlt;
+if ((RA7==1)&&(RA7Old==0))
+{
 
-# 466
-if (RA7==1)
-{
-PWMSetPeriod (64000-((uint32_t)63872*vPWM)/2048);
-PWMSetDutyCycle (32000-((uint32_t)63872*vPWM)/4096);
-}
-
-# 477
-cntUARTSend++;
-if (cntUARTSend%4 ==0)
-{
-vUART = vADCAN9;
-vUART_off = vSenOff -(90);
-sprintf(chBufADC,"%0.4dA%0.4d\r\n",vUART,vUART_off);
-UARTSend(chBufADC,0);
-}
-else if (cntUARTSend%3 == 0)
-{
-sprintf(chBufADC,"%0.4dA%0.4d\r\n",vUART,vUART_off);
-UARTSend(chBufADC,0);
-}
-else if (cntUARTSend%2 == 0)
-{
-sprintf(chBufADC,"%0.4dA%0.4d\r\n",vUART,vUART_off);
-UARTSend(chBufADC,0);
+# 132
+eeprom_write(0,vPWM);
 }
 else
 {
-sprintf(chBufADC,"%0.4dA%0.4d\r\n",vUART,vUART_off);
+PSMC1INT = 0x10;
+}
+
+vADCANOld = vADCANFlt;
+vPWM = vADCANFlt;
+
+
+cntUARTSend++;
+if ((cntUARTSend==50))
+{
+
+
+sprintf(chBufADC,"ADC:%d\r\n",vADCANFlt);
 UARTSend(chBufADC,0);
+cntUARTSend = 0;
 }
-
-if ((RA7==0)&&(RA7Old==1))
+else if ((cntUARTSend)%2==1)
 {
-(void)eeprom_write(0x06,vPWM);
-(void)eeprom_write(0x07,(vPWM>>8));
+
+
+}
+else
+{
+;
 }
 
+# 169
 RA7Old = RA7;
-Voff_Old = Voff;
-vADCAN9_Old = vADCAN9;
+
 
 }
 
-
-if ((cntOS%1000==0)&&(stBlinking==0))
-{
-Vavr_max = vADCAN9;
-for (char i=-10;i<10;i++)
-{
-vPWM= vPWM+i;
-{ PWMSetPeriod (64000000/(vPWM+100)); PWMSetDutyCycle(32000000/(vPWM+100)); _delay(200000); }
-{ Vin = ReadADC(9); for (char i=0; i<8;i++) { Vin8 = Vin7; Vin7 = Vin6; Vin6 = Vin5; Vin5 = Vin4; Vin4 = Vin3; Vin3 = Vin2; Vin2 = Vin; Vin = ReadADC(9); _delay(1000); } Vavr = (Vin + Vin2 + Vin3 + Vin4 + Vin5 + Vin6 + Vin7 + Vin8)/8;}
-if (Vavr > Vavr_max)
-{
-Vavr_max = Vavr;
-vPWM_old = vPWM;
-}
-}
-vPWM = vPWM_old;
-{ PWMSetPeriod (64000000/(vPWM+100)); PWMSetDutyCycle(32000000/(vPWM+100)); _delay(200000); }
-
-# 537
-vSenOff = Vavr;
-vSenDiff = 0;
-}
-
+# 197
 }
 }
 

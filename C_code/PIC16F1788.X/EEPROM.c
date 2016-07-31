@@ -17,6 +17,7 @@
     #include <htc.h>        /* HiTech General Include File */
 #endif
 
+
 #include <stdint.h>         /* For uint8_t definition */
 #include <stdbool.h>        /* For true/false definition */
 #include "EEPROM.h"
@@ -39,15 +40,16 @@ char EEPROMWrite(uint16_t Data, uint8_t Address)
 {
     static char cntOverTime;
 
+    asm("BANKSEL EEADRL");
     //EEADRH = EEPROM_HIADDRESS;
     //EEADRL = EEPROM_LOADDRESS;
     /* write the address to the EEADRL register and the datato the EEDATL
      * register*/
-    //EEADRL = Address; /* Low byte of address */
-    EEDATA = Address;
-    //EEDATL = (uint8_t)(Data|0x00FF);
-    //EEDATH = (uint8_t)(Data>>8);
-    EEADR = Data;
+    EEADRL = (Address); /* Low byte of address */
+
+    EEDATL = (uint8_t)(Data|0x00FF);
+    EEDATH = (uint8_t)(Data>>8);
+    
 
  
     CFGS = 0;                  /* Deselect Config state */
@@ -60,32 +62,20 @@ char EEPROMWrite(uint16_t Data, uint8_t Address)
      * Write AAh to EECON2
      * Set WR bit
      */
-    EECON2 = 0x55;
-    EECON2 = 0xAA;
-    WR = true;
-//#asm
-//     MOVLW 0x55
-//     MOVWF EECON2
-//     MOVLW 0xAA
-//     MOVWF EECON2
-//     BSF EEC0N1,WR
-//#endasm
-
-
-
-    
+    asm("BANKSEL EECON2");
+    //EECON2 = 0x55;
+    //EECON2 = 0xAA;
+    //  WR = true;
+    asm("MOVLW 0x55");
+    asm("MOVWF EECON2");
+    asm("MOVLW 0xAA");
+    asm("MOVWF EECON2");
+    asm("BSF EECON1,0x1");
     ei();
 
     WREN = false;   /*Write Disable */
 
-    while(WR)
-    {
-    }
-
-    return true;
-
-    _delay(2000);
-    if (WR)
+    if (EEIF)
     {
         cntOverTime++;
         if (cntOverTime > 2)
@@ -110,17 +100,16 @@ char EEPROMWrite(uint16_t Data, uint8_t Address)
 
 uint16_t EEPROMRead(uint8_t Address)
 {
+     asm("BANKSEL EEADRL");
     //EEADRH = EEPROM_HIADDRESS;
     //EEADRL = EEPROM_LOADDRESS;
 
-    //EEADRL = Address; /* Low byte of address */
-    EEADR = Address;
+    EEADRL = (Address); /* Low byte of address */
     CFGS = 0;                  /* Deselect Config state */
     EEPGD = 0;                 /* Pointer to DATA memory*/
     RD = 1;                    /* Read Request */
-    _delay(20);
-    //return ((uint16_t)(EEDATL))|((uint16_t)(EEDATH<<8));
-    //return EEDATL;
-    return EEDATA;
+    
+    return ((uint16_t)(EEDATL))|((uint16_t)(EEDATH<<8));
+   
 }
 

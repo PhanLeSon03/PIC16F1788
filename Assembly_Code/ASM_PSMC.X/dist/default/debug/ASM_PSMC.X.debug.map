@@ -1,0 +1,59 @@
+MPLINK 5.01, LINKER
+Linker Map File - Created Sat May 10 12:14:48 2014
+
+                                 Section Info
+                  Section       Type    Address   Location Size(Bytes)
+                ---------  ---------  ---------  ---------  ---------
+                   .org_0       code   0x000000    program   0x000142
+                   .cinit    romdata   0x0000a1    program   0x000004
+.config_8007_BUILD/DEFAULT/DEBUG/PSMC.O       code   0x008007    program   0x000002
+.config_8008_BUILD/DEFAULT/DEBUG/PSMC.O       code   0x008008    program   0x000002
+
+
+
+                              Program Memory Usage 
+                               Start         End      
+                           ---------   ---------      
+                            0x000000    0x0000a2      
+                            0x008007    0x008008      
+            165 out of 16647 program addresses used, program memory utilization is 0%
+
+
+
+                              Symbols - Sorted by Name
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                 Blinking   0x00009c    program     static C:\Users\PCMART\MPLABXProjects\ASM_PSMC.X\psmc.asm
+               Delay_Loop   0x000035    program     static C:\Users\PCMART\MPLABXProjects\ASM_PSMC.X\psmc.asm
+                  ExitISR   0x00000f    program     static C:\Users\PCMART\MPLABXProjects\ASM_PSMC.X\psmc.asm
+                      ISR   0x000004    program     static C:\Users\PCMART\MPLABXProjects\ASM_PSMC.X\psmc.asm
+                 MainLoop   0x000058    program     static C:\Users\PCMART\MPLABXProjects\ASM_PSMC.X\psmc.asm
+            ServiceTimer0   0x00000a    program     static C:\Users\PCMART\MPLABXProjects\ASM_PSMC.X\psmc.asm
+                    Start   0x000014    program     static C:\Users\PCMART\MPLABXProjects\ASM_PSMC.X\psmc.asm
+                   Tictac   0x000058    program     static C:\Users\PCMART\MPLABXProjects\ASM_PSMC.X\psmc.asm
+                 Tictac_e   0x0000a0    program     static C:\Users\PCMART\MPLABXProjects\ASM_PSMC.X\psmc.asm
+              _1mult_loop   0x00006f    program     static C:\Users\PCMART\MPLABXProjects\ASM_PSMC.X\psmc.asm
+       _1multiply_numbers   0x00006d    program     static C:\Users\PCMART\MPLABXProjects\ASM_PSMC.X\psmc.asm
+              _2mult_loop   0x000081    program     static C:\Users\PCMART\MPLABXProjects\ASM_PSMC.X\psmc.asm
+       _2multiply_numbers   0x00007f    program     static C:\Users\PCMART\MPLABXProjects\ASM_PSMC.X\psmc.asm
+
+
+
+                              Symbols - Sorted by Address
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                      ISR   0x000004    program     static C:\Users\PCMART\MPLABXProjects\ASM_PSMC.X\psmc.asm
+            ServiceTimer0   0x00000a    program     static C:\Users\PCMART\MPLABXProjects\ASM_PSMC.X\psmc.asm
+                  ExitISR   0x00000f    program     static C:\Users\PCMART\MPLABXProjects\ASM_PSMC.X\psmc.asm
+                    Start   0x000014    program     static C:\Users\PCMART\MPLABXProjects\ASM_PSMC.X\psmc.asm
+               Delay_Loop   0x000035    program     static C:\Users\PCMART\MPLABXProjects\ASM_PSMC.X\psmc.asm
+                 MainLoop   0x000058    program     static C:\Users\PCMART\MPLABXProjects\ASM_PSMC.X\psmc.asm
+                   Tictac   0x000058    program     static C:\Users\PCMART\MPLABXProjects\ASM_PSMC.X\psmc.asm
+       _1multiply_numbers   0x00006d    program     static C:\Users\PCMART\MPLABXProjects\ASM_PSMC.X\psmc.asm
+              _1mult_loop   0x00006f    program     static C:\Users\PCMART\MPLABXProjects\ASM_PSMC.X\psmc.asm
+       _2multiply_numbers   0x00007f    program     static C:\Users\PCMART\MPLABXProjects\ASM_PSMC.X\psmc.asm
+              _2mult_loop   0x000081    program     static C:\Users\PCMART\MPLABXProjects\ASM_PSMC.X\psmc.asm
+                 Blinking   0x00009c    program     static C:\Users\PCMART\MPLABXProjects\ASM_PSMC.X\psmc.asm
+                 Tictac_e   0x0000a0    program     static C:\Users\PCMART\MPLABXProjects\ASM_PSMC.X\psmc.asm
+
+

@@ -1,0 +1,22 @@
+(---------------------------------------------------------------------)
+(                                                                     )
+(    Dynamic Shape Status                                             )
+(                                                                     )
+(    Drawing          : ptmd_pcb20141102_2215.brd                     )
+(    Software Version : 16.5P003                                      )
+(    Date/Time        : Sat Nov 08 08:11:58 2014                      )
+(                                                                     )
+(---------------------------------------------------------------------)
+
+
+  Dynamic shapes out of date: 2 out of 2
+  Current fill mode         : SMOOTH
+
+
+  <<<  ETCH  >>>
+
+    Layer = BOTTOM
+       State: Out of date  Point on shape: (351.0001 271.0001)  Net: GND
+
+    Layer = TOP
+       State: Out of date  Point on shape: (351.0001 271.0001)  Net: GND

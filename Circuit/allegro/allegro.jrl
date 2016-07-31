@@ -1,0 +1,67 @@
+\t (00:00:07) allegro 16.5 P003 (v16-5-13C) i86
+\t (00:00:07)     Journal start - Mon Jun 08 22:10:37 2015
+\t (00:00:07)         Host=PCMART-VAIO User=PCMART Pid=3284 CPUs=4
+\t (00:00:07) 
+\t (00:00:10) Opening existing design...
+\d (00:00:11) Database opened: H:/PhanLeSon/PTMD/CD/Circuit/V01/20141102_22_15/allegro/ptmd_pcb20141102_2215.brd
+\t (00:00:12) Grids are drawn 6.4000, 6.4000 apart for enhanced viewability.
+\i (00:00:12) trapsize 26641
+\i (00:00:12) trapsize 25934
+\i (00:00:12) trapsize 26763
+\i (00:00:13) trapsize 26763
+\i (00:00:15) generaledit 
+\i (00:01:06) zoom in 1 
+\i (00:01:06) setwindow pcb
+\i (00:01:06) zoom in 400.6311 280.5633
+\t (00:01:06) Grids are drawn 1.6000, 1.6000 apart for enhanced viewability.
+\i (00:01:06) trapsize 13381
+\i (00:01:06) zoom in 1 
+\i (00:01:06) setwindow pcb
+\i (00:01:06) zoom in 400.6311 280.5633
+\i (00:01:06) trapsize 6691
+\i (00:01:06) zoom in 1 
+\i (00:01:06) setwindow pcb
+\i (00:01:06) zoom in 400.6311 280.5633
+\t (00:01:06) Grids are drawn 0.4000, 0.4000 apart for enhanced viewability.
+\i (00:01:06) trapsize 3345
+\i (00:01:06) zoom in 1 
+\i (00:01:06) setwindow pcb
+\i (00:01:06) zoom in 400.6311 280.5633
+\i (00:01:06) trapsize 1673
+\i (00:01:07) zoom out 1 
+\i (00:01:07) setwindow pcb
+\i (00:01:07) zoom out 400.6311 280.5634
+\i (00:01:07) trapsize 3345
+\i (00:01:07) zoom out 1 
+\i (00:01:07) setwindow pcb
+\i (00:01:07) zoom out 400.6311 280.5634
+\t (00:01:07) Grids are drawn 1.6000, 1.6000 apart for enhanced viewability.
+\i (00:01:07) trapsize 6691
+\i (00:01:07) zoom out 1 
+\i (00:01:07) setwindow pcb
+\i (00:01:07) zoom out 400.6312 280.5633
+\i (00:01:07) trapsize 13381
+\i (00:01:08) zoom in 1 
+\i (00:01:08) setwindow pcb
+\i (00:01:08) zoom in 400.8988 280.8310
+\i (00:01:08) trapsize 6691
+\i (00:01:08) zoom in 1 
+\i (00:01:08) setwindow pcb
+\i (00:01:08) zoom in 400.8988 280.8310
+\t (00:01:08) Grids are drawn 0.4000, 0.4000 apart for enhanced viewability.
+\i (00:01:08) trapsize 3345
+\i (00:01:09) zoom out 1 
+\i (00:01:09) setwindow pcb
+\i (00:01:09) zoom out 401.0996 281.2325
+\t (00:01:09) Grids are drawn 1.6000, 1.6000 apart for enhanced viewability.
+\i (00:01:09) trapsize 6691
+\i (00:01:10) zoom out 1 
+\i (00:01:10) setwindow pcb
+\i (00:01:10) zoom out 401.0995 281.2325
+\i (00:01:10) trapsize 13381
+\i (00:01:14) open 
+\i (00:02:04) fillin "H:\PhanLeSon\Agriculture\STM8\OrCad\Dimmer_20150428\20150325\allegro\test_gerber.brd"
+\i (00:02:04) cd "H:\PhanLeSon\Agriculture\STM8\OrCad\Dimmer_20150428\20150325\allegro"
+\t (00:02:04) Opening existing design...
+\i (00:02:04) trapsize 10057
+\t (00:02:04)     Journal end - Mon Jun 08 22:12:35 2015

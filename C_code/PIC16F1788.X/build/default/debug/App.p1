@@ -1,5 +1,5 @@
 Version 3.2 HI-TECH Software Intermediate Code
-"54 ADC.h
+"39 ADC.h
 [v _ReadADC `(i ~T0 @X0 0 ef1`uc ]
 "27 App.h
 [v _Blink `(v ~T0 @X0 0 ef1`f ]
@@ -6542,12 +6542,11 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;UART.h: 33: bool UARTReceive(char *pData);
 [; ;UART.h: 34: bool UARTSend(unsigned char *pData, unsigned char stLen);
 [; ;interrupts.h: 13: void interrupt isr(void);
-[; ;ADC.h: 52: void ADCIni(char ANx , char Fosc);
-[; ;ADC.h: 53: void ADCINTIni(char ANx, char Fosc);
-[; ;ADC.h: 54: int ReadADC(char ANx);
-[; ;ADC.h: 55: int16_t ReadADCINT(void);
-[; ;ADC.h: 56: int16_t ChkPeakVal(void);
-[; ;ADC.h: 57: int16_t SearchingOffSet(void);
+[; ;ADC.h: 37: void ADCIni(char ANx , char Fosc);
+[; ;ADC.h: 38: void ADCINTIni(char ANx, char Fosc);
+[; ;ADC.h: 39: int ReadADC(char ANx);
+[; ;ADC.h: 40: int16_t ReadADCINT(void);
+[; ;ADC.h: 41: int16_t ChkPeakVal(void);
 [; ;App.h: 25: bool ScanFrq(void);
 [; ;App.h: 26: void Blinking(int vSenFlt);
 [; ;App.h: 27: void Blink(float tiPerd);

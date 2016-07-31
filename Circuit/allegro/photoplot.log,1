@@ -1,0 +1,322 @@
+(---------------------------------------------------------------------)
+(                                                                     )
+(    ARTWORK LOG                                                      )
+(                                                                     )
+(    Drawing          : ptmd_pcb20141102_2215.brd                     )
+(    Software Version : 16.5P002                                      )
+(    Date/Time        : Sun Nov 09 13:39:15 2014                      )
+(                                                                     )
+(---------------------------------------------------------------------)
+
+
+
+Results from parameter file ...
+    DEVICE-TYPE           GERBER_RS274X
+    OUTPUT-UNITS          MM
+    FILM-SIZE             12000000 7000000
+    FORMAT                5.5
+    ABORT-ON-ERROR        NO
+    SCALE                 1
+    SUPPRESS-LEAD-ZEROES  NO
+    SUPPRESS-TRAIL-ZEROES NO
+    SUPPRESS-EQUAL        YES
+    UNDEF-APT-CONT        NO
+
+
+================================================================
+     PROCESSING FILM < TOP >
+     TO FILE < E:/STUDY/DATA/PTMD/PCB_v0.1/20141102_22_15/allegro/TOP.art > ...
+================================================================
+
+  FILM PARAMETERS :
+  ---------------------------------------------------------
+  Undefined line width                7.0000
+  Mirror code                         NONE
+  Rotate angle                        NONE
+  Offset x:                           0.0000
+  Offset y:                           0.0000
+  Plot negative                       NO
+  Suppress unconnected internal pads  NO
+
+
+
+  APERTURES USED:
+  ---------------------------------------------------------
+  TYPE       SIZE/NAME                   ROT   MIRROR MODE 
+  ---------------------------------------------------------
+  CIRCLE     0.20000                                  DARK 
+  CIRCLE     0.29000                                  DARK 
+  CIRCLE     0.30480                                  DARK 
+  CIRCLE     0.63500                                  DARK 
+  CIRCLE     1.00000                                  DARK 
+  CIRCLE     1.01600                                  DARK 
+  CIRCLE     1.20000                                  DARK 
+  CIRCLE     1.45010                                  DARK 
+  CIRCLE     1.50000                                  DARK 
+  CIRCLE     1.50010                                  DARK 
+  CIRCLE     1.52400                                  DARK 
+  CIRCLE     1.65000                                  DARK 
+  CIRCLE     1.65100                                  DARK 
+  CIRCLE     1.77800                                  DARK 
+  CIRCLE     2.03200                                  DARK 
+  CIRCLE     3.89990                                  DARK 
+  SQUARE     1.45010                     0.000 NO     DARK 
+  SQUARE     1.52400                     0.000 NO     DARK 
+  SQUARE     1.65000                     0.000 NO     DARK 
+  RECTANGLE  0.50800     x 0.43180       0.000 NO     DARK 
+  RECTANGLE  0.78990     x 0.92990       0.000 NO     DARK 
+  RECTANGLE  0.78990     x 0.92990      90.000 NO     DARK 
+  RECTANGLE  0.92000     x 1.38000       0.000 NO     DARK 
+  RECTANGLE  0.92000     x 1.38000      90.000 NO     DARK 
+  RECTANGLE  1.05000     x 1.02010       0.000 NO     DARK 
+  RECTANGLE  1.05000     x 1.02010      90.000 NO     DARK 
+  RECTANGLE  1.52400     x 0.48260       0.000 NO     DARK 
+  RECTANGLE  1.70180     x 2.43840       0.000 NO     DARK 
+  RECTANGLE  1.70180     x 2.43840      90.000 NO     DARK 
+  RECTANGLE  1.77800     x 5.84200       0.000 NO     DARK 
+  RECTANGLE  1.89990     x 0.48010       0.000 NO     DARK 
+  RECTANGLE  2.99720     x 5.58800      90.000 NO     DARK 
+  RECTANGLE  4.57200     x 1.19380       0.000 NO     DARK 
+  RECTANGLE  10.99820    x 8.00100       0.000 NO     DARK 
+
+     TOP created.
+
+
+================================================================
+     PROCESSING FILM < BOTTOM >
+     TO FILE < E:/STUDY/DATA/PTMD/PCB_v0.1/20141102_22_15/allegro/BOTTOM.art > ...
+================================================================
+
+  FILM PARAMETERS :
+  ---------------------------------------------------------
+  Undefined line width                7.0000
+  Mirror code                         NONE
+  Rotate angle                        NONE
+  Offset x:                           0.0000
+  Offset y:                           0.0000
+  Plot negative                       NO
+  Suppress unconnected internal pads  NO
+
+
+
+  APERTURES USED:
+  ---------------------------------------------------------
+  TYPE       SIZE/NAME                   ROT   MIRROR MODE 
+  ---------------------------------------------------------
+  CIRCLE     0.20000                                  DARK 
+  CIRCLE     0.30480                                  DARK 
+  CIRCLE     0.63500                                  DARK 
+  CIRCLE     1.00000                                  DARK 
+  CIRCLE     1.01600                                  DARK 
+  CIRCLE     1.45010                                  DARK 
+  CIRCLE     1.50000                                  DARK 
+  CIRCLE     1.50010                                  DARK 
+  CIRCLE     1.52400                                  DARK 
+  CIRCLE     1.65000                                  DARK 
+  CIRCLE     1.65100                                  DARK 
+  CIRCLE     1.77800                                  DARK 
+  CIRCLE     2.03200                                  DARK 
+  CIRCLE     3.89990                                  DARK 
+  SQUARE     1.45010                     0.000 NO     DARK 
+  SQUARE     1.52400                     0.000 NO     DARK 
+  SQUARE     1.65000                     0.000 NO     DARK 
+
+     BOTTOM created.
+
+
+================================================================
+     PROCESSING FILM < PhotoPlotArea >
+     TO FILE < E:/STUDY/DATA/PTMD/PCB_v0.1/20141102_22_15/allegro/PhotoPlotArea.art > ...
+================================================================
+
+  FILM PARAMETERS :
+  ---------------------------------------------------------
+  Undefined line width                7.0000
+  Mirror code                         NONE
+  Rotate angle                        NONE
+  Offset x:                           0.0000
+  Offset y:                           0.0000
+  Plot negative                       NO
+  Suppress unconnected internal pads  NO
+
+
+
+  APERTURES USED:
+  ---------------------------------------------------------
+  TYPE       SIZE/NAME                   ROT   MIRROR MODE 
+  ---------------------------------------------------------
+  CIRCLE     7.00000                                  DARK 
+
+     PhotoPlotArea created.
+
+
+================================================================
+     PROCESSING FILM < SolderMaskTop >
+     TO FILE < E:/STUDY/DATA/PTMD/PCB_v0.1/20141102_22_15/allegro/SolderMaskTop.art > ...
+================================================================
+
+  FILM PARAMETERS :
+  ---------------------------------------------------------
+  Undefined line width                7.0000
+  Mirror code                         NONE
+  Rotate angle                        NONE
+  Offset x:                           0.0000
+  Offset y:                           0.0000
+  Plot negative                       NO
+  Suppress unconnected internal pads  NO
+
+
+
+  APERTURES USED:
+  ---------------------------------------------------------
+  TYPE       SIZE/NAME                   ROT   MIRROR MODE 
+  ---------------------------------------------------------
+  CIRCLE     1.42190                                  DARK 
+  CIRCLE     1.45010                                  DARK 
+  CIRCLE     1.50010                                  DARK 
+  CIRCLE     1.65000                                  DARK 
+  CIRCLE     1.90500                                  DARK 
+  CIRCLE     2.03200                                  DARK 
+  CIRCLE     2.28600                                  DARK 
+  CIRCLE     2.41300                                  DARK 
+  CIRCLE     3.68300                                  DARK 
+  CIRCLE     3.89990                                  DARK 
+  SQUARE     1.45010                     0.000 NO     DARK 
+  SQUARE     1.65000                     0.000 NO     DARK 
+  SQUARE     1.67640                     0.000 NO     DARK 
+  SQUARE     1.90500                     0.000 NO     DARK 
+  RECTANGLE  0.63500     x 0.55880       0.000 NO     DARK 
+  RECTANGLE  0.78990     x 0.92990       0.000 NO     DARK 
+  RECTANGLE  0.78990     x 0.92990      90.000 NO     DARK 
+  RECTANGLE  0.92000     x 1.38000       0.000 NO     DARK 
+  RECTANGLE  0.92000     x 1.38000      90.000 NO     DARK 
+  RECTANGLE  1.17700     x 1.14710       0.000 NO     DARK 
+  RECTANGLE  1.17700     x 1.14710      90.000 NO     DARK 
+  RECTANGLE  1.77800     x 0.58420       0.000 NO     DARK 
+  RECTANGLE  1.89990     x 0.48010       0.000 NO     DARK 
+  RECTANGLE  1.95580     x 2.69240       0.000 NO     DARK 
+  RECTANGLE  1.95580     x 2.69240      90.000 NO     DARK 
+  RECTANGLE  2.28600     x 6.60400       0.000 NO     DARK 
+  RECTANGLE  3.50520     x 6.60400      90.000 NO     DARK 
+  RECTANGLE  5.58800     x 1.52400       0.000 NO     DARK 
+  RECTANGLE  11.76020    x 8.76300       0.000 NO     DARK 
+
+     SolderMaskTop created.
+
+
+================================================================
+     PROCESSING FILM < SolderMaskBottom >
+     TO FILE < E:/STUDY/DATA/PTMD/PCB_v0.1/20141102_22_15/allegro/SolderMaskBottom.art > ...
+================================================================
+
+  FILM PARAMETERS :
+  ---------------------------------------------------------
+  Undefined line width                7.0000
+  Mirror code                         NONE
+  Rotate angle                        NONE
+  Offset x:                           0.0000
+  Offset y:                           0.0000
+  Plot negative                       NO
+  Suppress unconnected internal pads  NO
+
+
+
+  APERTURES USED:
+  ---------------------------------------------------------
+  TYPE       SIZE/NAME                   ROT   MIRROR MODE 
+  ---------------------------------------------------------
+  CIRCLE     1.27000                                  DARK 
+  CIRCLE     1.42190                                  DARK 
+  CIRCLE     1.45010                                  DARK 
+  CIRCLE     1.50010                                  DARK 
+  CIRCLE     1.65000                                  DARK 
+  CIRCLE     1.90500                                  DARK 
+  CIRCLE     2.03200                                  DARK 
+  CIRCLE     2.28600                                  DARK 
+  CIRCLE     2.41300                                  DARK 
+  CIRCLE     3.68300                                  DARK 
+  CIRCLE     3.89990                                  DARK 
+  SQUARE     1.45010                     0.000 NO     DARK 
+  SQUARE     1.65000                     0.000 NO     DARK 
+  SQUARE     1.90500                     0.000 NO     DARK 
+
+     SolderMaskBottom created.
+
+
+================================================================
+     PROCESSING FILM < SilkScreenTop >
+     TO FILE < E:/STUDY/DATA/PTMD/PCB_v0.1/20141102_22_15/allegro/SilkScreenTop.art > ...
+================================================================
+
+  FILM PARAMETERS :
+  ---------------------------------------------------------
+  Undefined line width                0.0000
+  Mirror code                         NONE
+  Rotate angle                        NONE
+  Offset x:                           0.0000
+  Offset y:                           0.0000
+  Plot negative                       NO
+  Suppress unconnected internal pads  NO
+
+    WARNING: text composed 0 width line found at (357.7000 300.7000)
+           ... ignored!
+
+    WARNING: text having Multiple 0 width lines; all will be treated the same as the first.
+           ... ignored!
+
+
+
+  APERTURES USED:
+  ---------------------------------------------------------
+  TYPE       SIZE/NAME                   ROT   MIRROR MODE 
+  ---------------------------------------------------------
+  CIRCLE     0.02540                                  DARK 
+  CIRCLE     0.10000                                  DARK 
+  CIRCLE     0.12000                                  DARK 
+  CIRCLE     0.25400                                  DARK 
+  CIRCLE     0.50000                                  DARK 
+
+     SilkScreenTop created with warnings
+
+
+================================================================
+     PROCESSING FILM < SilkScreenBottom >
+     TO FILE < E:/STUDY/DATA/PTMD/PCB_v0.1/20141102_22_15/allegro/SilkScreenBottom.art > ...
+================================================================
+
+  FILM PARAMETERS :
+  ---------------------------------------------------------
+  Undefined line width                0.0000
+  Mirror code                         NONE
+  Rotate angle                        NONE
+  Offset x:                           0.0000
+  Offset y:                           0.0000
+  Plot negative                       NO
+  Suppress unconnected internal pads  NO
+
+
+
+  APERTURES USED:
+  ---------------------------------------------------------
+  TYPE       SIZE/NAME                   ROT   MIRROR MODE 
+  ---------------------------------------------------------
+  CIRCLE     0.02540                                  DARK 
+  CIRCLE     0.10000                                  DARK 
+  CIRCLE     0.12000                                  DARK 
+  CIRCLE     0.25400                                  DARK 
+  CIRCLE     0.50000                                  DARK 
+
+     SilkScreenBottom created.
+
+
+------------------------------------------------------
+ SUMMARY:
+        TOP created.
+        BOTTOM created.
+        PhotoPlotArea created.
+        SolderMaskTop created.
+        SolderMaskBottom created.
+        SilkScreenTop created with warnings
+        SilkScreenBottom created.
+
+ ARTWORK finished

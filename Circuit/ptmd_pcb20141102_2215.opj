@@ -1,0 +1,82 @@
+(ExpressProject ""
+  (ProjectVersion "19981106")
+  (ProjectType "PCB")
+  (Folder "Design Resources"
+    (Folder "Library")
+    (File ".\ptmd_pcb20141102_2215.dsn"
+      (Type "Schematic Design"))
+    (BuildFileAddedOrDeleted "x")
+    (CompileFileAddedOrDeleted "x")
+    (NoModify)
+    (BOM_Scope "0")
+    (BOM_Mode "0")
+    (BOM_Report_File
+       "E:\STUDY\DATA\Thesis_circuit_son\BOM\PTMD_bom20141106_2030.BOM")
+    (BOM_Merge_Include "FALSE")
+    (BOM_Property_Combine_7.0
+       "{Item}\t{Quantity}\t{Reference}\t{Value}\t{Mf Part Number}\t{DNI}\t{PCB Footprint}\t{ROOM}")
+    (BOM_Header
+       "Item\tQuantity\tReference\tPart\tMf Part Number\tDNI\tFootprint\tRoom")
+    (BOM_Include_File
+       "E:\STUDY\DATA\PTMD\PCB_V0.1\20141102_22_15\PTMD_PCB20141102_2215.INC")
+    (BOM_Include_File_Combine_7.0 "{Item}\t{Quantity}\t{Reference}\t{Value}")
+    (BOM_One_Part_Per_Line "FALSE")
+    (Open_BOM_in_Excel "TRUE")
+    (BOM_View_Output "FALSE")
+    ("Create Allegro Netlist" "TRUE")
+    ("Allegro Netlist Directory" "allegro")
+    ("View Allegro Netlist Files" "FALSE")
+    ("Update Allegro Board" "TRUE")
+    ("Allegro Netlist Input Board File"
+       "E:\STUDY\DATA\PTMD\PCB_v0.1\20141102_22_15\allegro\ptmd_pcb20141102_2215.brd")
+    ("Allegro Netlist Output Board File"
+       "E:\STUDY\DATA\PTMD\PCB_v0.1\20141102_22_15\allegro\ptmd_pcb20141102_2215.brd")
+    ("Allegro Netlist Remove Etch" "FALSE")
+    ("Allegro Netlist Place Changed Component" "ALWAYS_REPLACE")
+    ("Allegro Netlist Open Board in Allegro" "ALLEGRO")
+    ("Allegro Setup Configuration File"
+       "C:\Cadence\SPB_16.5\tools\capture\allegro.cfg")
+    ("Allegro Setup Backup Versions" "3")
+    ("Allegro Setup Output Warnings" "TRUE")
+    ("Allegro Setup Ignore Constraints" "FALSE")
+    ("Allegro Setup Part Type Length" "31")
+    ("Allegro Netlist Combine Property String" "PCB Footprint")
+    ("Allegro Netlist Ignore Fixed Property" "FALSE")
+    ("Allegro Netlist User Defined Property" "FALSE")
+    (Netlist_TAB "0"))
+  (Folder "Outputs"
+    (File ".\ptmd_pcb20141102_2215.bom"
+      (Type "Report"))
+    (File ".\allegro\pstxnet.dat"
+      (Type "Report")
+      (DisplayName "pstxnet.dat"))
+    (File ".\allegro\pstxprt.dat"
+      (Type "Report")
+      (DisplayName "pstxprt.dat"))
+    (File ".\allegro\pstchip.dat"
+      (Type "Report")
+      (DisplayName "pstchip.dat"))
+    (File "e:\study\data\thesis_circuit_son\bom\ptmd_bom20141106.bom"
+      (Type "Report"))
+    (File "e:\study\data\thesis_circuit_son\bom\ptmd_bom20141106_2030.bom"
+      (Type "Report")))
+  (Folder "Referenced Projects")
+  (PartMRUSelector
+    (IR2011
+      (FullPartName "IR2011.Normal")
+      (LibraryName "E:\STUDY\DATA\WATER SENSOR\ORCAD LIBRARY\WATERSENSOR.OLB")
+      (DeviceIndex "0")))
+  (GlobalState
+    (FileView
+      (Path "Design Resources")
+      (Path "Design Resources" ".\ptmd_pcb20141102_2215.dsn")
+      (Path "Design Resources" ".\ptmd_pcb20141102_2215.dsn" "SCHEMATIC1")
+      (Path "Outputs")
+      (Select "Design Resources"))
+    (HierarchyView)
+    (Doc
+      (Type "COrCapturePMDoc")
+      (Frame
+        (Placement "44 2 3 -1 -1 -8 -30 0 200 0 163"))
+      (Tab 0)))
+  (ISPCBBASICLICENSE "false"))

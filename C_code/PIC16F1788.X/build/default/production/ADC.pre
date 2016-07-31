@@ -9026,21 +9026,19 @@ bool UARTSend(unsigned char *pData, unsigned char stLen);
 # 13 "interrupts.h"
 void interrupt isr(void);
 
-# 54 "ADC.h"
+# 37 "ADC.h"
 void ADCIni(char ANx , char Fosc);
 void ADCINTIni(char ANx, char Fosc);
 int ReadADC(char ANx);
 int16_t ReadADCINT(void);
 int16_t ChkPeakVal(void);
-int16_t SearchingOffSet(void);
 
 # 3 "ADC.c"
 extern volatile int16_t ADC_vADC;
-extern volatile int16_t ADC_vADCAry[10];
+extern volatile int16_t ADC_vADCAry[100];
 extern volatile bit flgADCAryFull;
-extern char ADCON0Tmp;
-int32_t Sum_e;
-int32_t vAvg, vAvg_Old;
+extern uint8_t ADCON0Tmp;
+
 
 void ADCINTIni(char ANx, char Fosc)
 {
@@ -9056,60 +9054,53 @@ ANSELB = 0b00000001<<(ANx-7);
 }
 ADCON1 = 0b10000000;
 
-# 28
+# 27
 ADCON0 = (ANx<<2) & 0b01111111;
 
-# 36
+# 35
 ADCON2 = 0b00001111;
 
-# 43
+# 42
 ADIF = 0;
 
 ADIE = 1;
 
 ADON = 1;
 
-# 53
+# 52
 _delay(100);
 
 GO=1;
 }
 
-# 140
+# 139
 void ADCIni(char ANx , char Fosc)
 {
 TRISA = TRISA | (0b00000001<<ANx);
 ANSELA = ANSELA | (0b00000001<<ANx);
 ADCON1 = 0b11110000;
 
-# 159
+# 158
 ADCON2 = 0b00001111;
 
-# 165
+# 164
 ADCON0 = (ANx<<2) & 0b01111100;
 
-# 173
+# 172
 ADON = 1;
 _delay(100);
 GO = 1;
+
+ADCON0Tmp = ADCON0;
 }
 
 int ReadADC(char ANx)
 {
 int vADC;
-
-
-ADCON0 = (ADCON0&0b10000011)|((ANx<<2) & 0b01111100);
-ADON = 1;
-_delay(200);
-GO = 1;
-while (DONE){};
-
+ADCON0 = ADCON0Tmp;
 vADC = ADRESH;
 vADC <<=8;
 vADC |=ADRESL;
-
-ADIF = 1;
 GO=1;
 
 return vADC;
@@ -9146,7 +9137,7 @@ tmpMAX = 0;
 
 if (flgADCAryFull==1)
 {
-for (char i=0;i<10;i++)
+for (char i=0;i<100;i++)
 {
 if(ADC_vADCAry[i]>tmpMAX)
 {
@@ -9160,55 +9151,4 @@ else
 {
 return 0;
 }
-}
-
-int16_t SearchingOffSet(void)
-{
-
-int32_t error, temp;
-static int32_t uVout, error_old;
-
-# 265
-vAvg = ReadADC(9);
-
-temp = vAvg;
-
-vAvg = vAvg_Old +(vAvg-vAvg_Old)/10;
-
-if ((vAvg==vAvg_Old)&&(temp!=vAvg))
-{
-if ((temp>vAvg))
-{
-vAvg++;
-}
-else
-{
-vAvg--;
-}
-}
-
-error = -(3000 - vAvg);
-
-Sum_e = Sum_e + error;
-
-uVout = error*0 + Sum_e*0.000 + ((error-error_old)/1)*0;
-
-# 298
-if (uVout > 0x0FFF)
-{
-uVout = 0x0FFF;
-}
-else if (uVout < 0x0000)
-{
-uVout = 0x0000;
-}
-else
-{
-;
-}
-
-error_old = error;
-
-
-return uVout;
 }

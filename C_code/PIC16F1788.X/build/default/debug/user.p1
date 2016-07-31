@@ -7,7 +7,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _OPTION_REG `Vuc ~T0 @X0 0 e@149 ]
 "18398
 [v _TRISC2 `Vb ~T0 @X0 0 e@1138 ]
-"52 ADC.h
+"37 ADC.h
 [v _ADCIni `(v ~T0 @X0 0 ef2`uc`uc ]
 "11 DAC.h
 [v _DACInit `(v ~T0 @X0 0 ef ]
@@ -6561,12 +6561,11 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;UART.h: 33: bool UARTReceive(char *pData);
 [; ;UART.h: 34: bool UARTSend(unsigned char *pData, unsigned char stLen);
 [; ;interrupts.h: 13: void interrupt isr(void);
-[; ;ADC.h: 52: void ADCIni(char ANx , char Fosc);
-[; ;ADC.h: 53: void ADCINTIni(char ANx, char Fosc);
-[; ;ADC.h: 54: int ReadADC(char ANx);
-[; ;ADC.h: 55: int16_t ReadADCINT(void);
-[; ;ADC.h: 56: int16_t ChkPeakVal(void);
-[; ;ADC.h: 57: int16_t SearchingOffSet(void);
+[; ;ADC.h: 37: void ADCIni(char ANx , char Fosc);
+[; ;ADC.h: 38: void ADCINTIni(char ANx, char Fosc);
+[; ;ADC.h: 39: int ReadADC(char ANx);
+[; ;ADC.h: 40: int16_t ReadADCINT(void);
+[; ;ADC.h: 41: int16_t ChkPeakVal(void);
 [; ;PWM.h: 20: void PWMSetConfig(void);
 [; ;PWM.h: 21: void PWMIni(void);
 [; ;PWM.h: 22: void PWMSetPeriod(uint16_t cntPeriod );
@@ -6576,51 +6575,49 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;PWM.h: 26: void SetPeriod (unsigned int rPeriod);
 [; ;PWM.h: 27: void SetDeadTime(unsigned char rDeadTime);
 [; ;dio.h: 19: void DioIni(void);
-[; ;EEPROM.h: 10: uint16_t EEPROMRead(uint8_t Address);
-[; ;EEPROM.h: 11: char EEPROMWrite(uint16_t Data, uint8_t Address);
 [; ;DAC.h: 11: void DACInit(void);
 [; ;DAC.h: 12: void DACSet(uint8_t Val);
-"30 user.c
+"29 user.c
 [v _InitApp `(v ~T0 @X0 1 ef ]
 {
-[; ;user.c: 29: void InitApp(void)
-[; ;user.c: 30: {
+[; ;user.c: 28: void InitApp(void)
+[; ;user.c: 29: {
 [e :U _InitApp ]
 [f ]
-[; ;user.c: 32: TMR0 = 205;
-"32
+[; ;user.c: 31: TMR0 = 205;
+"31
 [e = _TMR0 -> -> 205 `i `uc ]
-[; ;user.c: 33: INTCON = 0b10100000;
-"33
+[; ;user.c: 32: INTCON = 0b10100000;
+"32
 [e = _INTCON -> -> 160 `i `uc ]
-[; ;user.c: 39: OPTION_REG = 0b10000011;
-"39
+[; ;user.c: 38: OPTION_REG = 0b10000011;
+"38
 [e = _OPTION_REG -> -> 131 `i `uc ]
-[; ;user.c: 48: TRISC2 = 0;
-"48
+[; ;user.c: 47: TRISC2 = 0;
+"47
 [e = _TRISC2 -> -> 0 `i `b ]
-[; ;user.c: 50: ADCIni(1, 0);
-"50
+[; ;user.c: 49: ADCIni(1, 0);
+"49
 [e ( _ADCIni (2 , -> -> 1 `i `uc -> -> 0 `i `uc ]
-[; ;user.c: 53: DACInit();
-"53
+[; ;user.c: 51: DACInit();
+"51
 [e ( _DACInit ..  ]
-[; ;user.c: 56: PWMIni();
-"56
+[; ;user.c: 54: PWMIni();
+"54
 [e ( _PWMIni ..  ]
-[; ;user.c: 59: DioIni();
-"59
+[; ;user.c: 57: DioIni();
+"57
 [e ( _DioIni ..  ]
-[; ;user.c: 62: UARTIni();
-"62
+[; ;user.c: 60: UARTIni();
+"60
 [e ( _UARTIni ..  ]
-[; ;user.c: 67: TMR0IE = 1;
-"67
+[; ;user.c: 65: TMR0IE = 1;
+"65
 [e = _TMR0IE -> -> 1 `i `b ]
-[; ;user.c: 68: (GIE = 1);
-"68
+[; ;user.c: 66: (GIE = 1);
+"66
 [e = _GIE -> -> 1 `i `b ]
-[; ;user.c: 69: }
-"69
+[; ;user.c: 67: }
+"67
 [e :UE 720 ]
 }

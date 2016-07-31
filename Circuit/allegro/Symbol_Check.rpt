@@ -1,0 +1,28 @@
+(---------------------------------------------------------------------)
+(                                                                     )
+(    Unplaced Symbol Availability Check                               )
+(                                                                     )
+(    Drawing          : ptmd_pcb20141102_2215.brd                     )
+(    Software Version : 16.5P003                                      )
+(    Date/Time        : Fri Nov 07 16:42:36 2014                      )
+(                                                                     )
+(---------------------------------------------------------------------)
+
+
+Current PSMPATH consists of:
+	.
+	symbols
+	..
+	../symbols
+	C:/Cadence/SPB_16.5/share/local/pcb/symbols
+	C:/Cadence/SPB_16.5/share/pcb/pcb_lib/symbols
+	C:/Cadence/SPB_16.5/share/pcb/allegrolib/symbols
+	C:\CADENCE\SPB_16.5\SHARE\PCB\PCB_LIB\SYMBOLS\
+	C:\Cadence\SPB_16.5\share\pcb\pcb_lib\symbols\script\
+
+
+All Symbols Found
+
+Total symbols placed:      90 out of 90
+
+

@@ -9,15 +9,14 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _DAC1CON0 `Vuc ~T0 @X0 0 e@280 ]
 "15974
 [v _DAC1OE1 `Vb ~T0 @X0 0 e@2245 ]
+"15976
+[v _DAC1OE2 `Vb ~T0 @X0 0 e@2244 ]
 "15970
 [v _DAC1EN `Vb ~T0 @X0 0 e@2247 ]
-"2996
-[v _DAC1CON1 `Vuc ~T0 @X0 0 e@281 ]
 "2034
 [v _ADCON0 `Vuc ~T0 @X0 0 e@157 ]
-"151 C:\Program Files (x86)\Microchip\xc8\v1.21\include\pic.h
-[v __delay `(v ~T0 @X0 0 ef1`ul ]
-[p i __delay ]
+"2996
+[v _DAC1CON1 `Vuc ~T0 @X0 0 e@281 ]
 [; ;pic16f1788.h: 44: extern volatile unsigned char INDF0 @ 0x000;
 "46 C:\Program Files (x86)\Microchip\xc8\v1.21\include\pic16f1788.h
 [; ;pic16f1788.h: 46: asm("INDF0 equ 00h");
@@ -6555,62 +6554,59 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;stdbool.h: 12: typedef unsigned char bool;
 [; ;DAC.h: 11: void DACInit(void);
 [; ;DAC.h: 12: void DACSet(uint8_t Val);
-"11 DAC.c
+"34 DAC.c
 [v _ADCON0Tmp `uc ~T0 @X0 1 e ]
-[; ;DAC.c: 11: char ADCON0Tmp;
-"37
+[; ;DAC.c: 34: uint8_t ADCON0Tmp;
+"36
 [v _DACInit `(v ~T0 @X0 1 ef ]
 {
-[; ;DAC.c: 36: void DACInit(void)
-[; ;DAC.c: 37: {
+[; ;DAC.c: 35: void DACInit(void)
+[; ;DAC.c: 36: {
 [e :U _DACInit ]
 [f ]
-[; ;DAC.c: 38: TRISA2 = 0;
-"38
+[; ;DAC.c: 37: TRISA2 = 0;
+"37
 [e = _TRISA2 -> -> 0 `i `b ]
-[; ;DAC.c: 39: ANSA2 = 1;
-"39
-[e = _ANSA2 -> -> 1 `i `b ]
-[; ;DAC.c: 41: DAC1NSS = 1;
-"41
+[; ;DAC.c: 38: ANSA2 = 0;
+"38
+[e = _ANSA2 -> -> 0 `i `b ]
+[; ;DAC.c: 40: DAC1NSS = 1;
+"40
 [e = _DAC1NSS -> -> 1 `i `b ]
-[; ;DAC.c: 66: DAC1CON0 = DAC1CON0 & (0b11110010);
-"66
-[e = _DAC1CON0 -> & -> _DAC1CON0 `i -> 242 `i `uc ]
-[; ;DAC.c: 68: DAC1OE1 = 1;
-"68
+[; ;DAC.c: 44: DAC1CON0 = DAC1CON0 & (0b11110011);
+"44
+[e = _DAC1CON0 -> & -> _DAC1CON0 `i -> 243 `i `uc ]
+[; ;DAC.c: 46: DAC1OE1 = 1;
+"46
 [e = _DAC1OE1 -> -> 1 `i `b ]
-[; ;DAC.c: 70: DAC1EN = 1;
-"70
+[; ;DAC.c: 48: DAC1OE2 = 0;
+"48
+[e = _DAC1OE2 -> -> 0 `i `b ]
+[; ;DAC.c: 50: DAC1EN = 1;
+"50
 [e = _DAC1EN -> -> 1 `i `b ]
-[; ;DAC.c: 72: DAC1CON1 = 0;
-"72
-[e = _DAC1CON1 -> -> 0 `i `uc ]
-[; ;DAC.c: 74: }
-"74
+[; ;DAC.c: 52: }
+"52
 [e :UE 720 ]
 }
-"77
+"55
 [v _DACSet `(v ~T0 @X0 1 ef1`uc ]
 {
-[; ;DAC.c: 76: void DACSet(uint8_t Val)
-[; ;DAC.c: 77: {
+[; ;DAC.c: 54: void DACSet(uint8_t Val)
+[; ;DAC.c: 55: {
 [e :U _DACSet ]
 [v _Val `uc ~T0 @X0 1 r1 ]
 [f ]
-[; ;DAC.c: 78: ADCON0Tmp = ADCON0;
-"78
+[; ;DAC.c: 58: ADCON0Tmp = ADCON0;
+"58
 [e = _ADCON0Tmp _ADCON0 ]
-[; ;DAC.c: 80: ADCON0 = (((ADCON0)&0b1000001) | 0b0111100);
-"80
-[e = _ADCON0 -> | & -> _ADCON0 `i -> 65 `i -> 60 `i `uc ]
-[; ;DAC.c: 81: _delay(20);
-"81
-[e ( __delay (1 -> -> -> 20 `i `l `ul ]
-[; ;DAC.c: 82: DAC1CON1 = Val;
-"82
+[; ;DAC.c: 60: ADCON0 = (ADCON0&0b10000011)|0b01111000;
+"60
+[e = _ADCON0 -> | & -> _ADCON0 `i -> 131 `i -> 120 `i `uc ]
+[; ;DAC.c: 61: DAC1CON1 = Val;
+"61
 [e = _DAC1CON1 _Val ]
-[; ;DAC.c: 83: }
-"83
+[; ;DAC.c: 63: }
+"63
 [e :UE 721 ]
 }

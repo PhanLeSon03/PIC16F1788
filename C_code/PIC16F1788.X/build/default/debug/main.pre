@@ -9121,6 +9121,12 @@ extern int vsscanf(const char *, const char *, va_list);
 extern int sprintf(char *, const char *, ...);
 extern int printf(const char *, ...);
 
+# 41 "C:\Program Files (x86)\Microchip\xc8\v1.21\include\eeprom_routines.h"
+extern void eeprom_write(unsigned char addr, unsigned char value);
+extern unsigned char eeprom_read(unsigned char addr);
+extern void eecpymem(volatile unsigned char *to, __eeprom unsigned char *from, unsigned char size);
+extern void memcpyee(__eeprom unsigned char *to, const unsigned char *from, unsigned char size);
+
 # 19 "system.h"
 void ConfigureOscillator(void);
 
@@ -9145,13 +9151,12 @@ void SetPWM1(unsigned int DutyCycle);
 void SetPeriod (unsigned int rPeriod);
 void SetDeadTime(unsigned char rDeadTime);
 
-# 52 "ADC.h"
+# 37 "ADC.h"
 void ADCIni(char ANx , char Fosc);
 void ADCINTIni(char ANx, char Fosc);
 int ReadADC(char ANx);
 int16_t ReadADCINT(void);
 int16_t ChkPeakVal(void);
-int16_t SearchingOffSet(void);
 
 # 25 "App.h"
 bool ScanFrq(void);
@@ -9166,22 +9171,20 @@ char EEPROMWrite(uint16_t Data, uint8_t Address);
 void DACInit(void);
 void DACSet(uint8_t Val);
 
-# 39 "main.c"
+# 34 "main.c"
 __config("__CONFIG", "pic", "FOSC_INTOSC & WDTE_OFF & PWRTE_ON & MCLRE_OFF & BOREN_OFF & LVP_OFF & CPD_OFF & CP_OFF & PLLEN_ON & CLKOUTEN_OFF");
 
-# 45
+# 40
 extern int16_t cntBlink;
 extern volatile bit flgTicTac;
 extern volatile bit flgPSMC;
 extern uint8_t cntPerd;
 extern volatile unsigned char UART_cntTxUART;
-extern char ADCON0Tmp;
-
 char chBufADC[20];
 int vADCAN0;
 int cntPWM;
 int vADCANFlt;
-int vPWM = 1000;;
+int vPWM = 3084;;
 int vADCANOld;
 int vADCANOld1;
 int cntCur;
@@ -9190,15 +9193,13 @@ char RA7Old;
 char bFlg;
 char cntUARTSend;
 
-# 70
+# 63
 void main(void)
 {
 
 
-char stBlinking = 0;
 
 int16_t vPeak;
-int16_t vDAC;
 
 
 ConfigureOscillator();
@@ -9207,17 +9208,11 @@ ConfigureOscillator();
 
 InitApp();
 
-ADCON0Tmp = ADCON0;
 
-vPWM = eeprom_read(0x00);
-vPWM = (vPWM | (eeprom_read(0x01)<<8));
+vPWM = eeprom_read(0);
+DACSet(100);
 
-PWMSetPeriod (16000-((uint32_t)15600*vPWM)/4096);
-PWMSetDutyCycle (8000-((uint32_t)15600*vPWM)/8192);
-
-# 99
-DACSet(0);
-
+# 87
 while(1)
 {
 
@@ -9225,77 +9220,18 @@ if (flgTicTac == 1)
 {
 flgTicTac = 0;
 
-# 114
-vDAC = SearchingOffSet();
-
+# 100
+RC2 = !RC2;
 cntCur++;
 
 vADCAN0 = ReadADC(1);
 
 
-if (vDAC > 1024)
-{
-stBlinking = 4;
-}
-else if (vDAC > 1000)
-{
-stBlinking = 3;
-}
-else if (vDAC > 990)
-{
-stBlinking = 2;
-}
-else if (vDAC > 940)
-{
-stBlinking = 1;
-}
-else
-{
-stBlinking = 0;
-}
-
-
-if (stBlinking == 1)
-{
-if (cntCur > 12)
-{
-RC2 = !RC2;
-cntCur = 0;
-}
-
-}
-else if (stBlinking == 2)
-{
-if (cntCur > 25)
-{
-RC2 = !RC2;
-cntCur = 0;
-}
-}
-else if (stBlinking == 3)
-{
-if (cntCur > 50)
-{
-RC2 = !RC2;
-cntCur = 0;
-}
-}
-else if (stBlinking == 4)
-{
-RC2 = 0;
-cntCur = 0;
-}
-else
-{
-if (cntCur > 12)
-{
-RC2 = !RC2;
-cntCur = 0;
-}
-}
-
 
 vADCANFlt = vADCANOld+(vADCAN0-vADCANOld)/20;
+
+
+
 
 if ((vADCANFlt==vADCANOld)&&(vADCAN0!=vADCANOld))
 {
@@ -9309,34 +9245,47 @@ vADCANFlt--;
 }
 }
 
+if ((RA7==1)&&(RA7Old==0))
+{
+
+# 132
+eeprom_write(0,vPWM);
+}
+else
+{
+PSMC1INT = 0x10;
+}
 
 vADCANOld = vADCANFlt;
-
-if ((vADCANFlt >= (vPWM+3))||((vADCANFlt <= (vPWM-3))))
-{
 vPWM = vADCANFlt;
 
-}
-
-if (RA7==1)
-{
-PWMSetPeriod (16000-((uint32_t)15600*vPWM)/4096);
-PWMSetDutyCycle (8000-((uint32_t)15600*vPWM)/8192);
-}
-
-DACSet(vDAC>>4);
 
 cntUARTSend++;
-
-if ((RA7==0)&&(RA7Old==1))
+if ((cntUARTSend==50))
 {
-(void)eeprom_write(0x00,vPWM);
-(void)eeprom_write(0x01,(vPWM>>8));
+
+
+sprintf(chBufADC,"ADC:%d\r\n",vADCANFlt);
+UARTSend(chBufADC,0);
+cntUARTSend = 0;
+}
+else if ((cntUARTSend)%2==1)
+{
+
+
+}
+else
+{
+;
 }
 
+# 169
 RA7Old = RA7;
+
+
 }
 
+# 197
 }
 }
 

@@ -13,8 +13,8 @@
 #include "interrupts.h"
 #include "PWM.h"
 
-#define PSMC_NUMPERD_ON 40     /* number of period to stop PSMC function*/
-#define PSMC_NUMPERD_OFF 200
+#define PSMC_NUMPERD_ON 10     /* number of period to stop PSMC function*/
+#define PSMC_NUMPERD_OFF 250
 
 /******************************************************************************/
 /* Interrupt Routines                                                         */
@@ -41,7 +41,7 @@ volatile bit flgPSMC;
 volatile bit flgTicTac;
 volatile bit flgADCAryFull;
 
-extern uint16_t vPWM;
+extern int vPWM;
 
 /* static variable */
 #if _POLLING
@@ -102,12 +102,11 @@ void interrupt isr(void)
                flgPSMC = true;
                cntPerd = 0;
             }
-            ////PWMSetPeriod (64000-((uint32_t)63990*vPWM)/4096);
-            ////PWMSetDutyCycle (32000-((uint32_t)63990*vPWM)/8192);//old:60800
-            PWMSetPeriod (16000-((uint32_t)15600*vPWM)/4096);
-            PWMSetDutyCycle (8000-((uint32_t)15600*vPWM)/8192);
+            PWMSetPeriod (64000-((uint32_t)62720*vPWM)/4096);
+            PWMSetDutyCycle (32000-((uint32_t)62720*vPWM)/8192);
             //PWMSetDutyCycle (8000-((uint32_t)7360*vPWM)/4096);
-            //64 MHz
+            //f = Fpmsc_clk/(X+1)
+            //X = Fpmsc_clk/f -1
         }
         else /*OFF cycle*/
         {
@@ -178,7 +177,7 @@ void interrupt isr(void)
             flgADCAryFull = true;
             ADIE = 0; /* Disable ADC interrupt */
 
-             TXIE = 1;/* Enable UART Transmission */
+             //TXIE = 1;/* Enable UART Transmission */
         }
 
         ADC_vADCAry[idxADC] = ADRESH<<8;

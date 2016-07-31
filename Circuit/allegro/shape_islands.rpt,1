@@ -1,0 +1,20 @@
+(---------------------------------------------------------------------)
+(                                                                     )
+(    Shape Island Report                                              )
+(                                                                     )
+(    Drawing          : ptmd_pcb20141102_2215.brd                     )
+(    Software Version : 16.5P003                                      )
+(    Date/Time        : Sat Nov 08 14:47:30 2014                      )
+(                                                                     )
+(---------------------------------------------------------------------)
+
+
+  Total islands on design: 3
+
+
+  <<<  ETCH  >>>
+
+    Layer = TOP
+	Point on shape: (396.6522 288.1596)  Net: GND
+	Point on shape: (390.1078 291.0269)  Net: GND
+	Point on shape: (416.8063 314.4105)  Net: GND

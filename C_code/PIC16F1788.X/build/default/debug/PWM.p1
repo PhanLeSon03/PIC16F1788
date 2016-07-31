@@ -6631,12 +6631,12 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;PWM.c: 56: PWMSetPhase(0);
 "56
 [e ( _PWMSetPhase (1 -> -> 0 `i `ui ]
-[; ;PWM.c: 78: PSMC1CLK = 0x31;
+[; ;PWM.c: 78: PSMC1CLK = 0x01;
 "78
-[e = _PSMC1CLK -> -> 49 `i `uc ]
-[; ;PWM.c: 82: PSMC1INT = 0x00;
+[e = _PSMC1CLK -> -> 1 `i `uc ]
+[; ;PWM.c: 82: PSMC1INT = 0x10;
 "82
-[e = _PSMC1INT -> -> 0 `i `uc ]
+[e = _PSMC1INT -> -> 16 `i `uc ]
 [; ;PWM.c: 86: PSMC1OEN = 0x03;
 "86
 [e = _PSMC1OEN -> -> 3 `i `uc ]
@@ -6655,12 +6655,12 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;PWM.c: 98: PSMC1DCSbits.P1DCST = 1;
 "98
 [e = . . _PSMC1DCSbits 0 0 -> -> 1 `i `uc ]
-[; ;PWM.c: 101: PSMC1DBR = 10;
+[; ;PWM.c: 101: PSMC1DBR = 0;
 "101
-[e = _PSMC1DBR -> -> 10 `i `uc ]
-[; ;PWM.c: 102: PSMC1DBF = 10;
+[e = _PSMC1DBR -> -> 0 `i `uc ]
+[; ;PWM.c: 102: PSMC1DBF = 0;
 "102
-[e = _PSMC1DBF -> -> 10 `i `uc ]
+[e = _PSMC1DBF -> -> 0 `i `uc ]
 [; ;PWM.c: 106: PSMC1CON = 0b11110001;
 "106
 [e = _PSMC1CON -> -> 241 `i `uc ]

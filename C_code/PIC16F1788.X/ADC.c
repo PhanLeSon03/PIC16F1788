@@ -3,9 +3,8 @@
 extern volatile int16_t ADC_vADC;
 extern volatile int16_t ADC_vADCAry[ADC_LARRAY];
 extern volatile bit flgADCAryFull;
-extern char ADCON0Tmp;
-int32_t Sum_e;
-int32_t vAvg, vAvg_Old;
+extern uint8_t ADCON0Tmp;
+
 
 void ADCINTIni(char ANx, char Fosc)
 {
@@ -173,24 +172,17 @@ void ADCIni(char ANx , char Fosc)
     ADON = 1;
     _delay(100);
     GO = 1;
+
+    ADCON0Tmp = ADCON0;
 }
 
 int ReadADC(char ANx)
 {
     int vADC;
-
-    //ADCON0 = ADCON0Tmp;
-    ADCON0 = (ADCON0&0b10000011)|((ANx<<2) & 0b01111100);
-    ADON = 1;
-    _delay(200);
-    GO = 1;
-    while (DONE){};
-
+    ADCON0 = ADCON0Tmp;
     vADC = ADRESH;
     vADC <<=8;
     vADC |=ADRESL;
-
-    ADIF = true;
     GO=1;
 
     return vADC;
@@ -241,75 +233,4 @@ int16_t ChkPeakVal(void)
     {
         return 0;
     }
-}
-
-int16_t SearchingOffSet(void)
-{
-
-    int32_t error, temp;
-    static int32_t uVout, error_old;
-
-    //if (flgADCAryFull==true) /* Data in array are ready*/
-    //{
-    //    flgADCAryFull = false;
-
-        //vAvg = 0;
-        
-        //for (char i=0;i<ADC_LARRAY;i++)
-        //{
-        //    vAvg+=ADC_vADCAry[i];
-        //}
-
-        //vAvg = vAvg/ADC_LARRAY;
-
-        vAvg = ReadADC(AN9);
-
-        temp = vAvg;
-
-        vAvg = vAvg_Old +(vAvg-vAvg_Old)/10;
-
-        if ((vAvg==vAvg_Old)&&(temp!=vAvg))
-        {
-            if ((temp>vAvg))
-            {
-                vAvg++;
-            }
-            else
-            {
-                vAvg--;
-            }
-        }
-
-        error = -(ADC_THRESSENS - vAvg);
-
-        Sum_e = Sum_e + error;
-
-        uVout = error*KD + Sum_e*KI + ((error-error_old)/dT)*KD;
-
-        //if (error < 0)
-        //{
-        //    uVout++;
-        //}
-        //else
-        //{
-        //    uVout--;
-        //}
-        
-        if (uVout > ADC_MAX)
-        {
-            uVout = ADC_MAX;
-        }
-        else if (uVout < ADC_MIN)
-        {
-            uVout = ADC_MIN;
-        }
-        else
-        {
-            ;
-        }
-
-        error_old = error;
-    //}
-
-    return uVout;
 }

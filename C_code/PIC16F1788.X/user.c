@@ -18,7 +18,6 @@
 #include "PWM.h"
 #include "UART.h"
 #include "dio.h"
-#include "EEPROM.h"
 #include "DAC.h"
 /******************************************************************************/
 /* User Functions                                                             */
@@ -48,8 +47,7 @@ void InitApp(void)
     TRISC2 = 0;
     /* Analog configuration*/
     ADCIni(AN1, Fosc_2);
-    //ADCINTIni(AN9, Fosc_32); // Read ADC from sensor
-
+    //ADCINTIni(AN9, Fosc_2);
     DACInit();
 
     /* inititalize PWM */

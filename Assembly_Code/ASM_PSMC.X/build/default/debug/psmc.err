@@ -1,0 +1,63 @@
+Warning[205] C:\USERS\PCMART\MPLABXPROJECTS\ASM_PSMC.X\PSMC.ASM 4 : Found directive in column 1. (__CONFIG)
+Message[303] C:\USERS\PCMART\MPLABXPROJECTS\ASM_PSMC.X\PSMC.ASM 4 : Program word too large.  Truncated to core size. (FFA4)
+Warning[205] C:\USERS\PCMART\MPLABXPROJECTS\ASM_PSMC.X\PSMC.ASM 5 : Found directive in column 1. (__CONFIG)
+Message[303] C:\USERS\PCMART\MPLABXPROJECTS\ASM_PSMC.X\PSMC.ASM 5 : Program word too large.  Truncated to core size. (DFFF)
+Warning[205] C:\USERS\PCMART\MPLABXPROJECTS\ASM_PSMC.X\PSMC.ASM 9 : Found directive in column 1. (cblock)
+Warning[205] C:\USERS\PCMART\MPLABXPROJECTS\ASM_PSMC.X\PSMC.ASM 20 : Found directive in column 1. (ENDC)
+Warning[205] C:\USERS\PCMART\MPLABXPROJECTS\ASM_PSMC.X\PSMC.ASM 22 : Found directive in column 1. (cblock)
+Warning[205] C:\USERS\PCMART\MPLABXPROJECTS\ASM_PSMC.X\PSMC.ASM 37 : Found directive in column 1. (ENDC)
+Warning[205] C:\USERS\PCMART\MPLABXPROJECTS\ASM_PSMC.X\PSMC.ASM 64 : Found directive in column 1. (endm)
+Warning[205] C:\USERS\PCMART\MPLABXPROJECTS\ASM_PSMC.X\PSMC.ASM 66 : Found directive in column 1. (org)
+Warning[203] C:\USERS\PCMART\MPLABXPROJECTS\ASM_PSMC.X\PSMC.ASM 67 : Found opcode in column 1. (goto)
+Warning[203] C:\USERS\PCMART\MPLABXPROJECTS\ASM_PSMC.X\PSMC.ASM 70 : Found opcode in column 1. (nop)
+Warning[203] C:\USERS\PCMART\MPLABXPROJECTS\ASM_PSMC.X\PSMC.ASM 71 : Found opcode in column 1. (nop)
+Warning[203] C:\USERS\PCMART\MPLABXPROJECTS\ASM_PSMC.X\PSMC.ASM 72 : Found opcode in column 1. (nop)
+Message[302] C:\USERS\PCMART\MPLABXPROJECTS\ASM_PSMC.X\PSMC.ASM 96 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[302] C:\USERS\PCMART\MPLABXPROJECTS\ASM_PSMC.X\PSMC.ASM 98 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[302] C:\USERS\PCMART\MPLABXPROJECTS\ASM_PSMC.X\PSMC.ASM 100 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[302] C:\USERS\PCMART\MPLABXPROJECTS\ASM_PSMC.X\PSMC.ASM 136 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[302] C:\USERS\PCMART\MPLABXPROJECTS\ASM_PSMC.X\PSMC.ASM 143 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[302] C:\USERS\PCMART\MPLABXPROJECTS\ASM_PSMC.X\PSMC.ASM 147 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[302] C:\USERS\PCMART\MPLABXPROJECTS\ASM_PSMC.X\PSMC.ASM 149 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[302] C:\USERS\PCMART\MPLABXPROJECTS\ASM_PSMC.X\PSMC.ASM 158 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[305] C:\USERS\PCMART\MPLABXPROJECTS\ASM_PSMC.X\PSMC.ASM 164 : Using default destination of 1 (file).
+Message[302] C:\USERS\PCMART\MPLABXPROJECTS\ASM_PSMC.X\PSMC.ASM 168 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[302] C:\USERS\PCMART\MPLABXPROJECTS\ASM_PSMC.X\PSMC.ASM 180 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[302] C:\USERS\PCMART\MPLABXPROJECTS\ASM_PSMC.X\PSMC.ASM 182 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[302] C:\USERS\PCMART\MPLABXPROJECTS\ASM_PSMC.X\PSMC.ASM 184 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[302] C:\USERS\PCMART\MPLABXPROJECTS\ASM_PSMC.X\PSMC.ASM 186 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[302] C:\USERS\PCMART\MPLABXPROJECTS\ASM_PSMC.X\PSMC.ASM 187 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[302] C:\USERS\PCMART\MPLABXPROJECTS\ASM_PSMC.X\PSMC.ASM 188 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[302] C:\USERS\PCMART\MPLABXPROJECTS\ASM_PSMC.X\PSMC.ASM 190 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[302] C:\USERS\PCMART\MPLABXPROJECTS\ASM_PSMC.X\PSMC.ASM 193 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[302] C:\USERS\PCMART\MPLABXPROJECTS\ASM_PSMC.X\PSMC.ASM 194 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[302] C:\USERS\PCMART\MPLABXPROJECTS\ASM_PSMC.X\PSMC.ASM 195 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[302] C:\USERS\PCMART\MPLABXPROJECTS\ASM_PSMC.X\PSMC.ASM 197 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[302] C:\USERS\PCMART\MPLABXPROJECTS\ASM_PSMC.X\PSMC.ASM 198 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[302] C:\USERS\PCMART\MPLABXPROJECTS\ASM_PSMC.X\PSMC.ASM 199 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[302] C:\USERS\PCMART\MPLABXPROJECTS\ASM_PSMC.X\PSMC.ASM 202 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[302] C:\USERS\PCMART\MPLABXPROJECTS\ASM_PSMC.X\PSMC.ASM 203 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[302] C:\USERS\PCMART\MPLABXPROJECTS\ASM_PSMC.X\PSMC.ASM 208 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[302] C:\USERS\PCMART\MPLABXPROJECTS\ASM_PSMC.X\PSMC.ASM 210 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[302] C:\USERS\PCMART\MPLABXPROJECTS\ASM_PSMC.X\PSMC.ASM 211 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[302] C:\USERS\PCMART\MPLABXPROJECTS\ASM_PSMC.X\PSMC.ASM 214 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[302] C:\USERS\PCMART\MPLABXPROJECTS\ASM_PSMC.X\PSMC.ASM 236 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[302] C:\USERS\PCMART\MPLABXPROJECTS\ASM_PSMC.X\PSMC.ASM 238 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[302] C:\USERS\PCMART\MPLABXPROJECTS\ASM_PSMC.X\PSMC.ASM 240 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[302] C:\USERS\PCMART\MPLABXPROJECTS\ASM_PSMC.X\PSMC.ASM 242 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[302] C:\USERS\PCMART\MPLABXPROJECTS\ASM_PSMC.X\PSMC.ASM 249 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Warning[205] C:\USERS\PCMART\MPLABXPROJECTS\ASM_PSMC.X\PSMC.ASM 49 : Found directive in column 1. (local)
+Message[302] C:\USERS\PCMART\MPLABXPROJECTS\ASM_PSMC.X\PSMC.ASM 263 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Warning[205] C:\USERS\PCMART\MPLABXPROJECTS\ASM_PSMC.X\PSMC.ASM 49 : Found directive in column 1. (local)
+Message[302] C:\USERS\PCMART\MPLABXPROJECTS\ASM_PSMC.X\PSMC.ASM 281 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[302] C:\USERS\PCMART\MPLABXPROJECTS\ASM_PSMC.X\PSMC.ASM 283 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[305] C:\USERS\PCMART\MPLABXPROJECTS\ASM_PSMC.X\PSMC.ASM 285 : Using default destination of 1 (file).
+Message[302] C:\USERS\PCMART\MPLABXPROJECTS\ASM_PSMC.X\PSMC.ASM 287 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[305] C:\USERS\PCMART\MPLABXPROJECTS\ASM_PSMC.X\PSMC.ASM 289 : Using default destination of 1 (file).
+Message[302] C:\USERS\PCMART\MPLABXPROJECTS\ASM_PSMC.X\PSMC.ASM 291 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[302] C:\USERS\PCMART\MPLABXPROJECTS\ASM_PSMC.X\PSMC.ASM 293 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[305] C:\USERS\PCMART\MPLABXPROJECTS\ASM_PSMC.X\PSMC.ASM 300 : Using default destination of 1 (file).
+Warning[203] C:\USERS\PCMART\MPLABXPROJECTS\ASM_PSMC.X\PSMC.ASM 308 : Found opcode in column 1. (goto)
+Warning[205] C:\USERS\PCMART\MPLABXPROJECTS\ASM_PSMC.X\PSMC.ASM 310 : Found directive in column 1. (end)
+Message[303] C:\USERS\PCMART\MPLABXPROJECTS\ASM_PSMC.X\PSMC.ASM 310 : Program word too large.  Truncated to core size. (FFA4)
+Message[303] C:\USERS\PCMART\MPLABXPROJECTS\ASM_PSMC.X\PSMC.ASM 310 : Program word too large.  Truncated to core size. (DFFF)

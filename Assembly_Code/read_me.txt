@@ -1,0 +1,3 @@
+- Using Timer 0 to make Tic-Tac flag
+- Read ADC to change frequency of complementary PWM
+- complementary PWM with Dead-band (PSMC module in PIC16F1788)

@@ -31,23 +31,6 @@
 #define AN9     9
 #define AN10    10
 
-#define ADC_THRESSENS 3000
-#define KD 0
-#define KI 0.000
-
-
-#define KP 0.001
-#define dT 1
-
-#define ADC_MAX 0x0FFF
-#define ADC_MIN 0x0000
-
-
-
-
-
-
-
 
 
 
@@ -56,7 +39,6 @@ void ADCINTIni(char ANx, char Fosc);
 int ReadADC(char ANx);
 int16_t ReadADCINT(void);
 int16_t ChkPeakVal(void);
-int16_t SearchingOffSet(void);
 
 #ifdef	__cplusplus
 extern "C" {

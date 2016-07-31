@@ -9022,33 +9022,34 @@ typedef unsigned char bool;
 void DACInit(void);
 void DACSet(uint8_t Val);
 
-# 11 "DAC.c"
-char ADCON0Tmp;
-
-# 36
+# 34 "DAC.c"
+uint8_t ADCON0Tmp;
 void DACInit(void)
 {
 TRISA2 = 0;
-ANSA2 = 1;
+ANSA2 = 0;
 
 DAC1NSS = 1;
 
-# 66
-DAC1CON0 = DAC1CON0 & (0b11110010);
+
+
+DAC1CON0 = DAC1CON0 & (0b11110011);
 
 DAC1OE1 = 1;
 
-DAC1EN = 1;
+DAC1OE2 = 0;
 
-DAC1CON1 = 0;
+DAC1EN = 1;
 
 }
 
 void DACSet(uint8_t Val)
 {
+
+
 ADCON0Tmp = ADCON0;
 
-ADCON0 = (((ADCON0)&0b1000001) | 0b0111100);
-_delay(20);
+ADCON0 = (ADCON0&0b10000011)|0b01111000;
 DAC1CON1 = Val;
+
 }

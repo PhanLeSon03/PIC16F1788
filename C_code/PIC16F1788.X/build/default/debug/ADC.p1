@@ -24,7 +24,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [p i __delay ]
 "16108 C:\Program Files (x86)\Microchip\xc8\v1.21\include\pic16f1788.h
 [v _GO `Vb ~T0 @X0 0 e@1257 ]
-"2015
+"6 ADC.c
+[v _ADCON0Tmp `uc ~T0 @X0 0 e ]
+"2015 C:\Program Files (x86)\Microchip\xc8\v1.21\include\pic16f1788.h
 [v _ADRESH `Vuc ~T0 @X0 0 e@156 ]
 "1996
 [v _ADRESL `Vuc ~T0 @X0 0 e@155 ]
@@ -6575,388 +6577,273 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;UART.h: 33: bool UARTReceive(char *pData);
 [; ;UART.h: 34: bool UARTSend(unsigned char *pData, unsigned char stLen);
 [; ;interrupts.h: 13: void interrupt isr(void);
-[; ;ADC.h: 52: void ADCIni(char ANx , char Fosc);
-[; ;ADC.h: 53: void ADCINTIni(char ANx, char Fosc);
-[; ;ADC.h: 54: int ReadADC(char ANx);
-[; ;ADC.h: 55: int16_t ReadADCINT(void);
-[; ;ADC.h: 56: int16_t ChkPeakVal(void);
-[; ;ADC.h: 57: int16_t SearchingOffSet(void);
+[; ;ADC.h: 37: void ADCIni(char ANx , char Fosc);
+[; ;ADC.h: 38: void ADCINTIni(char ANx, char Fosc);
+[; ;ADC.h: 39: int ReadADC(char ANx);
+[; ;ADC.h: 40: int16_t ReadADCINT(void);
+[; ;ADC.h: 41: int16_t ChkPeakVal(void);
 [; ;ADC.c: 3: extern volatile int16_t ADC_vADC;
-[; ;ADC.c: 4: extern volatile int16_t ADC_vADCAry[10];
+[; ;ADC.c: 4: extern volatile int16_t ADC_vADCAry[100];
 [; ;ADC.c: 5: extern volatile bit flgADCAryFull;
-[; ;ADC.c: 6: extern char ADCON0Tmp;
-"7 ADC.c
-[v _Sum_e `l ~T0 @X0 1 e ]
-[; ;ADC.c: 7: int32_t Sum_e;
-"8
-[v _vAvg `l ~T0 @X0 1 e ]
-[; ;ADC.c: 8: int32_t vAvg;
-"11
+[; ;ADC.c: 6: extern uint8_t ADCON0Tmp;
+"10 ADC.c
 [v _ADCINTIni `(v ~T0 @X0 1 ef2`uc`uc ]
 {
-[; ;ADC.c: 10: void ADCINTIni(char ANx, char Fosc)
-[; ;ADC.c: 11: {
+[; ;ADC.c: 9: void ADCINTIni(char ANx, char Fosc)
+[; ;ADC.c: 10: {
 [e :U _ADCINTIni ]
 [v _ANx `uc ~T0 @X0 1 r1 ]
 [v _Fosc `uc ~T0 @X0 1 r2 ]
 [f ]
-[; ;ADC.c: 12: if (ANx<8)
-"12
+[; ;ADC.c: 11: if (ANx<8)
+"11
 [e $ ! < -> _ANx `i -> 8 `i 721  ]
-[; ;ADC.c: 13: {
+[; ;ADC.c: 12: {
+"12
+{
+[; ;ADC.c: 13: TRISA = 0b00000001<<ANx;
 "13
-{
-[; ;ADC.c: 14: TRISA = 0b00000001<<ANx;
-"14
 [e = _TRISA -> << -> 1 `i _ANx `uc ]
-[; ;ADC.c: 15: ANSELA = 0b00000001<<ANx;
-"15
+[; ;ADC.c: 14: ANSELA = 0b00000001<<ANx;
+"14
 [e = _ANSELA -> << -> 1 `i _ANx `uc ]
-"16
+"15
 }
-[; ;ADC.c: 16: }
+[; ;ADC.c: 15: }
 [e $U 722  ]
-"17
+"16
 [e :U 721 ]
-[; ;ADC.c: 17: else
-[; ;ADC.c: 18: {
-"18
+[; ;ADC.c: 16: else
+[; ;ADC.c: 17: {
+"17
 {
-[; ;ADC.c: 19: TRISB = 0b00000001<<(ANx-7);
-"19
+[; ;ADC.c: 18: TRISB = 0b00000001<<(ANx-7);
+"18
 [e = _TRISB -> << -> 1 `i - -> _ANx `i -> 7 `i `uc ]
-[; ;ADC.c: 20: ANSELB = 0b00000001<<(ANx-7);
-"20
+[; ;ADC.c: 19: ANSELB = 0b00000001<<(ANx-7);
+"19
 [e = _ANSELB -> << -> 1 `i - -> _ANx `i -> 7 `i `uc ]
-"21
+"20
 }
 [e :U 722 ]
-[; ;ADC.c: 21: }
-[; ;ADC.c: 22: ADCON1 = 0b10000000;
-"22
+[; ;ADC.c: 20: }
+[; ;ADC.c: 21: ADCON1 = 0b10000000;
+"21
 [e = _ADCON1 -> -> 128 `i `uc ]
-[; ;ADC.c: 28: ADCON0 = (ANx<<2) & 0b01111111;
-"28
+[; ;ADC.c: 27: ADCON0 = (ANx<<2) & 0b01111111;
+"27
 [e = _ADCON0 -> & << -> _ANx `i -> 2 `i -> 127 `i `uc ]
-[; ;ADC.c: 36: ADCON2 = 0b00001111;
-"36
+[; ;ADC.c: 35: ADCON2 = 0b00001111;
+"35
 [e = _ADCON2 -> -> 15 `i `uc ]
-[; ;ADC.c: 43: ADIF = 0;
-"43
+[; ;ADC.c: 42: ADIF = 0;
+"42
 [e = _ADIF -> -> 0 `i `b ]
-[; ;ADC.c: 45: ADIE = 1;
-"45
+[; ;ADC.c: 44: ADIE = 1;
+"44
 [e = _ADIE -> -> 1 `i `b ]
-[; ;ADC.c: 47: ADON = 1;
-"47
+[; ;ADC.c: 46: ADON = 1;
+"46
 [e = _ADON -> -> 1 `i `b ]
-[; ;ADC.c: 53: _delay(100);
-"53
+[; ;ADC.c: 52: _delay(100);
+"52
 [e ( __delay (1 -> -> -> 100 `i `l `ul ]
-[; ;ADC.c: 55: GO=1;
-"55
+[; ;ADC.c: 54: GO=1;
+"54
 [e = _GO -> -> 1 `i `b ]
-[; ;ADC.c: 56: }
-"56
+[; ;ADC.c: 55: }
+"55
 [e :UE 720 ]
 }
-"141
+"140
 [v _ADCIni `(v ~T0 @X0 1 ef2`uc`uc ]
 {
-[; ;ADC.c: 140: void ADCIni(char ANx , char Fosc)
-[; ;ADC.c: 141: {
+[; ;ADC.c: 139: void ADCIni(char ANx , char Fosc)
+[; ;ADC.c: 140: {
 [e :U _ADCIni ]
 [v _ANx `uc ~T0 @X0 1 r1 ]
 [v _Fosc `uc ~T0 @X0 1 r2 ]
 [f ]
-[; ;ADC.c: 142: TRISA = TRISA | (0b00000001<<ANx);
-"142
+[; ;ADC.c: 141: TRISA = TRISA | (0b00000001<<ANx);
+"141
 [e = _TRISA -> | -> _TRISA `i << -> 1 `i _ANx `uc ]
-[; ;ADC.c: 143: ANSELA = ANSELA | (0b00000001<<ANx);
-"143
+[; ;ADC.c: 142: ANSELA = ANSELA | (0b00000001<<ANx);
+"142
 [e = _ANSELA -> | -> _ANSELA `i << -> 1 `i _ANx `uc ]
-[; ;ADC.c: 144: ADCON1 = 0b11110000;
-"144
+[; ;ADC.c: 143: ADCON1 = 0b11110000;
+"143
 [e = _ADCON1 -> -> 240 `i `uc ]
-[; ;ADC.c: 159: ADCON2 = 0b00001111;
-"159
+[; ;ADC.c: 158: ADCON2 = 0b00001111;
+"158
 [e = _ADCON2 -> -> 15 `i `uc ]
-[; ;ADC.c: 165: ADCON0 = (ANx<<2) & 0b01111100;
-"165
+[; ;ADC.c: 164: ADCON0 = (ANx<<2) & 0b01111100;
+"164
 [e = _ADCON0 -> & << -> _ANx `i -> 2 `i -> 124 `i `uc ]
-[; ;ADC.c: 173: ADON = 1;
-"173
+[; ;ADC.c: 172: ADON = 1;
+"172
 [e = _ADON -> -> 1 `i `b ]
-[; ;ADC.c: 174: _delay(100);
-"174
+[; ;ADC.c: 173: _delay(100);
+"173
 [e ( __delay (1 -> -> -> 100 `i `l `ul ]
-[; ;ADC.c: 175: GO = 1;
-"175
+[; ;ADC.c: 174: GO = 1;
+"174
 [e = _GO -> -> 1 `i `b ]
-[; ;ADC.c: 176: }
+[; ;ADC.c: 176: ADCON0Tmp = ADCON0;
 "176
+[e = _ADCON0Tmp _ADCON0 ]
+[; ;ADC.c: 177: }
+"177
 [e :UE 723 ]
 }
-"179
+"180
 [v _ReadADC `(i ~T0 @X0 1 ef1`uc ]
 {
-[; ;ADC.c: 178: int ReadADC(char ANx)
-[; ;ADC.c: 179: {
+[; ;ADC.c: 179: int ReadADC(char ANx)
+[; ;ADC.c: 180: {
 [e :U _ReadADC ]
 [v _ANx `uc ~T0 @X0 1 r1 ]
 [f ]
-"180
+"181
 [v _vADC `i ~T0 @X0 1 a ]
-[; ;ADC.c: 180: int vADC;
-[; ;ADC.c: 183: ADCON0 = (ADCON0&0b10000011)|((ANx<<2) & 0b01111100);
+[; ;ADC.c: 181: int vADC;
+[; ;ADC.c: 182: ADCON0 = ADCON0Tmp;
+"182
+[e = _ADCON0 _ADCON0Tmp ]
+[; ;ADC.c: 183: vADC = ADRESH;
 "183
-[e = _ADCON0 -> | & -> _ADCON0 `i -> 131 `i & << -> _ANx `i -> 2 `i -> 124 `i `uc ]
-[; ;ADC.c: 184: ADON = 1;
+[e = _vADC -> _ADRESH `i ]
+[; ;ADC.c: 184: vADC <<=8;
 "184
-[e = _ADON -> -> 1 `i `b ]
-[; ;ADC.c: 185: _delay(20);
+[e =<< _vADC -> 8 `i ]
+[; ;ADC.c: 185: vADC |=ADRESL;
 "185
-[e ( __delay (1 -> -> -> 20 `i `l `ul ]
-[; ;ADC.c: 186: GO = 1;
+[e =| _vADC -> _ADRESL `i ]
+[; ;ADC.c: 186: GO=1;
 "186
 [e = _GO -> -> 1 `i `b ]
-[; ;ADC.c: 187: _delay(20);
-"187
-[e ( __delay (1 -> -> -> 20 `i `l `ul ]
-[; ;ADC.c: 189: vADC = ADRESH;
-"189
-[e = _vADC -> _ADRESH `i ]
-[; ;ADC.c: 190: vADC <<=8;
-"190
-[e =<< _vADC -> 8 `i ]
-[; ;ADC.c: 191: vADC |=ADRESL;
-"191
-[e =| _vADC -> _ADRESL `i ]
-[; ;ADC.c: 192: GO=1;
-"192
-[e = _GO -> -> 1 `i `b ]
-[; ;ADC.c: 194: return vADC;
-"194
+[; ;ADC.c: 188: return vADC;
+"188
 [e ) _vADC ]
 [e $UE 724  ]
-[; ;ADC.c: 195: }
-"195
+[; ;ADC.c: 189: }
+"189
 [e :UE 724 ]
 }
-"200
+"194
 [v _ReadADCINT `(i ~T0 @X0 1 ef ]
 {
-[; ;ADC.c: 199: int16_t ReadADCINT(void)
-[; ;ADC.c: 200: {
+[; ;ADC.c: 193: int16_t ReadADCINT(void)
+[; ;ADC.c: 194: {
 [e :U _ReadADCINT ]
 [f ]
-[; ;ADC.c: 202: if (flgADCAryFull==1)
-"202
+[; ;ADC.c: 196: if (flgADCAryFull==1)
+"196
 [e $ ! == -> _flgADCAryFull `i -> 1 `i 726  ]
-[; ;ADC.c: 203: {
-"203
+[; ;ADC.c: 197: {
+"197
 {
-[; ;ADC.c: 204: ADIE = 1;
-"204
+[; ;ADC.c: 198: ADIE = 1;
+"198
 [e = _ADIE -> -> 1 `i `b ]
-[; ;ADC.c: 206: ADON = 1;
-"206
+[; ;ADC.c: 200: ADON = 1;
+"200
 [e = _ADON -> -> 1 `i `b ]
-[; ;ADC.c: 211: _delay(200);
-"211
+[; ;ADC.c: 205: _delay(200);
+"205
 [e ( __delay (1 -> -> -> 200 `i `l `ul ]
-[; ;ADC.c: 213: GO=1;
-"213
+[; ;ADC.c: 207: GO=1;
+"207
 [e = _GO -> -> 1 `i `b ]
-[; ;ADC.c: 215: TXIE = 0;
-"215
+[; ;ADC.c: 209: TXIE = 0;
+"209
 [e = _TXIE -> -> 0 `i `b ]
-"216
+"210
 }
 [e :U 726 ]
-[; ;ADC.c: 216: }
-[; ;ADC.c: 217: return ADC_vADC;
-"217
+[; ;ADC.c: 210: }
+[; ;ADC.c: 211: return ADC_vADC;
+"211
 [e ) _ADC_vADC ]
 [e $UE 725  ]
-[; ;ADC.c: 218: }
-"218
+[; ;ADC.c: 212: }
+"212
 [e :UE 725 ]
 }
-"221
+"215
 [v _ChkPeakVal `(i ~T0 @X0 1 ef ]
 {
-[; ;ADC.c: 220: int16_t ChkPeakVal(void)
-[; ;ADC.c: 221: {
+[; ;ADC.c: 214: int16_t ChkPeakVal(void)
+[; ;ADC.c: 215: {
 [e :U _ChkPeakVal ]
 [f ]
-"222
+"216
 [v _tmpMAX `i ~T0 @X0 1 a ]
-[; ;ADC.c: 222: int16_t tmpMAX;
-[; ;ADC.c: 224: tmpMAX = 0;
-"224
+[; ;ADC.c: 216: int16_t tmpMAX;
+[; ;ADC.c: 218: tmpMAX = 0;
+"218
 [e = _tmpMAX -> 0 `i ]
-[; ;ADC.c: 226: if (flgADCAryFull==1)
-"226
+[; ;ADC.c: 220: if (flgADCAryFull==1)
+"220
 [e $ ! == -> _flgADCAryFull `i -> 1 `i 728  ]
-[; ;ADC.c: 227: {
-"227
+[; ;ADC.c: 221: {
+"221
 {
-[; ;ADC.c: 228: for (char i=0;i<10;i++)
-"228
+[; ;ADC.c: 222: for (char i=0;i<100;i++)
+"222
 {
 [v _i `uc ~T0 @X0 1 a ]
 [e = _i -> -> 0 `i `uc ]
-[e $ < -> _i `i -> 10 `i 729  ]
+[e $ < -> _i `i -> 100 `i 729  ]
 [e $U 730  ]
-"229
+"223
 [e :U 729 ]
-[; ;ADC.c: 229: {
+[; ;ADC.c: 223: {
 {
-[; ;ADC.c: 230: if(ADC_vADCAry[i]>tmpMAX)
-"230
+[; ;ADC.c: 224: if(ADC_vADCAry[i]>tmpMAX)
+"224
 [e $ ! > *U + &U _ADC_vADCAry * -> _i `ux -> -> # *U &U _ADC_vADCAry `ui `ux _tmpMAX 732  ]
-[; ;ADC.c: 231: {
-"231
+[; ;ADC.c: 225: {
+"225
 {
-[; ;ADC.c: 232: tmpMAX = ADC_vADCAry[i];
-"232
+[; ;ADC.c: 226: tmpMAX = ADC_vADCAry[i];
+"226
 [e = _tmpMAX *U + &U _ADC_vADCAry * -> _i `ux -> -> # *U &U _ADC_vADCAry `ui `ux ]
-"233
+"227
 }
 [e :U 732 ]
-"234
-}
 "228
-[e ++ _i -> -> 1 `i `uc ]
-[e $ < -> _i `i -> 10 `i 729  ]
-[e :U 730 ]
-"234
 }
-[; ;ADC.c: 233: }
-[; ;ADC.c: 234: }
-[; ;ADC.c: 236: return tmpMAX;
-"236
+"222
+[e ++ _i -> -> 1 `i `uc ]
+[e $ < -> _i `i -> 100 `i 729  ]
+[e :U 730 ]
+"228
+}
+[; ;ADC.c: 227: }
+[; ;ADC.c: 228: }
+[; ;ADC.c: 230: return tmpMAX;
+"230
 [e ) _tmpMAX ]
 [e $UE 727  ]
-"237
+"231
 }
-[; ;ADC.c: 237: }
+[; ;ADC.c: 231: }
 [e $U 733  ]
-"238
+"232
 [e :U 728 ]
-[; ;ADC.c: 238: else
-[; ;ADC.c: 239: {
-"239
+[; ;ADC.c: 232: else
+[; ;ADC.c: 233: {
+"233
 {
-[; ;ADC.c: 240: return 0;
-"240
+[; ;ADC.c: 234: return 0;
+"234
 [e ) -> 0 `i ]
 [e $UE 727  ]
-"241
+"235
 }
 [e :U 733 ]
-[; ;ADC.c: 241: }
-[; ;ADC.c: 242: }
-"242
+[; ;ADC.c: 235: }
+[; ;ADC.c: 236: }
+"236
 [e :UE 727 ]
-}
-"245
-[v _SearchingOffSet `(i ~T0 @X0 1 ef ]
-{
-[; ;ADC.c: 244: int16_t SearchingOffSet(void)
-[; ;ADC.c: 245: {
-[e :U _SearchingOffSet ]
-[f ]
-"247
-[v _error `l ~T0 @X0 1 a ]
-"248
-[v F7102 `l ~T0 @X0 1 s uVout ]
-[v F7103 `l ~T0 @X0 1 s error_old ]
-[; ;ADC.c: 247: int32_t error;
-[; ;ADC.c: 248: static int32_t uVout, error_old;
-[; ;ADC.c: 263: vAvg = ReadADC(9);
-"263
-[e = _vAvg -> ( _ReadADC (1 -> -> 9 `i `uc `l ]
-[; ;ADC.c: 265: error = 1024 - vAvg;
-"265
-[e = _error - -> -> 1024 `i `l _vAvg ]
-[; ;ADC.c: 267: Sum_e = Sum_e + error;
-"267
-[e = _Sum_e + _Sum_e _error ]
-[; ;ADC.c: 271: if (error > 0)
-"271
-[e $ ! > _error -> -> 0 `i `l 735  ]
-[; ;ADC.c: 272: {
-"272
-{
-[; ;ADC.c: 273: uVout++;
-"273
-[e ++ F7102 -> -> 1 `i `l ]
-"274
-}
-[; ;ADC.c: 274: }
-[e $U 736  ]
-"275
-[e :U 735 ]
-[; ;ADC.c: 275: else
-[; ;ADC.c: 276: {
-"276
-{
-[; ;ADC.c: 277: uVout--;
-"277
-[e -- F7102 -> -> 1 `i `l ]
-"278
-}
-[e :U 736 ]
-[; ;ADC.c: 278: }
-[; ;ADC.c: 280: if (uVout > 0x0FFF)
-"280
-[e $ ! > F7102 -> -> 4095 `i `l 737  ]
-[; ;ADC.c: 281: {
-"281
-{
-[; ;ADC.c: 282: uVout = 0x0FFF;
-"282
-[e = F7102 -> -> 4095 `i `l ]
-"283
-}
-[; ;ADC.c: 283: }
-[e $U 738  ]
-"284
-[e :U 737 ]
-[; ;ADC.c: 284: else if (uVout < 0x0000)
-[e $ ! < F7102 -> -> 0 `i `l 739  ]
-[; ;ADC.c: 285: {
-"285
-{
-[; ;ADC.c: 286: uVout = 0x0000;
-"286
-[e = F7102 -> -> 0 `i `l ]
-"287
-}
-[; ;ADC.c: 287: }
-[e $U 740  ]
-"288
-[e :U 739 ]
-[; ;ADC.c: 288: else
-[; ;ADC.c: 289: {
-"289
-{
-[; ;ADC.c: 290: ;
-"291
-}
-[e :U 740 ]
-[e :U 738 ]
-[; ;ADC.c: 291: }
-[; ;ADC.c: 293: error_old = error;
-"293
-[e = F7103 _error ]
-[; ;ADC.c: 296: return uVout;
-"296
-[e ) -> F7102 `i ]
-[e $UE 734  ]
-[; ;ADC.c: 297: }
-"297
-[e :UE 734 ]
 }

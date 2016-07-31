@@ -2,24 +2,24 @@
 [d version 1.1 ]
 [d edition pro ]
 [d chip 16F1788 ]
-"11 U:\PTMD\1Jully\PIC16F1788.X\ADC.c
+"10 H:\PhanLeSon\PTMD\21July\21July\PIC16F1788.X\PIC16F1788.X\ADC.c
 [v _ADCINTIni ADCINTIni `(v  1 e 0 0 ]
-"141
+"140
 [v _ADCIni ADCIni `(v  1 e 0 0 ]
-"179
+"180
 [v _ReadADC ReadADC `(i  1 e 2 0 ]
-"200
+"194
 [v _ReadADCINT ReadADCINT `(i  1 e 2 0 ]
-"221
+"215
 [v _ChkPeakVal ChkPeakVal `(i  1 e 2 0 ]
-"245
-[v _SearchingOffSet SearchingOffSet `(i  1 e 2 0 ]
-"13 U:\PTMD\1Jully\PIC16F1788.X\App.c
+"13 H:\PhanLeSon\PTMD\21July\21July\PIC16F1788.X\PIC16F1788.X\App.c
 [v _ScanFrq ScanFrq `(uc  1 e 1 0 ]
 "68
 [v _Blinking Blinking `(v  1 e 0 0 ]
 "93
 [v _Blink Blink `(v  1 e 0 0 ]
+"493 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\doprnt.c
+[v _sprintf sprintf `(i  1 e 2 0 ]
 "5 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\pic\abdiv.c
 [v ___abdiv __abdiv `(c  1 e 1 0 ]
 "5 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\pic\abmod.c
@@ -108,8 +108,6 @@
 [v ___lltoft __lltoft `(f  1 e 3 0 ]
 "3 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\pic\lmul.c
 [v ___lmul __lmul `(ul  1 e 4 0 ]
-[v i1___lmul __lmul `(ul  1 e 4 0 ]
-[v i1___lmul __lmul `(ul  1 e 4 0 ]
 "5 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\pic\ltdiv.c
 [v ___ltdiv __ltdiv `(um  1 e 3 0 ]
 "5 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\pic\ltmod.c
@@ -126,21 +124,21 @@
 [v ___tmul __tmul `(um  1 e 3 0 ]
 "3 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\pic\wmul.c
 [v ___wmul __wmul `(ui  1 e 2 0 ]
-"37 U:\PTMD\1Jully\PIC16F1788.X\DAC.c
+"36 H:\PhanLeSon\PTMD\21July\21July\PIC16F1788.X\PIC16F1788.X\DAC.c
 [v _DACInit DACInit `(v  1 e 0 0 ]
-"77
+"55
 [v _DACSet DACSet `(v  1 e 0 0 ]
-"4 U:\PTMD\1Jully\PIC16F1788.X\dio.c
+"4 H:\PhanLeSon\PTMD\21July\21July\PIC16F1788.X\PIC16F1788.X\dio.c
 [v _DioIni DioIni `(v  1 e 0 0 ]
-"39 U:\PTMD\1Jully\PIC16F1788.X\EEPROM.c
+"40 H:\PhanLeSon\PTMD\21July\21July\PIC16F1788.X\PIC16F1788.X\EEPROM.c
 [v _EEPROMWrite EEPROMWrite `(uc  1 e 1 0 ]
-"112
+"102
 [v _EEPROMRead EEPROMRead `(ui  1 e 2 0 ]
-"53 U:\PTMD\1Jully\PIC16F1788.X\interrupts.c
+"53 H:\PhanLeSon\PTMD\21July\21July\PIC16F1788.X\PIC16F1788.X\interrupts.c
 [v _isr isr `II(v  1 e 0 0 ]
-"71 U:\PTMD\1Jully\PIC16F1788.X\main.c
+"64 H:\PhanLeSon\PTMD\21July\21July\PIC16F1788.X\PIC16F1788.X\main.c
 [v _main main `(v  1 e 0 0 ]
-"37 U:\PTMD\1Jully\PIC16F1788.X\PWM.c
+"37 H:\PhanLeSon\PTMD\21July\21July\PIC16F1788.X\PIC16F1788.X\PWM.c
 [v _PWMSetConfig PWMSetConfig `(v  1 e 0 0 ]
 "121
 [v _PWMSetPhase PWMSetPhase `(v  1 e 0 0 ]
@@ -160,21 +158,17 @@
 [v _SetPeriod SetPeriod `(v  1 e 0 0 ]
 "186
 [v _SetDeadTime SetDeadTime `(v  1 e 0 0 ]
-"21 U:\PTMD\1Jully\PIC16F1788.X\system.c
+"21 H:\PhanLeSon\PTMD\21July\21July\PIC16F1788.X\PIC16F1788.X\system.c
 [v _ConfigureOscillator ConfigureOscillator `(v  1 e 0 0 ]
-"116 U:\PTMD\1Jully\PIC16F1788.X\UART.c
+"116 H:\PhanLeSon\PTMD\21July\21July\PIC16F1788.X\PIC16F1788.X\UART.c
 [v _UARTIni UARTIni `(v  1 e 0 0 ]
 "147
 [v _UARTReceive UARTReceive `(uc  1 e 1 0 ]
 "167
 [v _UARTSend UARTSend `(uc  1 e 1 0 ]
-"30 U:\PTMD\1Jully\PIC16F1788.X\user.c
+"29 H:\PhanLeSon\PTMD\21July\21July\PIC16F1788.X\PIC16F1788.X\user.c
 [v _InitApp InitApp `(v  1 e 0 0 ]
-"7 U:\PTMD\1Jully\PIC16F1788.X\ADC.c
-[v _Sum_e Sum_e `l  1 e 4 0 ]
-"8
-[v _vAvg vAvg `l  1 e 4 0 ]
-"7 U:\PTMD\1Jully\PIC16F1788.X\App.c
+"7 H:\PhanLeSon\PTMD\21July\21July\PIC16F1788.X\PIC16F1788.X\App.c
 [v _cntBlink cntBlink `i  1 e 2 0 ]
 "9
 [v _vSenOld vSenOld `i  1 s 2 vSenOld ]
@@ -212,8 +206,14 @@
 [v _ANSELC ANSELC `VEuc  1 e 1 @398 ]
 "3779
 [v _EEADR EEADR `VEus  1 e 2 @401 ]
+"3785
+[v _EEADRL EEADRL `VEuc  1 e 1 @401 ]
+"3829
+[v _EEDATL EEDATL `VEuc  1 e 1 @403 ]
 "3834
 [v _EEDATA EEDATA `VEuc  1 e 1 @403 ]
+"3866
+[v _EEDATH EEDATH `VEuc  1 e 1 @404 ]
 "3885
 [v _EECON1 EECON1 `VEuc  1 e 1 @405 ]
 "3946
@@ -238,7 +238,7 @@
 [v _PSMC1OEN PSMC1OEN `VEuc  1 e 1 @3733 ]
 "9127
 [v _PSMC1POL PSMC1POL `VEuc  1 e 1 @3734 ]
-[s S81 . 1 `uc 1 P1PRST 1 0 :1:0 
+[s S76 . 1 `uc 1 P1PRST 1 0 :1:0 
 `uc 1 P1PRSC1 1 0 :1:1 
 `uc 1 P1PRSC2 1 0 :1:2 
 `uc 1 P1PRSC3 1 0 :1:3 
@@ -247,12 +247,12 @@
 `uc 1 P1PRSIN 1 0 :1:7 
 ]
 "9341
-[u S89 . 1 `S81 1 . 1 0 ]
-[v _PSMC1PHSbits PSMC1PHSbits `VES89  1 e 1 @3738 ]
+[u S84 . 1 `S76 1 . 1 0 ]
+[v _PSMC1PHSbits PSMC1PHSbits `VES84  1 e 1 @3738 ]
 "9391
-[v _PSMC1DCSbits PSMC1DCSbits `VES89  1 e 1 @3739 ]
+[v _PSMC1DCSbits PSMC1DCSbits `VES84  1 e 1 @3739 ]
 "9441
-[v _PSMC1PRSbits PSMC1PRSbits `VES89  1 e 1 @3740 ]
+[v _PSMC1PRSbits PSMC1PRSbits `VES84  1 e 1 @3740 ]
 "9607
 [v _PSMC1INT PSMC1INT `VEuc  1 e 1 @3744 ]
 "9674
@@ -301,6 +301,8 @@
 [v _DAC1NSS DAC1NSS `VEb  1 e 0 @2240 ]
 "15974
 [v _DAC1OE1 DAC1OE1 `VEb  1 e 0 @2245 ]
+"15976
+[v _DAC1OE2 DAC1OE2 `VEb  1 e 0 @2244 ]
 "16092
 [v _EEIF EEIF `VEb  1 e 0 @148 ]
 "16094
@@ -361,9 +363,11 @@
 [v _WR WR `VEb  1 e 0 @3241 ]
 "18506
 [v _WREN WREN `VEb  1 e 0 @3242 ]
-"11 U:\PTMD\1Jully\PIC16F1788.X\DAC.c
+"354 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\doprnt.c
+[v _dpowers dpowers `DCC[5]ui  1 s 10 dpowers ]
+"34 H:\PhanLeSon\PTMD\21July\21July\PIC16F1788.X\PIC16F1788.X\DAC.c
 [v _ADCON0Tmp ADCON0Tmp `uc  1 e 1 0 ]
-"29 U:\PTMD\1Jully\PIC16F1788.X\interrupts.c
+"29 H:\PhanLeSon\PTMD\21July\21July\PIC16F1788.X\PIC16F1788.X\interrupts.c
 [v _UART_chRxBuf UART_chRxBuf `VE[20]uc  1 e 20 0 ]
 "30
 [v _UART_chTxBuf UART_chTxBuf `VE[20]uc  1 e 20 0 ]
@@ -376,7 +380,7 @@
 "36
 [v _ADC_vADC ADC_vADC `VEi  1 e 2 0 ]
 "37
-[v _ADC_vADCAry ADC_vADCAry `VE[10]i  1 e 20 0 ]
+[v _ADC_vADCAry ADC_vADCAry `VE[100]i  1 e 200 @10024 ]
 "38
 [v _idxADC idxADC `uc  1 e 1 0 ]
 "39
@@ -389,48 +393,34 @@
 [v _flgADCAryFull flgADCAryFull `VEb  1 e 0 0 ]
 "49
 [v _stLen stLen `uc  1 s 1 stLen ]
-"52 U:\PTMD\1Jully\PIC16F1788.X\main.c
+"45 H:\PhanLeSon\PTMD\21July\21July\PIC16F1788.X\PIC16F1788.X\main.c
 [v _chBufADC chBufADC `[20]uc  1 e 20 0 ]
-"53
+"46
 [v _vADCAN0 vADCAN0 `i  1 e 2 0 ]
-"54
+"47
 [v _cntPWM cntPWM `i  1 e 2 0 ]
-"55
+"48
 [v _vADCANFlt vADCANFlt `i  1 e 2 0 ]
-"56
+"49
 [v _vPWM vPWM `i  1 e 2 0 ]
-"57
+"50
 [v _vADCANOld vADCANOld `i  1 e 2 0 ]
-"58
+"51
 [v _vADCANOld1 vADCANOld1 `i  1 e 2 0 ]
-"59
+"52
 [v _cntCur cntCur `i  1 e 2 0 ]
-"60
+"53
 [v _vPeakVld vPeakVld `i  1 e 2 0 ]
-"61
+"54
 [v _RA7Old RA7Old `uc  1 e 1 0 ]
-"62
+"55
 [v _bFlg bFlg `uc  1 e 1 0 ]
-"63
+"56
 [v _cntUARTSend cntUARTSend `uc  1 e 1 0 ]
-"71
+"64
 [v _main main `(v  1 e 0 0 ]
 {
-"77
-[v main@vDAC vDAC `i  1 a 2 6 ]
-"74
-[v main@stBlinking stBlinking `uc  1 a 1 8 ]
-"226
-} 0
-"3 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\pic\lmul.c
-[v ___lmul __lmul `(ul  1 e 4 0 ]
-{
-"4
-[v ___lmul@product product `ul  1 a 4 15 ]
-"3
-[v ___lmul@multiplier multiplier `ul  1 p 4 7 ]
-[v ___lmul@multiplicand multiplicand `ul  1 p 4 11 ]
-"13
+"198
 } 0
 "5 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\pic\awdiv.c
 [v ___awdiv __awdiv `(i  1 e 2 0 ]
@@ -445,6 +435,49 @@
 [v ___awdiv@dividend dividend `i  1 p 2 9 ]
 "37
 } 0
+"493 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\common\doprnt.c
+[v _sprintf sprintf `(i  1 e 2 0 ]
+{
+[v sprintf@sp sp `*.4uc  1 a 1 33 ]
+[s S377 . 4 `*.1DCCuc 1 _cp 2 0 `ui 1 _len 2 2 ]
+"533
+[u S380 . 4 `ui 1 _val 2 0 `S377 1 _str 4 0 ]
+[v sprintf@_val _val `S380  1 a 4 29 ]
+"499
+[v sprintf@c c `c  1 a 1 34 ]
+"506
+[v sprintf@prec prec `c  1 a 1 28 ]
+"508
+[v sprintf@flag flag `uc  1 a 1 27 ]
+"494
+[v sprintf@ap ap `[1]*.4v  1 a 1 26 ]
+"493
+[v sprintf@sp sp `*.4uc  1 a 1 33 ]
+[v sprintf@f f `*.24DCCuc  1 p 1 21 ]
+"1548
+} 0
+"5 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\pic\lwmod.c
+[v ___lwmod __lwmod `(ui  1 e 2 0 ]
+{
+"6
+[v ___lwmod@counter counter `uc  1 a 1 20 ]
+"5
+[v ___lwmod@divisor divisor `ui  1 p 2 15 ]
+[v ___lwmod@dividend dividend `ui  1 p 2 17 ]
+"21
+} 0
+"5 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\pic\lwdiv.c
+[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
+{
+"6
+[v ___lwdiv@quotient quotient `ui  1 a 2 12 ]
+"7
+[v ___lwdiv@counter counter `uc  1 a 1 14 ]
+"5
+[v ___lwdiv@divisor divisor `ui  1 p 2 7 ]
+[v ___lwdiv@dividend dividend `ui  1 p 2 9 ]
+"26
+} 0
 "7 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\pic\eewrite.c
 [v _eeprom_write eeprom_write `(v  1 e 0 0 ]
 {
@@ -453,12 +486,12 @@
 [v eeprom_write@value value `uc  1 p 1 7 ]
 "9
 } 0
-"77 U:\PTMD\1Jully\PIC16F1788.X\DAC.c
+"55 H:\PhanLeSon\PTMD\21July\21July\PIC16F1788.X\PIC16F1788.X\DAC.c
 [v _DACSet DACSet `(v  1 e 0 0 ]
 {
 [v DACSet@Val Val `uc  1 a 1 8 ]
 [v DACSet@Val Val `uc  1 a 1 8 ]
-"83
+"63
 } 0
 "7 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\pic\eeread.c
 [v _eeprom_read eeprom_read `(uc  1 e 1 0 ]
@@ -467,27 +500,27 @@
 [v eeprom_read@addr addr `uc  1 a 1 10 ]
 "12
 } 0
-"30 U:\PTMD\1Jully\PIC16F1788.X\user.c
+"29 H:\PhanLeSon\PTMD\21July\21July\PIC16F1788.X\PIC16F1788.X\user.c
 [v _InitApp InitApp `(v  1 e 0 0 ]
 {
-"69
+"67
 } 0
-"4 U:\PTMD\1Jully\PIC16F1788.X\dio.c
+"4 H:\PhanLeSon\PTMD\21July\21July\PIC16F1788.X\PIC16F1788.X\dio.c
 [v _DioIni DioIni `(v  1 e 0 0 ]
 {
 "12
 } 0
-"37 U:\PTMD\1Jully\PIC16F1788.X\DAC.c
+"36 H:\PhanLeSon\PTMD\21July\21July\PIC16F1788.X\PIC16F1788.X\DAC.c
 [v _DACInit DACInit `(v  1 e 0 0 ]
 {
-"74
+"52
 } 0
-"116 U:\PTMD\1Jully\PIC16F1788.X\UART.c
+"116 H:\PhanLeSon\PTMD\21July\21July\PIC16F1788.X\PIC16F1788.X\UART.c
 [v _UARTIni UARTIni `(v  1 e 0 0 ]
 {
 "144
 } 0
-"152 U:\PTMD\1Jully\PIC16F1788.X\PWM.c
+"152 H:\PhanLeSon\PTMD\21July\21July\PIC16F1788.X\PIC16F1788.X\PWM.c
 [v _PWMIni PWMIni `(v  1 e 0 0 ]
 {
 "155
@@ -506,62 +539,55 @@
 "130
 [v _PWMSetPeriod PWMSetPeriod `(v  1 e 0 0 ]
 {
-[v PWMSetPeriod@cntPeriod cntPeriod `ui  1 p 2 19 ]
+[v PWMSetPeriod@cntPeriod cntPeriod `ui  1 p 2 7 ]
 "138
 } 0
 "141
 [v _PWMSetDutyCycle PWMSetDutyCycle `(v  1 e 0 0 ]
 {
-[v PWMSetDutyCycle@cntDutyCycle cntDutyCycle `ui  1 p 2 19 ]
+[v PWMSetDutyCycle@cntDutyCycle cntDutyCycle `ui  1 p 2 7 ]
 "149
 } 0
-"141 U:\PTMD\1Jully\PIC16F1788.X\ADC.c
+"140 H:\PhanLeSon\PTMD\21July\21July\PIC16F1788.X\PIC16F1788.X\ADC.c
 [v _ADCIni ADCIni `(v  1 e 0 0 ]
 {
 [v ADCIni@ANx ANx `uc  1 a 1 9 ]
 [v ADCIni@ANx ANx `uc  1 a 1 9 ]
 [v ADCIni@Fosc Fosc `uc  1 p 1 7 ]
-"176
+"177
 } 0
-"21 U:\PTMD\1Jully\PIC16F1788.X\system.c
+"21 H:\PhanLeSon\PTMD\21July\21July\PIC16F1788.X\PIC16F1788.X\system.c
 [v _ConfigureOscillator ConfigureOscillator `(v  1 e 0 0 ]
 {
 "34
 } 0
-"245 U:\PTMD\1Jully\PIC16F1788.X\ADC.c
-[v _SearchingOffSet SearchingOffSet `(i  1 e 2 0 ]
+"167 H:\PhanLeSon\PTMD\21July\21July\PIC16F1788.X\PIC16F1788.X\UART.c
+[v _UARTSend UARTSend `(uc  1 e 1 0 ]
 {
-"247
-[v SearchingOffSet@error error `l  1 a 4 20 ]
-"248
-[v SearchingOffSet@uVout uVout `l  1 s 4 uVout ]
-[v SearchingOffSet@error_old error_old `l  1 s 4 error_old ]
-"297
+[v UARTSend@pData pData `*.4uc  1 a 1 10 ]
+"182
+[v UARTSend@i i `i  1 a 2 11 ]
+"167
+[v UARTSend@pData pData `*.4uc  1 a 1 10 ]
+[v UARTSend@stLen stLen `uc  1 p 1 7 ]
+"201
 } 0
-"179
+"180 H:\PhanLeSon\PTMD\21July\21July\PIC16F1788.X\PIC16F1788.X\ADC.c
 [v _ReadADC ReadADC `(i  1 e 2 0 ]
 {
-[v ReadADC@ANx ANx `uc  1 a 1 11 ]
+[v ReadADC@ANx ANx `uc  1 a 1 0 ]
+"181
+[v ReadADC@vADC vADC `i  1 a 2 11 ]
 "180
-[v ReadADC@vADC vADC `i  1 a 2 12 ]
-"179
-[v ReadADC@ANx ANx `uc  1 a 1 11 ]
-"195
+[v ReadADC@ANx ANx `uc  1 a 1 0 ]
+"189
 } 0
-"53 U:\PTMD\1Jully\PIC16F1788.X\interrupts.c
+"53 H:\PhanLeSon\PTMD\21July\21July\PIC16F1788.X\PIC16F1788.X\interrupts.c
 [v _isr isr `II(v  1 e 0 0 ]
 {
-"196
+"195
 } 0
-"3 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\pic\lmul.c
-[v i1___lmul __lmul `(ul  1 e 4 0 ]
-{
-[v i1___lmul@product __lmul `ul  1 a 4 8 ]
-[v i1___lmul@multiplier multiplier `ul  1 p 4 0 ]
-[v i1___lmul@multiplicand multiplicand `ul  1 p 4 4 ]
-"13
-} 0
-"141 U:\PTMD\1Jully\PIC16F1788.X\PWM.c
+"141 H:\PhanLeSon\PTMD\21July\21July\PIC16F1788.X\PIC16F1788.X\PWM.c
 [v i1_PWMSetDutyCycle PWMSetDutyCycle `(v  1 e 0 0 ]
 {
 [v i1PWMSetDutyCycle@cntDutyCycle cntDutyCycle `ui  1 p 2 12 ]
@@ -572,4 +598,14 @@
 {
 [v i1PWMSetPeriod@cntPeriod cntPeriod `ui  1 p 2 12 ]
 "138
+} 0
+"3 C:\Program Files (x86)\Microchip\xc8\v1.21\sources\pic\lmul.c
+[v ___lmul __lmul `(ul  1 e 4 0 ]
+{
+"4
+[v ___lmul@product product `ul  1 a 4 8 ]
+"3
+[v ___lmul@multiplier multiplier `ul  1 p 4 0 ]
+[v ___lmul@multiplicand multiplicand `ul  1 p 4 4 ]
+"13
 } 0

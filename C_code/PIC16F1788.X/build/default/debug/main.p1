@@ -4,30 +4,26 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _ConfigureOscillator `(v ~T0 @X0 0 ef ]
 "13 user.h
 [v _InitApp `(v ~T0 @X0 0 ef ]
-"50 main.c
-[v _ADCON0Tmp `uc ~T0 @X0 0 e ]
-"2034 C:\Program Files (x86)\Microchip\xc8\v1.21\include\pic16f1788.h
-[v _ADCON0 `Vuc ~T0 @X0 0 e@157 ]
 "42 C:\Program Files (x86)\Microchip\xc8\v1.21\include\eeprom_routines.h
 [v _eeprom_read `(uc ~T0 @X0 0 ef1`uc ]
-"22 PWM.h
-[v _PWMSetPeriod `(v ~T0 @X0 0 ef1`ui ]
-"23
-[v _PWMSetDutyCycle `(v ~T0 @X0 0 ef1`ui ]
 "12 DAC.h
 [v _DACSet `(v ~T0 @X0 0 ef1`uc ]
-"46 main.c
+"41 main.c
 [v _flgTicTac `Vb ~T0 @X0 0 e ]
-"57 ADC.h
-[v _SearchingOffSet `(i ~T0 @X0 0 ef ]
-"54
-[v _ReadADC `(i ~T0 @X0 0 ef1`uc ]
 "18096 C:\Program Files (x86)\Microchip\xc8\v1.21\include\pic16f1788.h
 [v _RC2 `Vb ~T0 @X0 0 e@114 ]
-"18074
+"39 ADC.h
+[v _ReadADC `(i ~T0 @X0 0 ef1`uc ]
+"18074 C:\Program Files (x86)\Microchip\xc8\v1.21\include\pic16f1788.h
 [v _RA7 `Vb ~T0 @X0 0 e@103 ]
 "41 C:\Program Files (x86)\Microchip\xc8\v1.21\include\eeprom_routines.h
 [v _eeprom_write `(v ~T0 @X0 0 ef2`uc`uc ]
+"9607 C:\Program Files (x86)\Microchip\xc8\v1.21\include\pic16f1788.h
+[v _PSMC1INT `Vuc ~T0 @X0 0 e@3744 ]
+"205 C:\Program Files (x86)\Microchip\xc8\v1.21\include\stdio.h
+[v _sprintf `(i ~T0 @X0 0 e1v`*uc`*Cuc ]
+"34 UART.h
+[v _UARTSend `(uc ~T0 @X0 0 ef2`*uc`uc ]
 [; ;pic16f1788.h: 44: extern volatile unsigned char INDF0 @ 0x000;
 "46 C:\Program Files (x86)\Microchip\xc8\v1.21\include\pic16f1788.h
 [; ;pic16f1788.h: 46: asm("INDF0 equ 00h");
@@ -6623,6 +6619,10 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;stdio.h: 201: extern int vsscanf(const char *, const char *, va_list);
 [; ;stdio.h: 205: extern int sprintf(char *, const char *, ...);
 [; ;stdio.h: 206: extern int printf(const char *, ...);
+[; ;eeprom_routines.h: 41: extern void eeprom_write(unsigned char addr, unsigned char value);
+[; ;eeprom_routines.h: 42: extern unsigned char eeprom_read(unsigned char addr);
+[; ;eeprom_routines.h: 43: extern void eecpymem(volatile unsigned char *to, __eeprom unsigned char *from, unsigned char size);
+[; ;eeprom_routines.h: 44: extern void memcpyee(__eeprom unsigned char *to, const unsigned char *from, unsigned char size);
 [; ;system.h: 19: void ConfigureOscillator(void);
 [; ;user.h: 13: void InitApp(void);
 [; ;UART.h: 32: void UARTIni(void);
@@ -6637,12 +6637,11 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;PWM.h: 25: void SetPWM1(unsigned int DutyCycle);
 [; ;PWM.h: 26: void SetPeriod (unsigned int rPeriod);
 [; ;PWM.h: 27: void SetDeadTime(unsigned char rDeadTime);
-[; ;ADC.h: 52: void ADCIni(char ANx , char Fosc);
-[; ;ADC.h: 53: void ADCINTIni(char ANx, char Fosc);
-[; ;ADC.h: 54: int ReadADC(char ANx);
-[; ;ADC.h: 55: int16_t ReadADCINT(void);
-[; ;ADC.h: 56: int16_t ChkPeakVal(void);
-[; ;ADC.h: 57: int16_t SearchingOffSet(void);
+[; ;ADC.h: 37: void ADCIni(char ANx , char Fosc);
+[; ;ADC.h: 38: void ADCINTIni(char ANx, char Fosc);
+[; ;ADC.h: 39: int ReadADC(char ANx);
+[; ;ADC.h: 40: int16_t ReadADCINT(void);
+[; ;ADC.h: 41: int16_t ChkPeakVal(void);
 [; ;App.h: 25: bool ScanFrq(void);
 [; ;App.h: 26: void Blinking(int vSenFlt);
 [; ;App.h: 27: void Blink(float tiPerd);
@@ -6650,7 +6649,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;EEPROM.h: 11: char EEPROMWrite(uint16_t Data, uint8_t Address);
 [; ;DAC.h: 11: void DACInit(void);
 [; ;DAC.h: 12: void DACSet(uint8_t Val);
-"39 main.c
+"34 main.c
 [p x FOSC=INTOSC ]
 [p x WDTE=OFF ]
 [p x PWRTE=ON ]
@@ -6661,422 +6660,231 @@ Version 3.2 HI-TECH Software Intermediate Code
 [p x CP=OFF ]
 [p x PLLEN=ON ]
 [p x CLKOUTEN=OFF ]
-[; ;main.c: 39: __config("__CONFIG", "pic", "FOSC_INTOSC & WDTE_OFF & PWRTE_ON & MCLRE_OFF & BOREN_OFF & LVP_OFF & CPD_OFF & CP_OFF & PLLEN_ON & CLKOUTEN_OFF");
-[; ;main.c: 45: extern int16_t cntBlink;
-[; ;main.c: 46: extern volatile bit flgTicTac;
-[; ;main.c: 47: extern volatile bit flgPSMC;
-[; ;main.c: 48: extern uint8_t cntPerd;
-[; ;main.c: 49: extern volatile unsigned char UART_cntTxUART;
-[; ;main.c: 50: extern char ADCON0Tmp;
-"52
+[; ;main.c: 34: __config("__CONFIG", "pic", "FOSC_INTOSC & WDTE_OFF & PWRTE_ON & MCLRE_OFF & BOREN_OFF & LVP_OFF & CPD_OFF & CP_OFF & PLLEN_ON & CLKOUTEN_OFF");
+[; ;main.c: 40: extern int16_t cntBlink;
+[; ;main.c: 41: extern volatile bit flgTicTac;
+[; ;main.c: 42: extern volatile bit flgPSMC;
+[; ;main.c: 43: extern uint8_t cntPerd;
+[; ;main.c: 44: extern volatile unsigned char UART_cntTxUART;
+"45
 [v _chBufADC `uc ~T0 @X0 -> 20 `i e ]
-[; ;main.c: 52: char chBufADC[20];
-"53
+[; ;main.c: 45: char chBufADC[20];
+"46
 [v _vADCAN0 `i ~T0 @X0 1 e ]
-[; ;main.c: 53: int vADCAN0;
-"54
+[; ;main.c: 46: int vADCAN0;
+"47
 [v _cntPWM `i ~T0 @X0 1 e ]
-[; ;main.c: 54: int cntPWM;
-"55
+[; ;main.c: 47: int cntPWM;
+"48
 [v _vADCANFlt `i ~T0 @X0 1 e ]
-[; ;main.c: 55: int vADCANFlt;
-"56
+[; ;main.c: 48: int vADCANFlt;
+"49
 [v _vPWM `i ~T0 @X0 1 e ]
 [i _vPWM
--> 1000 `i
+-> 3084 `i
 ]
-[; ;main.c: 56: int vPWM = 1000;;
-"57
+[; ;main.c: 49: int vPWM = 3084;;
+"50
 [v _vADCANOld `i ~T0 @X0 1 e ]
-[; ;main.c: 57: int vADCANOld;
-"58
+[; ;main.c: 50: int vADCANOld;
+"51
 [v _vADCANOld1 `i ~T0 @X0 1 e ]
-[; ;main.c: 58: int vADCANOld1;
-"59
+[; ;main.c: 51: int vADCANOld1;
+"52
 [v _cntCur `i ~T0 @X0 1 e ]
-[; ;main.c: 59: int cntCur;
-"60
+[; ;main.c: 52: int cntCur;
+"53
 [v _vPeakVld `i ~T0 @X0 1 e ]
-[; ;main.c: 60: int16_t vPeakVld;
-"61
+[; ;main.c: 53: int16_t vPeakVld;
+"54
 [v _RA7Old `uc ~T0 @X0 1 e ]
-[; ;main.c: 61: char RA7Old;
-"62
+[; ;main.c: 54: char RA7Old;
+"55
 [v _bFlg `uc ~T0 @X0 1 e ]
-[; ;main.c: 62: char bFlg;
-"63
+[; ;main.c: 55: char bFlg;
+"56
 [v _cntUARTSend `uc ~T0 @X0 1 e ]
-[; ;main.c: 63: char cntUARTSend;
-"71
+[; ;main.c: 56: char cntUARTSend;
+"64
 [v _main `(v ~T0 @X0 1 ef ]
 {
-[; ;main.c: 70: void main(void)
-[; ;main.c: 71: {
+[; ;main.c: 63: void main(void)
+[; ;main.c: 64: {
 [e :U _main ]
 [f ]
-"74
-[v _stBlinking `uc ~T0 @X0 1 a ]
-[; ;main.c: 74: char stBlinking = 0;
-[e = _stBlinking -> -> 0 `i `uc ]
-"76
+"68
 [v _vPeak `i ~T0 @X0 1 a ]
-"77
-[v _vDAC `i ~T0 @X0 1 a ]
-[; ;main.c: 76: int16_t vPeak;
-[; ;main.c: 77: int16_t vDAC;
-[; ;main.c: 80: ConfigureOscillator();
-"80
+[; ;main.c: 68: int16_t vPeak;
+[; ;main.c: 71: ConfigureOscillator();
+"71
 [e ( _ConfigureOscillator ..  ]
-[; ;main.c: 84: InitApp();
-"84
+[; ;main.c: 75: InitApp();
+"75
 [e ( _InitApp ..  ]
-[; ;main.c: 86: ADCON0Tmp = ADCON0;
-"86
-[e = _ADCON0Tmp _ADCON0 ]
-[; ;main.c: 88: vPWM = eeprom_read(0x00);
-"88
+[; ;main.c: 78: vPWM = eeprom_read(0);
+"78
 [e = _vPWM -> ( _eeprom_read (1 -> -> 0 `i `uc `i ]
-[; ;main.c: 89: vPWM = (vPWM | (eeprom_read(0x01)<<8));
-"89
-[e = _vPWM | _vPWM << -> ( _eeprom_read (1 -> -> 1 `i `uc `i -> 8 `i ]
-[; ;main.c: 91: PWMSetPeriod (16000-((uint32_t)15600*vPWM)/4096);
-"91
-[e ( _PWMSetPeriod (1 -> - -> -> -> 16000 `i `l `ul / * -> -> 15600 `i `ul -> -> _vPWM `l `ul -> -> -> 4096 `i `l `ul `ui ]
-[; ;main.c: 92: PWMSetDutyCycle (8000-((uint32_t)15600*vPWM)/8192);
-"92
-[e ( _PWMSetDutyCycle (1 -> - -> -> -> 8000 `i `l `ul / * -> -> 15600 `i `ul -> -> _vPWM `l `ul -> -> -> 8192 `i `l `ul `ui ]
-[; ;main.c: 99: DACSet(0);
-"99
-[e ( _DACSet (1 -> -> 0 `i `uc ]
-[; ;main.c: 101: while(1)
-"101
+[; ;main.c: 79: DACSet(100);
+"79
+[e ( _DACSet (1 -> -> 100 `i `uc ]
+[; ;main.c: 87: while(1)
+"87
 [e :U 723 ]
-[; ;main.c: 102: {
-"102
+[; ;main.c: 88: {
+"88
 {
-[; ;main.c: 104: if (flgTicTac == 1)
-"104
+[; ;main.c: 90: if (flgTicTac == 1)
+"90
 [e $ ! == -> _flgTicTac `i -> 1 `i 725  ]
-[; ;main.c: 105: {
-"105
+[; ;main.c: 91: {
+"91
 {
-[; ;main.c: 106: flgTicTac = 0;
-"106
+[; ;main.c: 92: flgTicTac = 0;
+"92
 [e = _flgTicTac -> -> 0 `i `b ]
-[; ;main.c: 114: vDAC = SearchingOffSet();
-"114
-[e = _vDAC ( _SearchingOffSet ..  ]
-[; ;main.c: 116: cntCur++;
-"116
-[e ++ _cntCur -> 1 `i ]
-[; ;main.c: 118: vADCAN0 = ReadADC(1);
-"118
-[e = _vADCAN0 ( _ReadADC (1 -> -> 1 `i `uc ]
-[; ;main.c: 121: if (vDAC > 1024)
-"121
-[e $ ! > _vDAC -> 1024 `i 726  ]
-[; ;main.c: 122: {
-"122
-{
-[; ;main.c: 123: stBlinking = 4;
-"123
-[e = _stBlinking -> -> 4 `i `uc ]
-"124
-}
-[; ;main.c: 124: }
-[e $U 727  ]
-"125
-[e :U 726 ]
-[; ;main.c: 125: else if (vDAC > 1000)
-[e $ ! > _vDAC -> 1000 `i 728  ]
-[; ;main.c: 126: {
-"126
-{
-[; ;main.c: 127: stBlinking = 3;
-"127
-[e = _stBlinking -> -> 3 `i `uc ]
-"128
-}
-[; ;main.c: 128: }
-[e $U 729  ]
-"129
-[e :U 728 ]
-[; ;main.c: 129: else if (vDAC > 990)
-[e $ ! > _vDAC -> 990 `i 730  ]
-[; ;main.c: 130: {
-"130
-{
-[; ;main.c: 131: stBlinking = 2;
-"131
-[e = _stBlinking -> -> 2 `i `uc ]
-"132
-}
-[; ;main.c: 132: }
-[e $U 731  ]
-"133
-[e :U 730 ]
-[; ;main.c: 133: else if (vDAC > 940)
-[e $ ! > _vDAC -> 940 `i 732  ]
-[; ;main.c: 134: {
-"134
-{
-[; ;main.c: 135: stBlinking = 1;
-"135
-[e = _stBlinking -> -> 1 `i `uc ]
-"136
-}
-[; ;main.c: 136: }
-[e $U 733  ]
-"137
-[e :U 732 ]
-[; ;main.c: 137: else
-[; ;main.c: 138: {
-"138
-{
-[; ;main.c: 139: stBlinking = 0;
-"139
-[e = _stBlinking -> -> 0 `i `uc ]
-"140
-}
-[e :U 733 ]
-[e :U 731 ]
-[e :U 729 ]
-[e :U 727 ]
-[; ;main.c: 140: }
-[; ;main.c: 143: if (stBlinking == 1)
-"143
-[e $ ! == -> _stBlinking `i -> 1 `i 734  ]
-[; ;main.c: 144: {
-"144
-{
-[; ;main.c: 145: if (cntCur > 12)
-"145
-[e $ ! > _cntCur -> 12 `i 735  ]
-[; ;main.c: 146: {
-"146
-{
-[; ;main.c: 147: RC2 = !RC2;
-"147
+[; ;main.c: 100: RC2 = !RC2;
+"100
 [e = _RC2 ! _RC2 ]
-[; ;main.c: 148: cntCur = 0;
-"148
-[e = _cntCur -> 0 `i ]
-"149
+[; ;main.c: 101: cntCur++;
+"101
+[e ++ _cntCur -> 1 `i ]
+[; ;main.c: 103: vADCAN0 = ReadADC(1);
+"103
+[e = _vADCAN0 ( _ReadADC (1 -> -> 1 `i `uc ]
+[; ;main.c: 107: vADCANFlt = vADCANOld+(vADCAN0-vADCANOld)/20;
+"107
+[e = _vADCANFlt + _vADCANOld / - _vADCAN0 _vADCANOld -> 20 `i ]
+[; ;main.c: 112: if ((vADCANFlt==vADCANOld)&&(vADCAN0!=vADCANOld))
+"112
+[e $ ! && == _vADCANFlt _vADCANOld != _vADCAN0 _vADCANOld 726  ]
+[; ;main.c: 113: {
+"113
+{
+[; ;main.c: 114: if ((vADCAN0>vADCANOld))
+"114
+[e $ ! > _vADCAN0 _vADCANOld 727  ]
+[; ;main.c: 115: {
+"115
+{
+[; ;main.c: 116: vADCANFlt++;
+"116
+[e ++ _vADCANFlt -> 1 `i ]
+"117
 }
-[e :U 735 ]
+[; ;main.c: 117: }
+[e $U 728  ]
+"118
+[e :U 727 ]
+[; ;main.c: 118: else
+[; ;main.c: 119: {
+"119
+{
+[; ;main.c: 120: vADCANFlt--;
+"120
+[e -- _vADCANFlt -> 1 `i ]
+"121
+}
+[e :U 728 ]
+"122
+}
+[e :U 726 ]
+[; ;main.c: 121: }
+[; ;main.c: 122: }
+[; ;main.c: 124: if ((RA7==1)&&(RA7Old==0))
+"124
+[e $ ! && == -> _RA7 `i -> 1 `i == -> _RA7Old `i -> 0 `i 729  ]
+[; ;main.c: 125: {
+"125
+{
+[; ;main.c: 132: eeprom_write(0,vPWM);
+"132
+[e ( _eeprom_write (2 , -> -> 0 `i `uc -> _vPWM `uc ]
+"133
+}
+[; ;main.c: 133: }
+[e $U 730  ]
+"134
+[e :U 729 ]
+[; ;main.c: 134: else
+[; ;main.c: 135: {
+"135
+{
+[; ;main.c: 136: PSMC1INT = 0x10;
+"136
+[e = _PSMC1INT -> -> 16 `i `uc ]
+"137
+}
+[e :U 730 ]
+[; ;main.c: 137: }
+[; ;main.c: 139: vADCANOld = vADCANFlt;
+"139
+[e = _vADCANOld _vADCANFlt ]
+[; ;main.c: 140: vPWM = vADCANFlt;
+"140
+[e = _vPWM _vADCANFlt ]
+[; ;main.c: 143: cntUARTSend++;
+"143
+[e ++ _cntUARTSend -> -> 1 `i `uc ]
+[; ;main.c: 144: if ((cntUARTSend==50))
+"144
+[e $ ! == -> _cntUARTSend `i -> 50 `i 731  ]
+[; ;main.c: 145: {
+"145
+{
+[; ;main.c: 148: sprintf(chBufADC,"ADC:%d\r\n",vADCANFlt);
+"148
+[e ( _sprintf (1 , (. , &U _chBufADC :s 1C _vADCANFlt ]
+[; ;main.c: 149: UARTSend(chBufADC,0);
+"149
+[e ( _UARTSend (2 , &U _chBufADC -> -> 0 `i `uc ]
+[; ;main.c: 150: cntUARTSend = 0;
+"150
+[e = _cntUARTSend -> -> 0 `i `uc ]
 "151
 }
-[; ;main.c: 149: }
 [; ;main.c: 151: }
-[e $U 736  ]
+[e $U 732  ]
 "152
-[e :U 734 ]
-[; ;main.c: 152: else if (stBlinking == 2)
-[e $ ! == -> _stBlinking `i -> 2 `i 737  ]
+[e :U 731 ]
+[; ;main.c: 152: else if ((cntUARTSend)%2==1)
+[e $ ! == % -> _cntUARTSend `i -> 2 `i -> 1 `i 733  ]
 [; ;main.c: 153: {
 "153
 {
-[; ;main.c: 154: if (cntCur > 25)
-"154
-[e $ ! > _cntCur -> 25 `i 738  ]
-[; ;main.c: 155: {
-"155
-{
-[; ;main.c: 156: RC2 = !RC2;
 "156
-[e = _RC2 ! _RC2 ]
-[; ;main.c: 157: cntCur = 0;
+}
+[; ;main.c: 156: }
+[e $U 734  ]
 "157
-[e = _cntCur -> 0 `i ]
+[e :U 733 ]
+[; ;main.c: 157: else
+[; ;main.c: 158: {
 "158
-}
-[e :U 738 ]
-"159
-}
-[; ;main.c: 158: }
-[; ;main.c: 159: }
-[e $U 739  ]
+{
+[; ;main.c: 159: ;
 "160
-[e :U 737 ]
-[; ;main.c: 160: else if (stBlinking == 3)
-[e $ ! == -> _stBlinking `i -> 3 `i 740  ]
-[; ;main.c: 161: {
-"161
-{
-[; ;main.c: 162: if (cntCur > 50)
-"162
-[e $ ! > _cntCur -> 50 `i 741  ]
-[; ;main.c: 163: {
-"163
-{
-[; ;main.c: 164: RC2 = !RC2;
-"164
-[e = _RC2 ! _RC2 ]
-[; ;main.c: 165: cntCur = 0;
-"165
-[e = _cntCur -> 0 `i ]
-"166
 }
-[e :U 741 ]
-"167
-}
-[; ;main.c: 166: }
-[; ;main.c: 167: }
-[e $U 742  ]
-"168
-[e :U 740 ]
-[; ;main.c: 168: else if (stBlinking == 4)
-[e $ ! == -> _stBlinking `i -> 4 `i 743  ]
-[; ;main.c: 169: {
+[e :U 734 ]
+[e :U 732 ]
+[; ;main.c: 160: }
+[; ;main.c: 169: RA7Old = RA7;
 "169
-{
-[; ;main.c: 170: RC2 = 0;
-"170
-[e = _RC2 -> -> 0 `i `b ]
-[; ;main.c: 171: cntCur = 0;
-"171
-[e = _cntCur -> 0 `i ]
+[e = _RA7Old -> -> _RA7 `i `uc ]
 "172
 }
-[; ;main.c: 172: }
-[e $U 744  ]
-"173
-[e :U 743 ]
-[; ;main.c: 173: else
-[; ;main.c: 174: {
-"174
-{
-[; ;main.c: 175: if (cntCur > 12)
-"175
-[e $ ! > _cntCur -> 12 `i 745  ]
-[; ;main.c: 176: {
-"176
-{
-[; ;main.c: 177: RC2 = !RC2;
-"177
-[e = _RC2 ! _RC2 ]
-[; ;main.c: 178: cntCur = 0;
-"178
-[e = _cntCur -> 0 `i ]
-"179
-}
-[e :U 745 ]
-"180
-}
-[e :U 744 ]
-[e :U 742 ]
-[e :U 739 ]
-[e :U 736 ]
-[; ;main.c: 179: }
-[; ;main.c: 180: }
-[; ;main.c: 183: vADCANFlt = vADCANOld+(vADCAN0-vADCANOld)/20;
-"183
-[e = _vADCANFlt + _vADCANOld / - _vADCAN0 _vADCANOld -> 20 `i ]
-[; ;main.c: 185: if ((vADCANFlt==vADCANOld)&&(vADCAN0!=vADCANOld))
-"185
-[e $ ! && == _vADCANFlt _vADCANOld != _vADCAN0 _vADCANOld 746  ]
-[; ;main.c: 186: {
-"186
-{
-[; ;main.c: 187: if ((vADCAN0>vADCANOld))
-"187
-[e $ ! > _vADCAN0 _vADCANOld 747  ]
-[; ;main.c: 188: {
-"188
-{
-[; ;main.c: 189: vADCANFlt++;
-"189
-[e ++ _vADCANFlt -> 1 `i ]
-"190
-}
-[; ;main.c: 190: }
-[e $U 748  ]
-"191
-[e :U 747 ]
-[; ;main.c: 191: else
-[; ;main.c: 192: {
-"192
-{
-[; ;main.c: 193: vADCANFlt--;
-"193
-[e -- _vADCANFlt -> 1 `i ]
-"194
-}
-[e :U 748 ]
-"195
-}
-[e :U 746 ]
-[; ;main.c: 194: }
-[; ;main.c: 195: }
-[; ;main.c: 198: vADCANOld = vADCANFlt;
-"198
-[e = _vADCANOld _vADCANFlt ]
-[; ;main.c: 200: if ((vADCANFlt >= (vPWM+3))||((vADCANFlt <= (vPWM-3))))
-"200
-[e $ ! || >= _vADCANFlt + _vPWM -> 3 `i <= _vADCANFlt - _vPWM -> 3 `i 749  ]
-[; ;main.c: 201: {
-"201
-{
-[; ;main.c: 202: vPWM = vADCANFlt;
-"202
-[e = _vPWM _vADCANFlt ]
-"204
-}
-[e :U 749 ]
-[; ;main.c: 204: }
-[; ;main.c: 206: if (RA7==1)
-"206
-[e $ ! == -> _RA7 `i -> 1 `i 750  ]
-[; ;main.c: 207: {
-"207
-{
-[; ;main.c: 208: PWMSetPeriod (16000-((uint32_t)15600*vPWM)/4096);
-"208
-[e ( _PWMSetPeriod (1 -> - -> -> -> 16000 `i `l `ul / * -> -> 15600 `i `ul -> -> _vPWM `l `ul -> -> -> 4096 `i `l `ul `ui ]
-[; ;main.c: 209: PWMSetDutyCycle (8000-((uint32_t)15600*vPWM)/8192);
-"209
-[e ( _PWMSetDutyCycle (1 -> - -> -> -> 8000 `i `l `ul / * -> -> 15600 `i `ul -> -> _vPWM `l `ul -> -> -> 8192 `i `l `ul `ui ]
-"210
-}
-[e :U 750 ]
-[; ;main.c: 210: }
-[; ;main.c: 212: DACSet(vDAC>>4);
-"212
-[e ( _DACSet (1 -> >> _vDAC -> 4 `i `uc ]
-[; ;main.c: 214: cntUARTSend++;
-"214
-[e ++ _cntUARTSend -> -> 1 `i `uc ]
-[; ;main.c: 216: if ((RA7==0)&&(RA7Old==1))
-"216
-[e $ ! && == -> _RA7 `i -> 0 `i == -> _RA7Old `i -> 1 `i 751  ]
-[; ;main.c: 217: {
-"217
-{
-[; ;main.c: 218: (void)eeprom_write(0x00,vPWM);
-"218
-[e ( _eeprom_write (2 , -> -> 0 `i `uc -> _vPWM `uc ]
-[; ;main.c: 219: (void)eeprom_write(0x01,(vPWM>>8));
-"219
-[e ( _eeprom_write (2 , -> -> 1 `i `uc -> >> _vPWM -> 8 `i `uc ]
-"220
-}
-[e :U 751 ]
-[; ;main.c: 220: }
-[; ;main.c: 222: RA7Old = RA7;
-"222
-[e = _RA7Old -> -> _RA7 `i `uc ]
-"223
-}
 [e :U 725 ]
-"225
+"197
 }
 [e :U 722 ]
-"101
+"87
 [e $U 723  ]
 [e :U 724 ]
-[; ;main.c: 223: }
-[; ;main.c: 225: }
-[; ;main.c: 226: }
-"226
+[; ;main.c: 172: }
+[; ;main.c: 197: }
+[; ;main.c: 198: }
+"198
 [e :UE 721 ]
 }
+[p f _sprintf 8388736 ]
+[a 1C 65 68 67 58 37 100 13 10 0 ]
+

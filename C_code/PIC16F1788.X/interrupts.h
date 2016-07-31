@@ -6,7 +6,7 @@
  */
 #include "UART.h"
 
-#define ADC_LARRAY      10
+#define ADC_LARRAY      100
 
 #ifndef INTERRUPTS_H
 #define	INTERRUPTS_H

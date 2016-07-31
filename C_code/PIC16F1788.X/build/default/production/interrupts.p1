@@ -14,7 +14,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 "22 PWM.h
 [v _PWMSetPeriod `(v ~T0 @X0 0 ef1`ui ]
 "44 interrupts.c
-[v _vPWM `ui ~T0 @X0 0 e ]
+[v _vPWM `i ~T0 @X0 0 e ]
 "23 PWM.h
 [v _PWMSetDutyCycle `(v ~T0 @X0 0 ef1`ui ]
 "18112 C:\Program Files (x86)\Microchip\xc8\v1.21\include\pic16f1788.h
@@ -6607,8 +6607,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _ADC_vADC `Vi ~T0 @X0 1 e ]
 [; ;interrupts.c: 36: volatile int16_t ADC_vADC;
 "37
-[v _ADC_vADCAry `Vi ~T0 @X0 -> 10 `i e ]
-[; ;interrupts.c: 37: volatile int16_t ADC_vADCAry[10];
+[v _ADC_vADCAry `Vi ~T0 @X0 -> 100 `i e ]
+[; ;interrupts.c: 37: volatile int16_t ADC_vADCAry[100];
 "38
 [v _idxADC `uc ~T0 @X0 1 e ]
 [; ;interrupts.c: 38: uint8_t idxADC;
@@ -6624,7 +6624,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 "42
 [v _flgADCAryFull `Vb ~T0 @X0 1 e ]
 [; ;interrupts.c: 42: volatile bit flgADCAryFull;
-[; ;interrupts.c: 44: extern uint16_t vPWM;
+[; ;interrupts.c: 44: extern int vPWM;
 "49
 [v _stLen `uc ~T0 @X0 1 s ]
 [; ;interrupts.c: 49: static unsigned char stLen;
@@ -6690,9 +6690,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;interrupts.c: 99: {
 "99
 {
-[; ;interrupts.c: 100: if (cntPerd == 40)
+[; ;interrupts.c: 100: if (cntPerd == 10)
 "100
-[e $ ! == -> _cntPerd `i -> 40 `i 725  ]
+[e $ ! == -> _cntPerd `i -> 10 `i 725  ]
 [; ;interrupts.c: 101: {
 "101
 {
@@ -6706,193 +6706,190 @@ Version 3.2 HI-TECH Software Intermediate Code
 }
 [e :U 725 ]
 [; ;interrupts.c: 104: }
-[; ;interrupts.c: 107: PWMSetPeriod (16000-((uint32_t)15600*vPWM)/4096);
-"107
-[e ( _PWMSetPeriod (1 -> - -> -> -> 16000 `i `l `ul / * -> -> 15600 `i `ul -> _vPWM `ul -> -> -> 4096 `i `l `ul `ui ]
-[; ;interrupts.c: 108: PWMSetDutyCycle (8000-((uint32_t)15600*vPWM)/8192);
-"108
-[e ( _PWMSetDutyCycle (1 -> - -> -> -> 8000 `i `l `ul / * -> -> 15600 `i `ul -> _vPWM `ul -> -> -> 8192 `i `l `ul `ui ]
-"111
+[; ;interrupts.c: 105: PWMSetPeriod (64000-((uint32_t)62720*vPWM)/4096);
+"105
+[e ( _PWMSetPeriod (1 -> - -> -> 64000 `l `ul / * -> -> 62720 `l `ul -> -> _vPWM `l `ul -> -> -> 4096 `i `l `ul `ui ]
+[; ;interrupts.c: 106: PWMSetDutyCycle (32000-((uint32_t)62720*vPWM)/8192);
+"106
+[e ( _PWMSetDutyCycle (1 -> - -> -> -> 32000 `i `l `ul / * -> -> 62720 `l `ul -> -> _vPWM `l `ul -> -> -> 8192 `i `l `ul `ui ]
+"110
 }
-[; ;interrupts.c: 111: }
+[; ;interrupts.c: 110: }
 [e $U 726  ]
-"112
+"111
 [e :U 724 ]
-[; ;interrupts.c: 112: else
-[; ;interrupts.c: 113: {
+[; ;interrupts.c: 111: else
+[; ;interrupts.c: 112: {
+"112
+{
+[; ;interrupts.c: 113: if (cntPerd == 250)
 "113
-{
-[; ;interrupts.c: 114: if (cntPerd == 200)
+[e $ ! == -> _cntPerd `i -> 250 `i 727  ]
+[; ;interrupts.c: 114: {
 "114
-[e $ ! == -> _cntPerd `i -> 200 `i 727  ]
-[; ;interrupts.c: 115: {
-"115
 {
-[; ;interrupts.c: 116: flgPSMC = 0;
-"116
+[; ;interrupts.c: 115: flgPSMC = 0;
+"115
 [e = _flgPSMC -> -> 0 `i `b ]
-[; ;interrupts.c: 117: cntPerd = 0;
-"117
+[; ;interrupts.c: 116: cntPerd = 0;
+"116
 [e = _cntPerd -> -> 0 `i `uc ]
-"118
+"117
 }
 [e :U 727 ]
-[; ;interrupts.c: 118: }
-[; ;interrupts.c: 120: PWMSetDutyCycle (0);
-"120
+[; ;interrupts.c: 117: }
+[; ;interrupts.c: 119: PWMSetDutyCycle (0);
+"119
 [e ( _PWMSetDutyCycle (1 -> -> 0 `i `ui ]
-"121
+"120
 }
 [e :U 726 ]
-[; ;interrupts.c: 121: }
-[; ;interrupts.c: 123: P1TPRIF = 0;
-"123
+[; ;interrupts.c: 120: }
+[; ;interrupts.c: 122: P1TPRIF = 0;
+"122
 [e = _P1TPRIF -> -> 0 `i `b ]
-"125
+"124
 }
 [e :U 723 ]
-[; ;interrupts.c: 125: }
-[; ;interrupts.c: 131: if (RCIE && RCIF)
-"131
+[; ;interrupts.c: 124: }
+[; ;interrupts.c: 130: if (RCIE && RCIF)
+"130
 [e $ ! && _RCIE _RCIF 728  ]
-[; ;interrupts.c: 132: {
-"132
+[; ;interrupts.c: 131: {
+"131
 {
-[; ;interrupts.c: 133: UART_chRxBuf[UART_cntRxUART++] = RCREG;
-"133
+[; ;interrupts.c: 132: UART_chRxBuf[UART_cntRxUART++] = RCREG;
+"132
 [e = *U + &U _UART_chRxBuf * -> ++ _UART_cntRxUART -> -> 1 `i `uc `ux -> -> # *U &U _UART_chRxBuf `ui `ux _RCREG ]
-"134
+"133
 }
 [e :U 728 ]
-[; ;interrupts.c: 134: }
-[; ;interrupts.c: 137: if (TXIE && TXIF)
-"137
+[; ;interrupts.c: 133: }
+[; ;interrupts.c: 136: if (TXIE && TXIF)
+"136
 [e $ ! && _TXIE _TXIF 729  ]
-[; ;interrupts.c: 139: {
+[; ;interrupts.c: 138: {
+"138
+{
+[; ;interrupts.c: 139: if ((UART_cntTxUART!=0))
 "139
-{
-[; ;interrupts.c: 140: if ((UART_cntTxUART!=0))
-"140
 [e $ ! != -> _UART_cntTxUART `i -> 0 `i 730  ]
-[; ;interrupts.c: 141: {
+[; ;interrupts.c: 140: {
+"140
+{
+[; ;interrupts.c: 141: TXREG = UART_chTxBuf[stLen];
 "141
-{
-[; ;interrupts.c: 142: TXREG = UART_chTxBuf[stLen];
-"142
 [e = _TXREG *U + &U _UART_chTxBuf * -> _stLen `ux -> -> # *U &U _UART_chTxBuf `ui `ux ]
-[; ;interrupts.c: 145: stLen++;
-"145
+[; ;interrupts.c: 144: stLen++;
+"144
 [e ++ _stLen -> -> 1 `i `uc ]
-[; ;interrupts.c: 147: if (stLen == UART_cntTxUART)
-"147
+[; ;interrupts.c: 146: if (stLen == UART_cntTxUART)
+"146
 [e $ ! == -> _stLen `i -> _UART_cntTxUART `i 731  ]
-[; ;interrupts.c: 148: {
-"148
+[; ;interrupts.c: 147: {
+"147
 {
-[; ;interrupts.c: 149: UART_cntTxUART = 0;
-"149
+[; ;interrupts.c: 148: UART_cntTxUART = 0;
+"148
 [e = _UART_cntTxUART -> -> 0 `i `uc ]
-[; ;interrupts.c: 150: stLen = 0;
-"150
+[; ;interrupts.c: 149: stLen = 0;
+"149
 [e = _stLen -> -> 0 `i `uc ]
-[; ;interrupts.c: 151: TXEN = 0;
-"151
+[; ;interrupts.c: 150: TXEN = 0;
+"150
 [e = _TXEN -> -> 0 `i `b ]
-[; ;interrupts.c: 152: TXIE = 0;
-"152
+[; ;interrupts.c: 151: TXIE = 0;
+"151
 [e = _TXIE -> -> 0 `i `b ]
-"154
+"153
 }
 [e :U 731 ]
-"155
+"154
 }
+[; ;interrupts.c: 153: }
 [; ;interrupts.c: 154: }
-[; ;interrupts.c: 155: }
 [e $U 732  ]
-"156
+"155
 [e :U 730 ]
-[; ;interrupts.c: 156: else
-[; ;interrupts.c: 157: {
-"157
+[; ;interrupts.c: 155: else
+[; ;interrupts.c: 156: {
+"156
 {
-[; ;interrupts.c: 159: TXEN = 0;
-"159
+[; ;interrupts.c: 158: TXEN = 0;
+"158
 [e = _TXEN -> -> 0 `i `b ]
-[; ;interrupts.c: 160: TXIE = 0;
-"160
+[; ;interrupts.c: 159: TXIE = 0;
+"159
 [e = _TXIE -> -> 0 `i `b ]
-"161
+"160
 }
 [e :U 732 ]
-"162
+"161
 }
 [e :U 729 ]
+[; ;interrupts.c: 160: }
 [; ;interrupts.c: 161: }
-[; ;interrupts.c: 162: }
-[; ;interrupts.c: 167: if (ADIE&&ADIF)
-"167
+[; ;interrupts.c: 166: if (ADIE&&ADIF)
+"166
 [e $ ! && _ADIE _ADIF 733  ]
-[; ;interrupts.c: 168: {
-"168
+[; ;interrupts.c: 167: {
+"167
 {
-[; ;interrupts.c: 170: if (idxADC<10)
+[; ;interrupts.c: 169: if (idxADC<100)
+"169
+[e $ ! < -> _idxADC `i -> 100 `i 734  ]
+[; ;interrupts.c: 170: {
 "170
-[e $ ! < -> _idxADC `i -> 10 `i 734  ]
-[; ;interrupts.c: 171: {
+{
+[; ;interrupts.c: 171: idxADC++;
 "171
-{
-[; ;interrupts.c: 172: idxADC++;
-"172
 [e ++ _idxADC -> -> 1 `i `uc ]
-[; ;interrupts.c: 173: flgADCAryFull = 0;
-"173
+[; ;interrupts.c: 172: flgADCAryFull = 0;
+"172
 [e = _flgADCAryFull -> -> 0 `i `b ]
-"174
+"173
 }
-[; ;interrupts.c: 174: }
+[; ;interrupts.c: 173: }
 [e $U 735  ]
-"175
+"174
 [e :U 734 ]
-[; ;interrupts.c: 175: else
-[; ;interrupts.c: 176: {
-"176
+[; ;interrupts.c: 174: else
+[; ;interrupts.c: 175: {
+"175
 {
-[; ;interrupts.c: 177: idxADC = 0;
-"177
+[; ;interrupts.c: 176: idxADC = 0;
+"176
 [e = _idxADC -> -> 0 `i `uc ]
-[; ;interrupts.c: 178: flgADCAryFull = 1;
-"178
+[; ;interrupts.c: 177: flgADCAryFull = 1;
+"177
 [e = _flgADCAryFull -> -> 1 `i `b ]
-[; ;interrupts.c: 179: ADIE = 0;
-"179
+[; ;interrupts.c: 178: ADIE = 0;
+"178
 [e = _ADIE -> -> 0 `i `b ]
-[; ;interrupts.c: 181: TXIE = 1;
 "181
-[e = _TXIE -> -> 1 `i `b ]
-"182
 }
 [e :U 735 ]
-[; ;interrupts.c: 182: }
-[; ;interrupts.c: 184: ADC_vADCAry[idxADC] = ADRESH<<8;
-"184
+[; ;interrupts.c: 181: }
+[; ;interrupts.c: 183: ADC_vADCAry[idxADC] = ADRESH<<8;
+"183
 [e = *U + &U _ADC_vADCAry * -> _idxADC `ux -> -> # *U &U _ADC_vADCAry `ui `ux << -> _ADRESH `i -> 8 `i ]
-[; ;interrupts.c: 186: ADC_vADCAry[idxADC] |=ADRESL;
-"186
+[; ;interrupts.c: 185: ADC_vADCAry[idxADC] |=ADRESL;
+"185
 [e =| *U + &U _ADC_vADCAry * -> _idxADC `ux -> -> # *U &U _ADC_vADCAry `ui `ux -> _ADRESL `i ]
-[; ;interrupts.c: 188: ADIF = 0;
-"188
+[; ;interrupts.c: 187: ADIF = 0;
+"187
 [e = _ADIF -> -> 0 `i `b ]
-[; ;interrupts.c: 189: GO=1;
-"189
+[; ;interrupts.c: 188: GO=1;
+"188
 [e = _GO -> -> 1 `i `b ]
-"190
+"189
 }
 [e :U 733 ]
-[; ;interrupts.c: 190: }
-[; ;interrupts.c: 193: (GIE = 1);
-"193
+[; ;interrupts.c: 189: }
+[; ;interrupts.c: 192: (GIE = 1);
+"192
 [e = _GIE -> -> 1 `i `b ]
-[; ;interrupts.c: 196: }
-"196
+[; ;interrupts.c: 195: }
+"195
 [e :UE 720 ]
 }

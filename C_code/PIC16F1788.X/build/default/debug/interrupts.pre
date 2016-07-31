@@ -9045,7 +9045,7 @@ volatile unsigned char UART_cntRxUART;
 
 unsigned volatile int counter;
 volatile int16_t ADC_vADC;
-volatile int16_t ADC_vADCAry[10];
+volatile int16_t ADC_vADCAry[100];
 uint8_t idxADC;
 uint8_t cntPerd;
 volatile bit flgPSMC;
@@ -9085,21 +9085,20 @@ if (P1TPRIE && P1TPRIF)
 cntPerd++;
 if (flgPSMC==0)
 {
-if (cntPerd == 40)
+if (cntPerd == 10)
 {
 flgPSMC = 1;
 cntPerd = 0;
 }
+PWMSetPeriod (64000-((uint32_t)62720*vPWM)/4096);
+PWMSetDutyCycle (32000-((uint32_t)62720*vPWM)/8192);
 
-
-PWMSetPeriod (16000-((uint32_t)15600*vPWM)/4096);
-PWMSetDutyCycle (8000-((uint32_t)15600*vPWM)/8192);
 
 
 }
 else
 {
-if (cntPerd == 200)
+if (cntPerd == 250)
 {
 flgPSMC = 0;
 cntPerd = 0;
@@ -9112,7 +9111,7 @@ P1TPRIF = 0;
 
 }
 
-# 131
+# 130
 if (RCIE && RCIF)
 {
 UART_chRxBuf[UART_cntRxUART++] = RCREG;
@@ -9152,7 +9151,7 @@ TXIE = 0;
 if (ADIE&&ADIF)
 {
 
-if (idxADC<10)
+if (idxADC<100)
 {
 idxADC++;
 flgADCAryFull = 0;
@@ -9163,7 +9162,7 @@ idxADC = 0;
 flgADCAryFull = 1;
 ADIE = 0;
 
-TXIE = 1;
+
 }
 
 ADC_vADCAry[idxADC] = ADRESH<<8;

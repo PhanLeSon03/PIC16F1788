@@ -1,0 +1,16 @@
+\t (00:03:19) allegro 16.5 P003 (v16-5-13C) i86
+\t (00:03:19)     Journal start - Mon Jun 08 21:51:42 2015
+\t (00:03:19)         Host=PCMART-VAIO User=PCMART Pid=768 CPUs=4
+\t (00:03:19) 
+\e (00:03:23) Retrieval of 'PCB_design_expert' license failed: 'ERROR (LMF-02015): License call failed for feature PCB_design_expert, version 16.500 and quantity 1. The license server search path is defined as D:\cadence\LicenseManager\license.dat. The FLEXnet error message is as follows,
+    FLEXnet ERROR(-15, 0, 0): Cannot connect to license server system.
+
+Run 'lic_error LMF-02015' for more information.'
+\i (00:14:03) fillin confirm
+\i (00:14:06) fillin PCB_design_expert
+\e (00:14:07) Retrieval of 'PCB_design_expert' license failed: 'ERROR (LMF-02097): License call failed for feature PCB_design_expert, version 16.500 and quantity 1. The license server search path is defined as D:\cadence\LicenseManager\license.dat. The FLEXnet error message is as follows,
+    FLEXnet ERROR(-97, 0, 0): The desired vendor daemon is down.
+
+Run 'lic_error LMF-02097' for more information.'
+\i (00:14:09) fillin confirm
+\t (00:14:09)     Journal end - Mon Jun 08 22:02:33 2015

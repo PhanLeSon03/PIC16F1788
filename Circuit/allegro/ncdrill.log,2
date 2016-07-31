@@ -1,0 +1,84 @@
+(---------------------------------------------------------------------)
+(                                                                     )
+(    NC DRILL Log                                                     )
+(                                                                     )
+(    Drawing          : #Taaaaaa03960.tmp                             )
+(    Software Version : 16.5P002                                      )
+(    Date/Time        : Sat Nov 08 15:23:08 2014                      )
+(                                                                     )
+(---------------------------------------------------------------------)
+
+
+
+ Processing NC Parameters file ...
+
+ NC PARAMETERS
+ -------------
+
+ FORMAT   		2.4
+ MACHINE-OFFSET		x:0.000000	y:0.000000
+ FEEDRATE		1
+ COORDINATES		ABSOLUTE
+ OUTPUT-UNITS		ENGLISH
+ TOOL-ORDER		DECREASING
+ REPEAT-CODES		YES
+ SUPPRESS-LEAD-ZEROES	NO
+ SUPPRESS-TRAIL-ZEROES	YES
+ SUPPRESS-EQUAL		NO
+ TOOL-SELECT		YES
+ HEADER			none
+ LEADER			12
+ CODE			ASCII
+ SEPARATE		YES
+ OPTIMIZE_DRILLING	YES
+ ENHANCED_EXCELLON	YES
+ SCALE			1.000000
+
+ WARNING: Switching units system when generating drill output file data.
+ WARNING: Can't find tool file (nc_tools.txt)
+          ... will auto-generate tool file (nc_tools_auto.txt)
+
+
+     Auto-generating tool file nc_tools_auto.txt
+     -------------------------------------------
+
+           Size  Plating  Tool        + Tolerance  - Tolerance
+
+         2.5999  P        T01            0.000000     0.000000
+         1.3970  P        T02            0.000000     0.000000
+         1.2954  P        T03            0.000000     0.000000
+         1.1176  P        T04            0.000000     0.000000
+         1.1001  P        T05            0.000000     0.000000
+         1.0668  P        T06            0.000000     0.000000
+         1.0000  P        T07            0.000000     0.000000
+         0.9500  P        T08            0.000000     0.000000
+         0.9144  P        T09            0.000000     0.000000
+         0.6604  P        T10            0.000000     0.000000
+         0.6599  P        T11            0.000000     0.000000
+
+
+ Drill files being output to directory 'E:/STUDY/DATA/PTMD/PCB_v0.1/20141102_22_15/allegro' ...
+
+
+
+     'ptmd_pcb20141102_2215-1-2.drl' created for holes connecting TOP and BOTTOM ; Plating = PLATED
+     ----------------------------------------------------------------------------------------------
+
+     Tool  Num     Size      +/- Tolerance     Plating   Quantity
+
+     T01    1. 102.3583    0.0000/  0.0000      PLATED          6
+     T02    2.  55.0000    0.0000/  0.0000      PLATED          3
+     T03    3.  51.0000    0.0000/  0.0000      PLATED          4
+     T04    4.  44.0000    0.0000/  0.0000      PLATED          4
+     T05    5.  43.3110    0.0000/  0.0000      PLATED         18
+     T06    6.  42.0000    0.0000/  0.0000      PLATED          3
+     T07    7.  39.3701    0.0000/  0.0000      PLATED          4
+     T08    8.  37.4016    0.0000/  0.0000      PLATED          4
+     T09    9.  36.0000    0.0000/  0.0000      PLATED         10
+     T10   10.  26.0000    0.0000/  0.0000      PLATED          2
+     T11   11.  25.9803    0.0000/  0.0000      PLATED         87
+
+     ---- Total holes:                                        145
+
+     ---- Total head travel:              6.37 feet (1.94 meters)
+

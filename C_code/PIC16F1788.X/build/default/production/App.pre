@@ -9026,13 +9026,12 @@ bool UARTSend(unsigned char *pData, unsigned char stLen);
 # 13 "interrupts.h"
 void interrupt isr(void);
 
-# 54 "ADC.h"
+# 37 "ADC.h"
 void ADCIni(char ANx , char Fosc);
 void ADCINTIni(char ANx, char Fosc);
 int ReadADC(char ANx);
 int16_t ReadADCINT(void);
 int16_t ChkPeakVal(void);
-int16_t SearchingOffSet(void);
 
 # 25 "App.h"
 bool ScanFrq(void);

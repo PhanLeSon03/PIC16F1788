@@ -1,0 +1,57 @@
+(---------------------------------------------------------------------)
+(                                                                     )
+(    ARTWORK LOG                                                      )
+(                                                                     )
+(    Drawing          : ptmd_pcb20141102_2215.brd                     )
+(    Software Version : 16.5P002                                      )
+(    Date/Time        : Sun Nov 09 14:17:10 2014                      )
+(                                                                     )
+(---------------------------------------------------------------------)
+
+
+
+Results from parameter file ...
+    DEVICE-TYPE           GERBER_RS274X
+    OUTPUT-UNITS          MM
+    FILM-SIZE             12000000 7000000
+    FORMAT                5.5
+    ABORT-ON-ERROR        NO
+    SCALE                 1
+    SUPPRESS-LEAD-ZEROES  NO
+    SUPPRESS-TRAIL-ZEROES NO
+    SUPPRESS-EQUAL        YES
+    UNDEF-APT-CONT        NO
+
+
+================================================================
+     PROCESSING FILM < SilkScreenBottom >
+     TO FILE < E:/STUDY/DATA/PTMD/PCB_v0.1/20141102_22_15/allegro/SilkScreenBottom.art > ...
+================================================================
+
+  FILM PARAMETERS :
+  ---------------------------------------------------------
+  Undefined line width                0.0000
+  Mirror code                         NONE
+  Rotate angle                        NONE
+  Offset x:                           0.0000
+  Offset y:                           0.0000
+  Plot negative                       NO
+  Suppress unconnected internal pads  NO
+
+    WARNING: text composed 0 width line found at (359.2000 310.8500)
+           ... ignored!
+
+    WARNING: text having Multiple 0 width lines; all will be treated the same as the first.
+           ... ignored!
+
+
+
+  APERTURES USED:  NONE
+     SilkScreenBottom created with warnings
+
+
+------------------------------------------------------
+ SUMMARY:
+        SilkScreenBottom created with warnings
+
+ ARTWORK finished
